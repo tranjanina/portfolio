@@ -1,0 +1,209 @@
+/* Responsive Design & Mobile Adaptations */
+
+/* Tablet & Smaller Screens (< 1024px) */
+@media (max-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px 20px;
+  }
+  
+  .case-studies-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  
+  .reels-layout {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  
+  .phone-mockup-wrapper {
+    order: -1;
+  }
+  
+  .brief-builder-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  
+  .svc-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .svc-col {
+    padding: 28px 0;
+  }
+  
+  .svc-col + .svc-col {
+    padding-left: 0;
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+}
+
+/* Medium Tablets & Large Phones (< 768px) */
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .hero-figure {
+    order: -1;
+  }
+  
+  .clients-section {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .about {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  
+  .voice-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  
+  .quotes-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .quote-card,
+  .quote-card:nth-child(even) {
+    padding: 28px 0;
+    border-left: none;
+  }
+  
+  .formats-bar {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  
+  .lightbox-container {
+    grid-template-columns: 1fr;
+    max-height: 94vh;
+    overflow-y: auto;
+  }
+  
+  .lightbox-media {
+    max-height: 45vh;
+  }
+  
+  .lightbox-details {
+    max-height: none;
+    padding: 24px 20px;
+  }
+  
+  .phone-device {
+    width: 290px;
+    height: 580px;
+  }
+  
+  .nav-links {
+    display: none; /* Replaced by mobile floating bar */
+  }
+  
+  .site-nav {
+    padding-block: 20px;
+  }
+}
+
+/* Small Phones (< 480px) */
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  
+  .facts {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .facts div {
+    padding: 16px 0 0 0;
+    border-top: 1px solid var(--line);
+  }
+  
+  .process-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .gallery-caption {
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .reel-script-step {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  
+  .case-study-results-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .contact-box {
+    gap: 24px;
+  }
+  
+  .hero h1 {
+    font-size: 56px;
+  }
+}
+
+/* Mobile Quick Action Floating Bar */
+.mobile-action-bar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-action-bar {
+    display: flex;
+    position: fixed;
+    bottom: max(16px, env(safe-area-inset-bottom, 0px));
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(23, 19, 19, 0.92);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 40px;
+    padding: 6px 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    z-index: 990;
+    gap: 4px;
+    max-width: calc(100vw - 32px);
+  }
+  
+  .mobile-action-btn {
+    padding: 8px 14px;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    border-radius: 30px;
+    white-space: nowrap;
+    transition: all var(--transition-fast);
+  }
+  
+  .mobile-action-btn:hover,
+  .mobile-action-btn.active {
+    color: var(--white);
+    background: rgba(255, 255, 255, 0.15);
+  }
+  
+  .mobile-action-btn.btn-enquire {
+    background: var(--accent);
+    color: var(--white);
+    font-weight: 500;
+  }
+}

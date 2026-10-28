@@ -1,0 +1,36 @@
+/* Design Tokens & CSS Variables */
+:root {
+  color-scheme: light;
+  
+  /* Palette: Warm editorial dining tones */
+  --white: #FFFFFF;
+  --paper: #FAF4F0;       /* Blush warm off-white, lamp glow */
+  --paper-soft: #F5EBE6;  /* Deeper cream paper for subtle containers */
+  --ink: #171313;         /* Deepest rich black */
+  --ink-secondary: #3A3834;
+  --muted: #71625D;       /* Warm secondary gray/brown */
+  --line: #EBDDD5;        /* Refined hairlines */
+  --line-dark: #CBB9AF;
+  
+  /* Brand accents */
+  --accent: #B3221C;      /* Lacquer red, banquette warmth */
+  --accent-deep: #8E1814; /* Deep red for contact & callout blocks */
+  --accent-light: #FBECEB;
+  --gold: #A98743;        /* Subtle Michelin gold / aged brass */
+  --gold-soft: #FBF7EE;
+  
+  /* Typography */
+  --serif: "Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
+  --sans: "Hanken Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  
+  /* Shadows & Depth */
+  --shadow-sm: 0 1px 3px rgba(23, 19, 19, 0.05);
+  --shadow-md: 0 4px 18px rgba(23, 19, 19, 0.08);
+  --shadow-lg: 0 12px 36px rgba(23, 19, 19, 0.12);
+  --shadow-phone: 0 24px 60px rgba(23, 19, 19, 0.22);
+  
+  /* Transitions */
+  --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
