@@ -20,6 +20,7 @@ var PORTFOLIO_DATA = // Data for Janina · Food, Dining & Hospitality Portfolio
     { name: "Bottega di Carne", note: "Mondrian Duxton, Singapore" },
     { name: "The Cave by Ryan Clift", note: "Uluwatu, Bali" },
     { name: "Medusa", note: "Dining Room & Bar, Singapore" },
+    { name: "Bakalaki Greek Taverna", note: "Martin Road, Singapore" },
     { name: "Pete's Place", note: "Grand Hyatt Singapore" },
     { name: "Tanjong Beach Club", note: "Sentosa, Singapore" },
     { name: "Solo Ristorante", note: "Amoy Street, Singapore" },
@@ -509,6 +510,104 @@ var PORTFOLIO_DATA = // Data for Janina · Food, Dining & Hospitality Portfolio
       caption: "Late evening supper done right. Smoky lamb skewers sizzling right off the binchotan charcoal, washed down with a cold glass of crisp Italian white wine.",
       sensoryNotes: "Charcoal binchotan grill · Wild oregano · Chilled crisp white wine",
       format: "4:5 Portrait · Wine & Skewers"
+    },
+    {
+      id: "medusa-welcome",
+      image: "img/medusa_welcome.jpg",
+      title: "Dinner & Drinks at Medusa",
+      restaurant: "Medusa",
+      location: "Orchard, Singapore",
+      category: "me",
+      cuisine: "Supper Club & Late-Night Dining",
+      stamp: "Medusa",
+      hook: "Why this stops the scroll: Saturated crimson leather, amber orbs, and effortless supper club glamour.",
+      caption: "When dinner slips past midnight into drinks and house tracks. Medusa is all crimson velvet, retro pop art, and high-energy dining in Singapore.",
+      sensoryNotes: "Red leather banquette · Negroni on ice · Deep house bass",
+      format: "4:5 Portrait · Creator on-camera"
+    },
+    {
+      id: "medusa-chili-crunch",
+      image: "img/medusa_chili_crunch.jpg",
+      title: "Signature Chilli Crunch",
+      restaurant: "Medusa",
+      location: "Orchard, Singapore",
+      category: "bar",
+      cuisine: "Modern Asian & Supper Club",
+      stamp: "Medusa",
+      hook: "Why this stops the scroll: Golden chili oil dripping from the spoon with toasted garlic flakes and Sichuan crisp.",
+      caption: "Spoon it on everything. Fragrant toasted aromatics, slow-rendered chili oil, and crispy shallots made in-house.",
+      sensoryNotes: "Crispy shallot · Smoky roasted chili · Star anise oil",
+      format: "4:5 Portrait · Macro Culinary Detail"
+    },
+    {
+      id: "medusa-telefono",
+      image: "img/medusa_telefono.jpg",
+      title: "The Telefono Booth",
+      restaurant: "Medusa",
+      location: "Orchard, Singapore",
+      category: "bar",
+      cuisine: "Nightlife & Experiential Venue",
+      stamp: "Medusa",
+      hook: "Why this stops the scroll: Neon archways, infinity mirror reflections, and the quintessential venue selfie stop.",
+      caption: "Every great dining venue has that one spot everyone posts from. At Medusa, it's the glowing red Telefono booth on the way to the cocktail lounge.",
+      sensoryNotes: "Neon red glow · Polished brass · Nightlife energy",
+      format: "4:5 Portrait · Ambiance & Venue Feature"
+    },
+    {
+      id: "bakalaki-mezze",
+      image: "img/bakalaki_mezze.jpg",
+      title: "Greek Mezze Dips Platter",
+      restaurant: "Bakalaki Greek Taverna",
+      location: "Martin Road, Singapore",
+      category: "fine",
+      cuisine: "Authentic Hellenic & Mediterranean",
+      stamp: "Bakalaki",
+      hook: "Why this stops the scroll: Five vivid Mediterranean bowls — whipped taramosalata crowned with roe, smoky eggplant melitzanosalata, and spicy whipped feta htipiti with toasted pine nuts.",
+      caption: "The only proper way to open a Greek feast. Warm grilled pita dipped into chilled tzatziki, salted roe tarama, and smoky charred melitzanosalata made with Greek extra virgin olive oil.",
+      sensoryNotes: "Kalamata extra virgin olive oil · Garlic dill strained yogurt · Toasted pine nuts",
+      format: "4:5 Portrait · Culinary Dish Highlight"
+    },
+    {
+      id: "bakalaki-seabass",
+      image: "img/bakalaki_seabass.jpg",
+      title: "Whole Greek Sea Bass (Lavraki)",
+      restaurant: "Bakalaki Greek Taverna",
+      location: "Martin Road, Singapore",
+      category: "fine",
+      cuisine: "Aegean Seafood",
+      stamp: "Bakalaki",
+      hook: "Why this stops the scroll: Tender, flaky Mediterranean sea bass deboned tableside with aromatic ladolemono and sea salt.",
+      caption: "Baked in a golden sea salt crust and cracked open tableside. Flaky, tender white fish finished with cold-pressed Greek extra virgin olive oil, fresh lemon emulsion, and wild Aegean oregano.",
+      sensoryNotes: "Ladolemono emulsion · Flaky white sea bass · Wild Greek oregano",
+      format: "4:5 Portrait · Tableside Signature Dish"
+    },
+    {
+      id: "bakalaki-market",
+      image: "img/bakalaki_market.jpg",
+      title: "Aegean Fresh Catch Display",
+      restaurant: "Bakalaki Greek Taverna",
+      location: "Martin Road, Singapore",
+      category: "fine",
+      cuisine: "Fresh Catch & Market Dining",
+      stamp: "Bakalaki",
+      hook: "Why this stops the scroll: Pristine whole Mediterranean fish flown in fresh, resting on crushed ice with fresh rosemary and handwritten Greek slates.",
+      caption: "You pick your catch directly from the ice counter before it hits the charcoal grill. Hellenic seafood provenance at its most authentic.",
+      sensoryNotes: "Fresh rosemary · Sea salt air · Crushed ice chill",
+      format: "4:5 Portrait · Provenance & Counter"
+    },
+    {
+      id: "bakalaki-portrait",
+      image: "img/bakalaki_portrait.jpg",
+      title: "Taverna Living at Bakalaki",
+      restaurant: "Bakalaki Greek Taverna",
+      location: "Martin Road, Singapore",
+      category: "me",
+      cuisine: "Mediterranean Hospitality",
+      stamp: "Bakalaki",
+      hook: "Why this stops the scroll: Whitewashed Cycladic arches, reed ceilings, and effortless Mediterranean dining presence.",
+      caption: "Stepping inside feels like an afternoon escape to the Cyclades. Warm hospitality, Greek wines, and that golden Mediterranean light right on Martin Road.",
+      sensoryNotes: "Whitewashed stone · Mediterranean breeze · Linen & citrus",
+      format: "4:5 Portrait · Creator on-camera"
     }
   ],
 
@@ -597,6 +696,23 @@ var PORTFOLIO_DATA = // Data for Janina · Food, Dining & Hospitality Portfolio
         { time: "00:00 - 00:03", action: "Visual Hook: Sunlit open-air breakfast table with seeded sourdough avocado toast." },
         { time: "00:03 - 00:07", action: "Authentic Reaction: Tasting golden farm-fresh scrambled eggs ('Mm nice eggs')." },
         { time: "00:07 - 00:10", action: "Lifestyle Feel & CTA: Slow morning vacation pacing and tropical garden relaxation." }
+      ]
+    },
+    {
+      id: "reel-bougatsa",
+      title: "Tableside Bougatsa Tower",
+      establishment: "Bakalaki Greek Taverna · Singapore",
+      category: "Hellenic Dessert & Tableside Theater",
+      videoSrc: "video/reel_bakalaki_bougatsa.mp4",
+      videoThumb: "video/thumbs/reel_bakalaki_bougatsa.jpg",
+      hookText: "The tableside dessert crack at Bakalaki you need to experience.",
+      audioTrack: "Original Tableside Audio · Dining Room Energy",
+      duration: "0:09",
+      stats: { views: "194.2K", saves: "8.1K", bookings: "+42 Tables" },
+      scriptTimeline: [
+        { time: "00:00 - 00:03", action: "Visual Hook: Tall multi-tiered crispy filo pastry tower dusted with cinnamon sugar." },
+        { time: "00:04 - 00:06", action: "Action Crack: Server using two silver forks to dramatically smash through the crunchy filo layers." },
+        { time: "00:07 - 00:09", action: "The Reveal: Vanilla ice cream and warm Greek cream filling pooling beneath golden pastry shards." }
       ]
     }
   ],
