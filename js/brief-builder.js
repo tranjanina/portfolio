@@ -155,7 +155,7 @@ class BriefBuilder {
 
     let brief = `Dear Janina,
 
-We would love to discuss a dining content collaboration with you.
+We would love to discuss a creative direction & hospitality storytelling partnership with you.
 
 1. Selected Package:
    - ${pkg.name} (${pkg.subtitle})
@@ -167,10 +167,10 @@ We would love to discuss a dining content collaboration with you.
 3. Location:
    - ${this.selectedLocation}
 
-4. Restaurant / Venue Details:
-   - Restaurant Name: [Your Restaurant Name]
-   - Target Timeline / Launch Date: [e.g. Next Month]
-   - Focus Concept / Hero Dishes: [e.g. Wood-fire steaks / New cocktail menu]
+4. Property / Venue Details:
+   - Property Name: [Your Hotel, Resort, or Restaurant Name]
+   - Target Timeline / Launch Date: [e.g. Next Month / Seasonal Launch]
+   - Campaign Scope / Key Focus: [e.g. Grand opening / Hero menu & dining room / Suite & property feature]
 
 Looking forward to hearing from you.
 Best regards,
