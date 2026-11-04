@@ -10,9 +10,9 @@ var PORTFOLIO_DATA = {
       "Hong Kong"
     ],
     "experience": "Since 2017",
-    "education": "BA Creative & Academic Writing · Specialty in Poetry & Critical Analysis",
+    "education": "BA in Academic & Creative Writing with Concentration in Poetry & Analysis",
     "bio": [
-      "I've lived in Hong Kong, Bali, and Singapore and eaten my way through all three with an obsession for what makes a meal linger in memory. My foundation is a degree in Creative and Academic Writing with a double concentration in Poetry and Analysis—giving me both the lyricist's ear for emotional truth and the analyst's rigor for critical structure. Before founding my own practice, I spent years in corporate brand strategy, brand development, and press kit building, bridging creative passion with commercial clarity.",
+      "I've lived in Hong Kong, Bali, and Singapore and eaten my way through all three with an obsession for what makes a meal linger in memory. My foundation is a degree in Academic and Creative Writing with a concentration in Poetry and Analysis—giving me both the lyricist's ear for emotional truth and the analyst's rigor for critical structure. Before founding my own practice, I spent years in corporate brand strategy, brand development, and press kit building, bridging creative passion with commercial clarity.",
       "My food photography and writing craft developed through real newsrooms and cultural titles: capturing vibrant restaurant features and on-location culinary photo stories for Sassy Hong Kong, authoring editorial press releases and features for Tatler Singapore (including high-profile launches like Wrong Gym), and architecting comprehensive press kits that food and lifestyle editors actually open. I know how editors think, how dining rooms fill, and what kind of voice commands authority in an era of generic promotional fluff.",
       "I don't approach hospitality as cookie-cutter influencer promotion; I treat it as cultural, sensory, and emotional storytelling. I shoot the way I write my essays—looking for the small, unforgettable moments: the crackle of wood-fire crust, the chill on the champagne coupe, the afternoon light across a private pool villa, and the quiet conversation over a shared mezze platter. From 2027, this storytelling practice is my full-time life's work."
     ]
@@ -31,8 +31,32 @@ var PORTFOLIO_DATA = {
       "note": "Butcher's Block & Heritage Courtyard"
     },
     {
+      "name": "La Réserve 1785",
+      "note": "Luxury Boutique Resort, Canggu, Bali"
+    },
+    {
+      "name": "Desa Kitsuné",
+      "note": "Canggu, Bali"
+    },
+    {
+      "name": "The Macallan",
+      "note": "Singapore"
+    },
+    {
+      "name": "Capella Singapore",
+      "note": "Sentosa Island Luxury Resort"
+    },
+    {
       "name": "Mondrian Singapore Duxton",
       "note": "Bottega di Carne & Rooftop"
+    },
+    {
+      "name": "FiCO Masseria",
+      "note": "East Coast, Singapore"
+    },
+    {
+      "name": "Fortuna",
+      "note": "Craig Road, Singapore"
     },
     {
       "name": "Desa Potato Head Bali",
@@ -59,10 +83,6 @@ var PORTFOLIO_DATA = {
       "note": "Sentosa, Singapore"
     },
     {
-      "name": "FiCO Masseria",
-      "note": "East Coast, Singapore"
-    },
-    {
       "name": "El Kabron",
       "note": "Cliffside, Uluwatu, Bali"
     },
@@ -73,10 +93,6 @@ var PORTFOLIO_DATA = {
     {
       "name": "Alati Divine Greek",
       "note": "Amoy Street, Singapore"
-    },
-    {
-      "name": "Capella Singapore",
-      "note": "Sentosa Island Luxury Resort"
     }
   ],
   "dishes": [
@@ -84,13 +100,13 @@ var PORTFOLIO_DATA = {
       "id": "t01",
       "image": "img/travel_pool_breakfast.jpg",
       "title": "Poolside Villa Breakfast",
-      "restaurant": "Luxury Boutique Resort",
-      "location": "Bali / Southeast Asia",
+      "restaurant": "La Réserve 1785",
+      "location": "Canggu, Bali",
       "category": "travel",
       "cuisine": "Private Poolside Dining & Sourdough",
-      "stamp": "Boutique Resort",
-      "hook": "Why this stops the scroll: Morning tropical light, avocado toast with microgreens, and a private villa pool reflecting the palms.",
-      "caption": "The luxury of unhurried mornings. Warm sourdough topped with creamy avocado and blistered cherry tomatoes, fresh tropical pineapple, and silver service tea while the private pool ripples under the palms. This is what hospitality should feel like: quiet, generous, and effortless.",
+      "stamp": "La Réserve 1785",
+      "hook": "Why this stops the scroll: Morning tropical light, avocado toast with microgreens, and a private villa pool reflecting the palms at La Réserve 1785.",
+      "caption": "The luxury of unhurried mornings at La Réserve 1785 in Canggu. Warm sourdough topped with creamy avocado and blistered cherry tomatoes, fresh tropical pineapple, and silver service tea while the private pool ripples under the palms. This is what hospitality should feel like: quiet, generous, and effortless.",
       "sensoryNotes": "Sea breeze · Ripe pineapple · Sourdough crust · Morning birdsong",
       "format": "16:9 & 4:5 Widescreen · Luxury Stay Feature"
     },
@@ -98,13 +114,13 @@ var PORTFOLIO_DATA = {
       "id": "t02",
       "image": "img/travel_suite_stone.jpg",
       "title": "The Stone Sanctuary Suite",
-      "restaurant": "Luxury Boutique Stays",
-      "location": "Boutique Resort",
+      "restaurant": "La Réserve 1785",
+      "location": "Canggu, Bali",
       "category": "travel",
       "cuisine": "Architectural Design & Suite Living",
-      "stamp": "Luxury Suite",
-      "hook": "Why this stops the scroll: Hand-carved limestone masonry, Venetian etched glass mirrors, and monogrammed plush linens.",
-      "caption": "A sanctuary of natural texture. When boutique properties invest in architectural authenticity—raw limestone walls, dual ornate mirrors, and organic stone basins—every corner tells a story of refined shelter.",
+      "stamp": "La Réserve 1785",
+      "hook": "Why this stops the scroll: Hand-carved limestone masonry, Venetian etched glass mirrors, and monogrammed plush linens at La Réserve 1785.",
+      "caption": "A sanctuary of natural texture at La Réserve 1785 in Canggu. When boutique properties invest in architectural authenticity—raw limestone walls, dual ornate mirrors, and organic stone basins—every corner tells a story of refined shelter.",
       "sensoryNotes": "Cool limestone · Crisp Egyptian cotton · Bergamot essence",
       "format": "4:5 Portrait · Interior Architecture"
     },
@@ -112,13 +128,13 @@ var PORTFOLIO_DATA = {
       "id": "t03",
       "image": "img/travel_beachclub_spritz.jpg",
       "title": "The Frozen Spritz Flight",
-      "restaurant": "Beach Club Living",
-      "location": "Sentosa & Bali",
-      "category": "travel",
+      "restaurant": "Tanjong Beach Club",
+      "location": "Sentosa, Singapore",
+      "category": "travel bar",
       "cuisine": "Poolside Mixology & Coastal Aperitivo",
-      "stamp": "Beach Club",
-      "hook": "Why this stops the scroll: Four icy frozen spritzes and daiquiris raised in high-contrast sunlight with vibrant aperitivo hues.",
-      "caption": "Four glasses, sun-warmed skin, and crushed ice that refuses to melt in the tropical heat. Aperol orange, frozen strawberry, coconut lime, and passionfruit raised under the palm canopy. Coastal living distilled into a single moment.",
+      "stamp": "Tanjong Beach Club",
+      "hook": "Why this stops the scroll: Four icy frozen spritzes and daiquiris raised in high-contrast sunlight with vibrant aperitivo hues at Tanjong Beach Club.",
+      "caption": "Four glasses, sun-warmed skin, and crushed ice that refuses to melt in the Sentosa afternoon heat at Tanjong Beach Club. Aperol orange, frozen strawberry, coconut lime, and passionfruit raised under the palm canopy. Coastal living distilled into a single moment.",
       "sensoryNotes": "Bittersweet Aperol · Crushed ice · Strawberry puree · Sea salt",
       "format": "4:5 Portrait · Lifestyle & Beverage Hook"
     },
@@ -140,13 +156,13 @@ var PORTFOLIO_DATA = {
       "id": "t05",
       "image": "img/travel_resort_lounge.jpg",
       "title": "Tropical Resort Nights",
-      "restaurant": "Bali Beach Lounge",
-      "location": "Seminyak / Canggu, Bali",
-      "category": "me",
+      "restaurant": "Desa Kitsuné",
+      "location": "Canggu, Bali",
+      "category": "travel me",
       "cuisine": "Nightlife & Tropical Resort Hospitality",
-      "stamp": "Bali Nights",
-      "hook": "Why this stops the scroll: Ambient cobalt lighting against oversized monstera palms and effortless resort evening style.",
-      "caption": "When the tropical heat cools and the lounge opens up to the night. Monstera fronds, open-air timber decks, and low ambient music. Capturing the spirit of luxury destination travel from inside the room.",
+      "stamp": "Desa Kitsuné",
+      "hook": "Why this stops the scroll: Ambient cobalt lighting against oversized monstera palms and effortless resort evening style at Desa Kitsuné Bali.",
+      "caption": "When the tropical heat cools and Desa Kitsuné opens up to the Bali night. Monstera fronds, open-air timber decks, and low ambient beats in Canggu. Capturing the spirit of luxury destination travel from inside the room.",
       "sensoryNotes": "Night-blooming jasmine · Teak wood · Amber glow",
       "format": "4:5 Portrait · On-Camera Presence"
     },
@@ -154,13 +170,13 @@ var PORTFOLIO_DATA = {
       "id": "t06",
       "image": "img/travel_macallan_archive.jpg",
       "title": "The Macallan Vintage Archive",
-      "restaurant": "Private Cellar Collection",
-      "location": "Fine Spirits Salon, Singapore",
-      "category": "fine",
-      "cuisine": "Rare Spirits & Oenoteca Curation",
-      "stamp": "Rare Spirits",
-      "hook": "Why this stops the scroll: Rows of rare single-malt vintages spanning 1949 to 1993 glowing in back-lit amber glass.",
-      "caption": "Whisky is liquid time. Standing before rare Macallan releases aged across seven decades. When hospitality brands celebrate heritage and provenance, the story sells itself.",
+      "restaurant": "The Macallan",
+      "location": "Singapore",
+      "category": "fine bar",
+      "cuisine": "Rare Single Malt Archive & Provenance",
+      "stamp": "The Macallan",
+      "hook": "Why this stops the scroll: Rows of rare single-malt vintages spanning 1949 to 1993 glowing in back-lit amber glass at The Macallan Singapore.",
+      "caption": "Whisky is liquid time. Standing before the rare Macallan archive in Singapore, spanning seven decades of single-malt history. When heritage and provenance are staged with this level of reverence, the story commands attention.",
       "sensoryNotes": "Oloroso sherry cask · Dried orange peel · Polished oak",
       "format": "4:5 Portrait · Luxury Provenance"
     },
@@ -198,14 +214,14 @@ var PORTFOLIO_DATA = {
       "image": "img/j18.jpg",
       "objectPosition": "50% 30%",
       "title": "Caviar at Brunch",
-      "restaurant": "Tanjong Beach Club",
-      "location": "Sentosa, Singapore",
-      "category": "me",
-      "cuisine": "Coastal Beach Club & Brunch",
-      "stamp": "Tanjong Beach Club",
-      "hook": "Why this stops the scroll: Crisp natural sunlight, mother-of-pearl spoons, and the relaxed beachside glamour of Sunday champagne dining.",
-      "caption": "Some brunches are for fuel; this one was for leisurely afternoon beach club living in Singapore. Briny pearls of oscietra against whipped cultured butter, eaten with fingers while the sea breeze moves the linen curtains.",
-      "sensoryNotes": "Sea salt brine · Whipped Guernsey butter · Warm focaccia",
+      "restaurant": "FiCO",
+      "location": "East Coast, Singapore",
+      "category": "fine me",
+      "cuisine": "Pugliese Coastal Dining & Caviar",
+      "stamp": "FiCO",
+      "hook": "Why this stops the scroll: Crisp natural light, mother-of-pearl spoon, and coastal Pugliese seaside dining at FiCO Singapore.",
+      "caption": "Brunch at FiCO along Singapore's East Coast. Briny pearls of caviar against whipped cultured butter and warm house-baked Pugliese focaccia, savored while sea breezes filter through the coastal masseria.",
+      "sensoryNotes": "Sea salt brine · Whipped cultured butter · Warm focaccia",
       "format": "4:5 Portrait · Creator on-camera"
     },
     {
