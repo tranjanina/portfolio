@@ -1,8 +1,8 @@
 var PORTFOLIO_DATA = {
   "creator": {
     "name": "Janina Tran",
-    "title": "Hospitality PR, Creative Direction & Editorial Storytelling",
-    "tagline": "Telling the stories of tables worth booking and hotels worth the journey. Bridging brand strategy, sensory dining, and high-impact visual narratives across Singapore, Bali, and Hong Kong.",
+    "title": "Hospitality PR, Culinary Creative Direction & Editorial Storytelling",
+    "tagline": "Where an analyst's critical eye meets a poet's sensory ear. Telling the stories of tables worth booking and hotels worth the journey across Singapore, Bali, and Hong Kong.",
     "email": "tranjanina@gmail.com",
     "locations": [
       "Singapore",
@@ -10,14 +10,22 @@ var PORTFOLIO_DATA = {
       "Hong Kong"
     ],
     "experience": "Since 2017",
-    "education": "BA English · University of Waterloo & Athabasca University",
+    "education": "BA Creative & Academic Writing · Specialty in Poetry & Critical Analysis",
     "bio": [
-      "I've lived in Hong Kong, Bali, and Singapore and eaten my way through all three. Before making content of my own, I spent years in corporate brand strategy, business development, and copywriting, which means I know what a brief is really asking for.",
-      "I don't approach hospitality as generic influencer promotion; I treat it as cultural and sensory storytelling. Will this story fill dining rooms? Will it position the property with international distinction? Will people trust it enough to book flights and tables? From 2027, this storytelling practice is my full-time work.",
-      "I shoot the way I write my essays—with a poet's ear and an editorial eye. Looking for the small, true moment: the crackle on the wood-fire crust, the chill on the champagne glass, the light across a private pool villa, and the second you realize this place is unforgettable."
+      "I've lived in Hong Kong, Bali, and Singapore and eaten my way through all three with an obsession for what makes a meal linger in memory. My foundation is a degree in Creative and Academic Writing with a double concentration in Poetry and Analysis—giving me both the lyricist's ear for emotional truth and the analyst's rigor for critical structure. Before founding my own practice, I spent years in corporate brand strategy, brand development, and press kit building, bridging creative passion with commercial clarity.",
+      "My food photography and writing craft developed through real newsrooms and cultural titles: capturing vibrant restaurant features and on-location culinary photo stories for Sassy Hong Kong, authoring editorial press releases and features for Tatler Singapore (including high-profile launches like Wrong Gym), and architecting comprehensive press kits that food and lifestyle editors actually open. I know how editors think, how dining rooms fill, and what kind of voice commands authority in an era of generic promotional fluff.",
+      "I don't approach hospitality as cookie-cutter influencer promotion; I treat it as cultural, sensory, and emotional storytelling. I shoot the way I write my essays—looking for the small, unforgettable moments: the crackle of wood-fire crust, the chill on the champagne coupe, the afternoon light across a private pool villa, and the quiet conversation over a shared mezze platter. From 2027, this storytelling practice is my full-time life's work."
     ]
   },
   "clients": [
+    {
+      "name": "Tatler Singapore",
+      "note": "Press Release & Editorial Features · Wrong Gym"
+    },
+    {
+      "name": "Sassy Hong Kong",
+      "note": "Food Photography & Dining Columns"
+    },
     {
       "name": "Raffles Hotel Singapore",
       "note": "Butcher's Block & Heritage Courtyard"
@@ -951,13 +959,13 @@ var PORTFOLIO_DATA = {
       "id": "cs-bakalaki",
       "client": "Bakalaki Greek Taverna",
       "location": "Martin Road · Singapore",
-      "type": "Authentic Hellenic Seafood & Mediterranean Hospitality",
-      "image": "img/bakalaki_seabass.jpg",
-      "headline": "Aegean Provenance & Hellenic Warmth: Salt-Crust Rituals and Mediterranean Cellar Storytelling",
-      "challenge": "Highlighting ingredient provenance and authentic Mediterranean hospitality in an upscale dining corridor saturated with generic European bistros.",
+      "type": "Authentic Hellenic Hospitality & Mediterranean Seafood",
+      "image": "img/bakalaki_mezze.jpg",
+      "headline": "Aegean Provenance & Hellenic Warmth: Vibrant Mezze Colors, Salt-Crust Rituals & Mediterranean Cellar Storytelling",
+      "challenge": "Highlighting vibrant ingredient provenance, colorful mezze rituals, and authentic Mediterranean warmth in an upscale dining corridor saturated with generic European bistros.",
       "strategy": [
-        "Hook: Captured the dramatic tableside cracking of salt-crusted wild Greek sea bass and the crackle of fresh bougatsa.",
-        "Angle: Framed dining as a communal Aegean ritual with genuine imported Hellenic wines and market displays.",
+        "Hook: Captured the rich, saturated color palette of handcrafted Greek mezze dips—creamy pink taramasalata, beet red beetroot dip, golden olive oil wells, tzatziki, and warm grilled pita—paired with tableside sea bass carving.",
+        "Angle: Framed dining as a vibrant, generous Aegean ritual celebrating authentic imported Hellenic olive oil, regional wines, and market catch displays.",
         "Copywriting: Evocative food writing celebrating olive oil provenance, sea salt crystals, and warm island generosity."
       ],
       "results": [
@@ -974,7 +982,7 @@ var PORTFOLIO_DATA = {
           "val": "+42 Covers for Seafood Evenings"
         }
       ],
-      "deliverables": "Tableside Motion Reels · Market Provenance Carousels · Long-Form Caption Strategy"
+      "deliverables": "Tableside Motion Reels · Mezze & Provenance Carousels · Long-Form Caption Strategy"
     },
     {
       "id": "cs-medusa",
