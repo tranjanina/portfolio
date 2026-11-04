@@ -23,10 +23,6 @@ var PORTFOLIO_DATA = {
       "note": "Butcher's Block & Heritage Courtyard"
     },
     {
-      "name": "The Cave by Ryan Clift",
-      "note": "The edge, Uluwatu, Bali"
-    },
-    {
       "name": "Mondrian Singapore Duxton",
       "note": "Bottega di Carne & Rooftop"
     },
@@ -69,6 +65,10 @@ var PORTFOLIO_DATA = {
     {
       "name": "Alati Divine Greek",
       "note": "Amoy Street, Singapore"
+    },
+    {
+      "name": "Capella Singapore",
+      "note": "Sentosa Island Luxury Resort"
     }
   ],
   "dishes": [
@@ -155,20 +155,6 @@ var PORTFOLIO_DATA = {
       "caption": "Whisky is liquid time. Standing before rare Macallan releases aged across seven decades. When hospitality brands celebrate heritage and provenance, the story sells itself.",
       "sensoryNotes": "Oloroso sherry cask · Dried orange peel · Polished oak",
       "format": "4:5 Portrait · Luxury Provenance"
-    },
-    {
-      "id": "t07",
-      "image": "img/the_cave_ryan_clift.jpg",
-      "title": "Chef Ryan Clift at The Cave",
-      "restaurant": "The Cave by Ryan Clift",
-      "location": "The edge, Uluwatu, Bali",
-      "category": "fine",
-      "cuisine": "Subterranean Modernist Fine Dining",
-      "stamp": "The Cave Bali",
-      "hook": "Why this stops the scroll: Celebrity Chef Ryan Clift tableside inside a 25,000-year-old subterranean cavern.",
-      "caption": "Dining inside a 25,000-year-old limestone cavern with Chef Ryan Clift orchestrating 7 courses of molecular culinary theatre. Ancient earth meets cutting-edge gastronomy.",
-      "sensoryNotes": "Subterranean mineral air · Truffle dashi · Liquid nitrogen",
-      "format": "4:5 Portrait · Culinary Spotlight"
     },
     {
       "id": "t08",
@@ -429,20 +415,6 @@ var PORTFOLIO_DATA = {
       "caption": "When a kitchen takes comfort food seriously. Beef smashed paper-thin on screaming hot chrome, American cheese welded to the meat, served with fries dusted in rosemary salt.",
       "sensoryNotes": "Crisp lace beef edge · Rosemary salt · Sweet potato bun",
       "format": "4:5 Portrait · Casual Comfort"
-    },
-    {
-      "id": "m03",
-      "image": "img/m03.jpg",
-      "title": "Dinner in the Cave",
-      "restaurant": "Cavern Restaurant",
-      "location": "Bali",
-      "category": "bar",
-      "cuisine": "Subterranean Dining & Experience",
-      "stamp": "Cavern Restaurant",
-      "hook": "Why this stops the scroll: Bioluminescent stone textures, subterranean candle flicker, and an otherworldly dining atmosphere.",
-      "caption": "Dining deep within limestone walls carved thousands of years ago. The acoustics drop to a whisper, and every plate arrives glowing under warm amber downlights.",
-      "sensoryNotes": "Damp cave mineral stone · Flickering beeswax candle · Aged single malt",
-      "format": "4:5 Portrait · Experiential Interior"
     },
     {
       "id": "k03",
@@ -796,37 +768,6 @@ var PORTFOLIO_DATA = {
       ]
     },
     {
-      "id": "reel-cave",
-      "title": "Dinner Inside a Prehistoric Cave",
-      "establishment": "The Cave by Chef Ryan Clift · Bali",
-      "category": "Experiential Destination Dining",
-      "videoSrc": "video/reel_cave.mp4",
-      "videoThumb": "video/thumbs/reel_cave.jpg",
-      "beautyFilter": true,
-      "hookText": "Would you eat dessert 50 feet underground inside a prehistoric cave? 🕯️✨",
-      "audioTrack": "Ambient Cave Acoustics · Whispers & Glass",
-      "duration": "0:12",
-      "stats": {
-        "views": "312.4K",
-        "saves": "8.9K",
-        "bookings": "+70 Covers"
-      },
-      "scriptTimeline": [
-        {
-          "time": "00:00 - 00:03",
-          "action": "Visual Hook: Subterranean limestone stalactites, glowing beauty radiance & candlelight."
-        },
-        {
-          "time": "00:04 - 00:08",
-          "action": "Sensory Detail: Spooning gold-flecked cocktail dessert from a chilled champagne coupe."
-        },
-        {
-          "time": "00:09 - 00:12",
-          "action": "The Experience & CTA: Dramatic acoustics and subterranean wonder of Uluwatu cliffs."
-        }
-      ]
-    },
-    {
       "id": "reel-affogato",
       "title": "The Tableside Affogato Tasting",
       "establishment": "Pete's Place · Grand Hyatt Singapore",
@@ -949,35 +890,6 @@ var PORTFOLIO_DATA = {
   ],
   "caseStudies": [
     {
-      "id": "cs-the-cave",
-      "client": "The Cave by Ryan Clift",
-      "location": "The edge · Uluwatu, Bali",
-      "type": "Subterranean Fine Dining & Destination Hospitality",
-      "image": "img/the_cave_ryan_clift.jpg",
-      "headline": "Subterranean Gastronomy: 22 Seats Inside a 25,000-Year-Old Limestone Cavern",
-      "challenge": "A 22-seat subterranean restaurant inside a natural cave needs to convey its acoustic intimacy, ancient geology, and Ryan Clift's avant-garde gastronomy without feeling gimmicky or claustrophobic.",
-      "strategy": [
-        "Hook: Leveraged the raw juxtaposition of natural stalactites, digital projection mapping, and theatrical tableside plating by Chef Ryan Clift.",
-        "Angle: Positioned The Cave not merely as dinner, but as Southeast Asia's ultimate subterranean bucket-list dining experience.",
-        "Copywriting: Sensory writing balancing earth, fire, and modernist culinary techniques."
-      ],
-      "results": [
-        {
-          "label": "Organic Views",
-          "val": "260,000+"
-        },
-        {
-          "label": "Direct Saves",
-          "val": "6,800+"
-        },
-        {
-          "label": "Tasting Bookings",
-          "val": "+48 High-Value Covers"
-        }
-      ],
-      "deliverables": "Vertical Cinematic Motion · Editorial Stills with Chef Ryan Clift · Press Angle Factsheet"
-    },
-    {
       "id": "cs-butchers",
       "client": "Butcher's Block",
       "location": "Raffles Hotel Arcade · Singapore",
@@ -1063,6 +975,35 @@ var PORTFOLIO_DATA = {
         }
       ],
       "deliverables": "Tableside Motion Reels · Market Provenance Carousels · Long-Form Caption Strategy"
+    },
+    {
+      "id": "cs-medusa",
+      "client": "Medusa",
+      "location": "Dining Room & Bar · Singapore",
+      "type": "Experiential Late-Night Hospitality & Supper Club",
+      "image": "img/m01.jpg",
+      "headline": "Cinematic Mood & Fashion Aesthetics: Driving The Post-9PM Supper Crowd",
+      "challenge": "Launching an intimate red-room concept in a saturated neighborhood where cocktail bars blend into one another.",
+      "strategy": [
+        "Hook: Leveraged high-contrast lacquer red lighting, black attire, and noir cinematography.",
+        "Angle: Positioned Medusa as the late-night haven for discerning creatives, hospitality insiders, and date nights.",
+        "Copywriting: Evocative storytelling linking mood, music, and Mediterranean small plates."
+      ],
+      "results": [
+        {
+          "label": "Organic Views",
+          "val": "210,000+"
+        },
+        {
+          "label": "Direct Saves",
+          "val": "4,600+"
+        },
+        {
+          "label": "Supper Covers",
+          "val": "+65 Walk-ins & Tables"
+        }
+      ],
+      "deliverables": "2 Reels · 10 Lifestyle Stills · Hook Testing for Paid Boosting"
     }
   ],
   "essays": [
