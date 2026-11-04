@@ -11,6 +11,16 @@
     grid-template-columns: 1fr;
     gap: 32px;
   }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .services-pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
   
   .reels-layout {
     grid-template-columns: 1fr;

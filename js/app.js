@@ -82,27 +82,50 @@ document.addEventListener('DOMContentLoaded', () => {
   if (caseStudiesGrid && data.caseStudies) {
     caseStudiesGrid.innerHTML = data.caseStudies.map(cs => `
       <article class="case-study-card">
-        <div class="case-study-client">${cs.client} · ${cs.location}</div>
-        <div class="case-study-type">${cs.type}</div>
-        <h3 class="case-study-title">${cs.headline}</h3>
-        <p class="case-study-challenge">${cs.challenge}</p>
-        
-        <div class="case-study-strategy-title">Strategic UGC Execution</div>
-        <ul class="case-study-strategy-list">
-          ${cs.strategy.map(item => `<li>${item}</li>`).join('')}
-        </ul>
+        ${cs.image ? `
+          <div class="case-study-image-wrapper">
+            <img src="${cs.image}" alt="${cs.client}" loading="lazy">
+            <span class="case-study-location-badge">✦ ${cs.location}</span>
+          </div>
+        ` : ''}
+        <div class="case-study-body">
+          <div class="case-study-client">${cs.client}</div>
+          <div class="case-study-type">${cs.type}</div>
+          <h3 class="case-study-title">${cs.headline}</h3>
+          <p class="case-study-challenge">${cs.challenge}</p>
+          
+          <div class="case-study-strategy-title">Strategic Execution</div>
+          <ul class="case-study-strategy-list">
+            ${cs.strategy.map(item => `<li>${item}</li>`).join('')}
+          </ul>
 
-        <div class="case-study-results-grid">
-          ${cs.results.map(r => `
-            <div>
-              <div class="case-study-result-val">${r.val}</div>
-              <div class="case-study-result-label">${r.label}</div>
-            </div>
-          `).join('')}
+          <div class="case-study-results-grid">
+            ${cs.results.map(r => `
+              <div>
+                <div class="case-study-result-val">${r.val}</div>
+                <div class="case-study-result-label">${r.label}</div>
+              </div>
+            `).join('')}
+          </div>
+
+          <div class="case-study-deliverables">${cs.deliverables}</div>
         </div>
-
-        <div class="case-study-deliverables">${cs.deliverables}</div>
       </article>
+    `).join('');
+  }
+
+  // 6b. Render Testimonials
+  const testimonialsGrid = document.getElementById('testimonialsGrid');
+  if (testimonialsGrid && data.testimonials) {
+    testimonialsGrid.innerHTML = data.testimonials.map(t => `
+      <div class="testimonial-card">
+        <div class="testimonial-mark">“</div>
+        <blockquote class="testimonial-quote">${t.quote}</blockquote>
+        <div class="testimonial-meta">
+          <div class="testimonial-author">${t.author}</div>
+          <div class="testimonial-property">${t.property}</div>
+        </div>
+      </div>
     `).join('');
   }
 

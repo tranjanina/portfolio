@@ -808,24 +808,68 @@
    ========================================================================== */
 .case-studies-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(24px, 3vw, 40px);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(28px, 3.5vw, 48px);
 }
 
 .case-study-card {
   background: var(--white);
   border: 1px solid var(--line);
-  padding: clamp(28px, 3vw, 40px);
+  padding: 0;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 1px 4px rgba(23, 19, 19, 0.03);
+  box-shadow: 0 2px 8px rgba(23, 19, 19, 0.04);
   transition: all var(--transition-smooth);
 }
 
 .case-study-card:hover {
   box-shadow: var(--shadow-md);
   border-color: var(--line-dark);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+}
+
+.case-study-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background-color: var(--paper);
+}
+
+.case-study-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.case-study-card:hover .case-study-image-wrapper img {
+  transform: scale(1.04);
+}
+
+.case-study-location-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: rgba(23, 19, 19, 0.78);
+  backdrop-filter: blur(8px);
+  color: var(--white);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 500;
+  z-index: 2;
+}
+
+.case-study-body {
+  padding: clamp(26px, 2.8vw, 38px);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .case-study-client {
@@ -834,7 +878,7 @@
   text-transform: uppercase;
   color: var(--accent);
   font-weight: 600;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .case-study-type {
@@ -845,18 +889,18 @@
 
 .case-study-title {
   font-family: var(--serif);
-  font-size: clamp(22px, 2.2vw, 26px);
+  font-size: clamp(22px, 2vw, 27px);
   line-height: 1.25;
   color: var(--ink);
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .case-study-challenge {
   font-size: 14px;
   line-height: 1.6;
   color: var(--ink-secondary);
-  margin-bottom: 24px;
-  padding-bottom: 20px;
+  margin-bottom: 22px;
+  padding-bottom: 18px;
   border-bottom: 1px solid var(--line);
 }
 
@@ -866,6 +910,7 @@
   text-transform: uppercase;
   color: var(--muted);
   margin-bottom: 12px;
+  font-weight: 600;
 }
 
 .case-study-strategy-list {
@@ -875,35 +920,36 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  font-size: 13px;
-  line-height: 1.5;
+  font-size: 13.5px;
+  line-height: 1.55;
   color: var(--ink-secondary);
 }
 
 .case-study-strategy-list li {
   position: relative;
-  padding-left: 14px;
+  padding-left: 16px;
 }
 
 .case-study-strategy-list li::before {
-  content: "·";
+  content: "✦";
   position: absolute;
   left: 0;
-  top: 0;
+  top: 1px;
   color: var(--accent);
-  font-weight: bold;
+  font-size: 10px;
 }
 
 .case-study-results-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 8px;
+  gap: 10px;
   background: var(--paper);
-  padding: 16px 12px;
+  padding: 16px 14px;
   border-radius: 2px;
   margin-top: auto;
   margin-bottom: 20px;
   text-align: center;
+  border: 1px solid var(--line);
 }
 
 .case-study-result-val {
@@ -914,7 +960,7 @@
 }
 
 .case-study-result-label {
-  font-size: 9.5px;
+  font-size: 9px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--muted);
@@ -928,6 +974,72 @@
   color: var(--muted);
   border-top: 1px solid var(--line);
   padding-top: 14px;
+}
+
+/* ==========================================================================
+   4b. CLIENT & COLLABORATOR TESTIMONIALS
+   ========================================================================== */
+.testimonials-section {
+  padding: clamp(60px, 7vw, 100px) 0;
+  background-color: var(--paper);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(24px, 3vw, 40px);
+  margin-top: 48px;
+}
+
+.testimonial-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: clamp(28px, 3vw, 38px);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 1px 4px rgba(23, 19, 19, 0.02);
+}
+
+.testimonial-mark {
+  font-family: var(--serif);
+  font-size: 48px;
+  line-height: 1;
+  color: var(--accent);
+  opacity: 0.35;
+  margin-bottom: 8px;
+}
+
+.testimonial-quote {
+  font-family: var(--serif);
+  font-size: clamp(16px, 1.4vw, 18px);
+  line-height: 1.5;
+  font-style: italic;
+  color: var(--ink);
+  margin: 0 0 24px 0;
+  flex-grow: 1;
+}
+
+.testimonial-meta {
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+}
+
+.testimonial-author {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: 0.02em;
+}
+
+.testimonial-property {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 2px;
 }
 
 
@@ -1608,4 +1720,87 @@ footer.site-footer {
   flex-wrap: wrap;
   font-size: 12px;
   color: var(--muted);
+}
+
+/* ==========================================================================
+   4c. BESPOKE SERVICES PILLARS (GEORGIA BATEMAN STYLE)
+   ========================================================================== */
+.services-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(24px, 3vw, 40px);
+  margin-top: 48px;
+}
+
+.service-pillar-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: clamp(32px, 3vw, 44px);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all var(--transition-smooth);
+}
+
+.service-pillar-card:hover {
+  border-color: var(--line-dark);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.service-pillar-card.featured {
+  border-top: 3px solid var(--accent);
+}
+
+.pillar-num {
+  font-family: var(--serif);
+  font-size: 28px;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.service-pillar-card h3 {
+  font-family: var(--serif);
+  font-size: clamp(20px, 1.8vw, 24px);
+  color: var(--ink);
+  line-height: 1.25;
+  margin-bottom: 10px;
+}
+
+.pillar-tagline {
+  font-size: 13.5px;
+  color: var(--muted);
+  line-height: 1.5;
+  margin-bottom: 24px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.pillar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--ink-secondary);
+}
+
+.pillar-list li {
+  position: relative;
+  padding-left: 16px;
+}
+
+.pillar-list li::before {
+  content: "·";
+  position: absolute;
+  left: 0;
+  top: -2px;
+  color: var(--accent);
+  font-weight: bold;
+  font-size: 16px;
 }
