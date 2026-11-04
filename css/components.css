@@ -1804,3 +1804,88 @@ footer.site-footer {
   font-weight: bold;
   font-size: 16px;
 }
+
+/* ==========================================================================
+   1b. VENUE COLLAGE CARDS & DIPTYCHS
+   ========================================================================== */
+.gallery-collage .gallery-mat {
+  display: grid;
+  gap: 3px;
+  background-color: var(--line);
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+  aspect-ratio: 4 / 5;
+}
+
+.gallery-collage .gallery-mat::after {
+  display: none;
+}
+
+/* Tri-grid (Butcher's Block: 1 hero + 2 stacked) */
+.gallery-mat.collage-grid-3 {
+  grid-template-columns: 1.6fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.gallery-mat.collage-grid-3 .collage-hero {
+  grid-row: span 2;
+  height: 100%;
+}
+
+/* Quad-grid (Medusa, Bakalaki: 1 hero + 3 stacked) */
+.gallery-mat.collage-grid-4 {
+  grid-template-columns: 1.55fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.gallery-mat.collage-grid-4 .collage-hero {
+  grid-row: span 3;
+  height: 100%;
+}
+
+/* Diptych Split (Solo Ristorante, Alati, People People, Fine Dining) */
+.gallery-mat.collage-diptych {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.gallery-collage .gallery-mat img {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  aspect-ratio: auto;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
+}
+
+.gallery-collage:hover .gallery-mat img {
+  transform: scale(1.02);
+}
+
+.gallery-collage .gallery-mat img:hover {
+  filter: brightness(1.06);
+}
+
+.collage-count-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(23, 19, 19, 0.88);
+  backdrop-filter: blur(8px);
+  color: var(--white);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 5px 11px;
+  border-radius: 20px;
+  font-weight: 500;
+  z-index: 5;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+  border: 1px solid rgba(255,255,255,0.18);
+  pointer-events: none;
+}
+

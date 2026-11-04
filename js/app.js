@@ -23,32 +23,69 @@ document.addEventListener('DOMContentLoaded', () => {
   const tabs = document.querySelectorAll('.gallery-tabs button');
   const galleryItems = galleryGrid ? galleryGrid.querySelectorAll('.gallery-item') : [];
 
-  // Attach Lightbox click handlers to each pre-rendered item
-  galleryItems.forEach(item => {
-    const dishId = item.getAttribute('data-id');
-    item.addEventListener('click', () => {
+  // Map dish ID -> index in data.dishes for fast lookup
+  const dishIndexMap = new Map();
+  data.dishes.forEach((d, idx) => dishIndexMap.set(d.id, idx));
+
+  let currentVisibleIndices = [];
+
+  function filterGallery(filter = 'all') {
+    currentVisibleIndices = [];
+    galleryItems.forEach(item => {
+      const cat = item.getAttribute('data-category') || '';
+      const categories = cat.split(/\s+/);
+      const isMatch = (filter === 'all' || categories.includes(filter));
+      item.style.display = isMatch ? '' : 'none';
+      if (isMatch) {
+        const venueIdsStr = item.getAttribute('data-venue-ids');
+        if (venueIdsStr) {
+          const ids = venueIdsStr.split(',').map(s => s.trim());
+          ids.forEach(id => {
+            if (dishIndexMap.has(id)) {
+              currentVisibleIndices.push(dishIndexMap.get(id));
+            }
+          });
+        } else {
+          const dishId = item.getAttribute('data-id');
+          if (dishIndexMap.has(dishId)) {
+            currentVisibleIndices.push(dishIndexMap.get(dishId));
+          }
+        }
+      }
+    });
+    lightbox.setFilteredIndices(currentVisibleIndices);
+  }
+
+  // Handle opening lightbox from any gallery item or collage
+  function activateGalleryItem(e, item) {
+    const venueIdsStr = item.getAttribute('data-venue-ids');
+    if (venueIdsStr) {
+      const ids = venueIdsStr.split(',').map(s => s.trim());
+      const venueIndices = ids.map(id => dishIndexMap.get(id)).filter(idx => idx !== undefined);
+      lightbox.setFilteredIndices(venueIndices);
+
+      const clickedImg = (e && e.target) ? e.target.closest('[data-venue-id]') : null;
+      const targetId = (clickedImg && clickedImg.getAttribute('data-venue-id')) || ids[0];
+      lightbox.open(targetId);
+    } else {
+      lightbox.setFilteredIndices(currentVisibleIndices);
+      const dishId = item.getAttribute('data-id');
       lightbox.open(dishId);
+    }
+  }
+
+  // Attach Lightbox click and keyboard handlers
+  galleryItems.forEach(item => {
+    item.addEventListener('click', (e) => {
+      activateGalleryItem(e, item);
     });
     item.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
-        lightbox.open(dishId);
+        activateGalleryItem(e, item);
       }
     });
   });
-
-  function filterGallery(filter = 'all') {
-    const matchingIndices = [];
-    galleryItems.forEach((item, idx) => {
-      const cat = item.getAttribute('data-category');
-      const isMatch = (filter === 'all' || cat === filter);
-      item.style.display = isMatch ? '' : 'none';
-      if (isMatch) {
-        matchingIndices.push(idx);
-      }
-    });
-    lightbox.setFilteredIndices(matchingIndices);
-  }
 
   // Update tab counts & wire filter clicks
   tabs.forEach(tab => {
@@ -56,9 +93,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const countSpan = tab.querySelector('.tab-count');
     if (countSpan) {
       if (f === 'all') {
-        countSpan.textContent = data.dishes.length;
+        countSpan.textContent = galleryItems.length;
       } else {
-        const count = data.dishes.filter(d => d.category === f).length;
+        let count = 0;
+        galleryItems.forEach(item => {
+          const cats = (item.getAttribute('data-category') || '').split(/\s+/);
+          if (cats.includes(f)) count++;
+        });
         countSpan.textContent = count;
       }
     }
