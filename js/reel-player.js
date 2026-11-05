@@ -75,8 +75,8 @@ class ReelPlayer {
           <span class="reel-tab-title">${reel.title}</span>
         </div>
         <div class="reel-tab-metrics">
-          <span class="reel-tab-views">${reel.stats.views}</span>
-          <span class="reel-tab-saves">${reel.stats.saves} saves</span>
+          <span class="reel-tab-views">${reel.stats.tag || reel.duration}</span>
+          <span class="reel-tab-saves">${reel.stats.format || '4K Vertical'}</span>
         </div>
       `;
 

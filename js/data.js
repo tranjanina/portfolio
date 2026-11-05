@@ -4,95 +4,37 @@ var PORTFOLIO_DATA = {
     "title": "Hospitality PR, Culinary Creative Direction & Editorial Storytelling",
     "tagline": "Where an analyst's critical eye meets a poet's sensory ear. Telling the stories of tables worth booking and hotels worth the journey across Singapore, Bali, and Hong Kong.",
     "email": "tranjanina@gmail.com",
+    "instagram": "https://www.instagram.com/janina.ig",
+    "substack": "https://planetnina.substack.com/",
     "locations": [
       "Singapore",
       "Bali",
       "Hong Kong"
     ],
-    "experience": "Since 2017",
+    "experience": "2 Years Copywriting & Direction · 6 Years Head of English & Admissions (HK)",
     "education": "BA in Academic & Creative Writing with Concentration in Poetry & Analysis",
     "bio": [
-      "I've lived in Hong Kong, Bali, and Singapore and eaten my way through all three with an obsession for what makes a meal linger in memory. My foundation is a degree in Academic and Creative Writing with a concentration in Poetry and Analysis—giving me both the lyricist's ear for emotional truth and the analyst's rigor for critical structure. Before founding my own practice, I spent years in corporate brand strategy, brand development, and press kit building, bridging creative passion with commercial clarity.",
-      "My food photography and writing craft developed through real newsrooms and cultural titles: capturing vibrant restaurant features and on-location culinary photo stories for Sassy Hong Kong, authoring editorial press releases and features for Tatler Singapore (including high-profile launches like Wrong Gym), and architecting comprehensive press kits that food and lifestyle editors actually open. I know how editors think, how dining rooms fill, and what kind of voice commands authority in an era of generic promotional fluff.",
-      "I don't approach hospitality as cookie-cutter influencer promotion; I treat it as cultural, sensory, and emotional storytelling. I shoot the way I write my essays—looking for the small, unforgettable moments: the crackle of wood-fire crust, the chill on the champagne coupe, the afternoon light across a private pool villa, and the quiet conversation over a shared mezze platter. From 2027, this storytelling practice is my full-time life's work."
+      "I've lived in Hong Kong, Bali, and Singapore, immersed in the food, hotels, and cultural textures of all three. My literary foundation is a degree in Academic and Creative Writing with a concentration in Poetry and Analysis—giving me both a lyricist's ear for emotional cadence and an analyst's eye for rigorous narrative structure.",
+      "Before launching into copywriting and hospitality creative direction two years ago, I spent six years in Hong Kong as Head of English and an admissions coach for overseas college and university applications, including at Telos Education Hong Kong. That career required shaping authentic, compelling personal narratives that stood out to the world's most discerning selection committees—a discipline that now drives how I position luxury dining rooms and boutique hotels.",
+      "Today, my craft spans food photography, brand development, and editorial press kits: producing culinary features for Sassy Mama Hong Kong, architecting launch press releases for Wrong Gym Bali (featured in Tatler Singapore), and directing visual stories for luxury boutique stays like La Réserve 1785 Bali. I treat hospitality as cultural, sensory, and emotional storytelling—capturing the moments that linger long after the table is cleared."
     ]
   },
   "clients": [
     {
-      "name": "Tatler Singapore",
-      "note": "Press Release & Editorial Features · Wrong Gym"
-    },
-    {
-      "name": "Sassy Hong Kong",
-      "note": "Food Photography & Dining Columns"
-    },
-    {
-      "name": "Raffles Hotel Singapore",
-      "note": "Butcher's Block & Heritage Courtyard"
-    },
-    {
       "name": "La Réserve 1785",
-      "note": "Luxury Boutique Resort, Canggu, Bali"
+      "note": "Luxury Boutique Resort · Canggu, Bali"
     },
     {
-      "name": "Desa Kitsuné",
-      "note": "Canggu, Bali"
+      "name": "Wrong Gym Bali",
+      "note": "Brand Development, Press Release & Media Strategy · Bali"
     },
     {
-      "name": "The Macallan",
-      "note": "Singapore"
+      "name": "Telos Education Hong Kong",
+      "note": "Head of English & University Admissions Strategy · Hong Kong"
     },
     {
-      "name": "Capella Singapore",
-      "note": "Sentosa Island Luxury Resort"
-    },
-    {
-      "name": "Mondrian Singapore Duxton",
-      "note": "Bottega di Carne & Rooftop"
-    },
-    {
-      "name": "FiCO Masseria",
-      "note": "East Coast, Singapore"
-    },
-    {
-      "name": "Fortuna",
-      "note": "Craig Road, Singapore"
-    },
-    {
-      "name": "Desa Potato Head Bali",
-      "note": "Seminyak, Bali"
-    },
-    {
-      "name": "Cloudstreet",
-      "note": "2-Star Michelin, Singapore"
-    },
-    {
-      "name": "Bakalaki Greek Taverna",
-      "note": "Martin Road, Singapore"
-    },
-    {
-      "name": "Medusa",
-      "note": "Dining Room & Bar, Singapore"
-    },
-    {
-      "name": "Solo Ristorante",
-      "note": "Amoy Street, Singapore"
-    },
-    {
-      "name": "Tanjong Beach Club",
-      "note": "Sentosa, Singapore"
-    },
-    {
-      "name": "El Kabron",
-      "note": "Cliffside, Uluwatu, Bali"
-    },
-    {
-      "name": "SUSHISAMBA",
-      "note": "Capital Tower, Singapore"
-    },
-    {
-      "name": "Alati Divine Greek",
-      "note": "Amoy Street, Singapore"
+      "name": "Sassy Mama Hong Kong",
+      "note": "Editorial Writing & Culinary/Lifestyle Photography · Hong Kong"
     }
   ],
   "dishes": [
@@ -772,9 +714,8 @@ var PORTFOLIO_DATA = {
       "audioTrack": "Original Tableside Audio · Dining Room Energy",
       "duration": "0:10",
       "stats": {
-        "views": "248.5K",
-        "saves": "6.8K",
-        "bookings": "+54 Tables"
+        "tag": "Tableside Motion",
+        "format": "4K Vertical · 0:10"
       },
       "scriptTimeline": [
         {
@@ -802,9 +743,8 @@ var PORTFOLIO_DATA = {
       "audioTrack": "Original Tableside Audio · Crystal Spoons & Room Chatter",
       "duration": "0:08",
       "stats": {
-        "views": "389.2K",
-        "saves": "11.4K",
-        "bookings": "+92 Tables"
+        "tag": "Macro Dessert",
+        "format": "Tableside Ritual · 0:08"
       },
       "scriptTimeline": [
         {
@@ -832,9 +772,8 @@ var PORTFOLIO_DATA = {
       "audioTrack": "Original Ambient Audio · Night Breeze & Courtyard Glow",
       "duration": "0:09",
       "stats": {
-        "views": "326.7K",
-        "saves": "9.3K",
-        "bookings": "+68 Reservations"
+        "tag": "Evening Glamour",
+        "format": "Supper Club · 0:09"
       },
       "scriptTimeline": [
         {
@@ -862,9 +801,8 @@ var PORTFOLIO_DATA = {
       "audioTrack": "Original Villa Audio · Tropical Garden Breeze",
       "duration": "0:10",
       "stats": {
-        "views": "264.1K",
-        "saves": "7.5K",
-        "bookings": "+48 Bookings"
+        "tag": "Lifestyle Dining",
+        "format": "Slow Morning · 0:10"
       },
       "scriptTimeline": [
         {
@@ -892,9 +830,8 @@ var PORTFOLIO_DATA = {
       "audioTrack": "Original Tableside Audio · Dining Room Energy",
       "duration": "0:09",
       "stats": {
-        "views": "194.2K",
-        "saves": "8.1K",
-        "bookings": "+42 Tables"
+        "tag": "Culinary Reveal",
+        "format": "Dessert Crack · 0:09"
       },
       "scriptTimeline": [
         {
@@ -928,16 +865,16 @@ var PORTFOLIO_DATA = {
       ],
       "results": [
         {
-          "label": "Organic Views",
-          "val": "185,000+"
+          "label": "Creative Angle",
+          "val": "Ember Gastronomy"
         },
         {
-          "label": "Direct Saves",
-          "val": "4,200+"
+          "label": "Brand Focus",
+          "val": "Heritage Luxury"
         },
         {
-          "label": "Reservation Surge",
-          "val": "+54 Tables in 14 Days"
+          "label": "Editorial Impact",
+          "val": "High-Intent Saves"
         }
       ],
       "deliverables": "Vertical Reels · 10 Editorial Table Stills · Ad Hook Architecture"
@@ -957,16 +894,16 @@ var PORTFOLIO_DATA = {
       ],
       "results": [
         {
-          "label": "Organic Views",
-          "val": "172,000+"
+          "label": "Culinary Hook",
+          "val": "Tuscan Butchery"
         },
         {
-          "label": "Direct Saves",
-          "val": "3,800+"
+          "label": "Hospitality Angle",
+          "val": "Lifestyle Hotel"
         },
         {
-          "label": "Dinner Covers",
-          "val": "+38 Weekend Banquettes"
+          "label": "Visual Impact",
+          "val": "Tableside Motion"
         }
       ],
       "deliverables": "Tableside Motion Assets · Editorial Photography · Social Campaign Cut"
@@ -986,16 +923,16 @@ var PORTFOLIO_DATA = {
       ],
       "results": [
         {
-          "label": "Organic Views",
-          "val": "194,000+"
+          "label": "Visual Narrative",
+          "val": "Vibrant Aegean Mezze"
         },
         {
-          "label": "Direct Saves",
-          "val": "8,100+"
+          "label": "Dining Ritual",
+          "val": "Tableside Carving"
         },
         {
-          "label": "Table Bookings",
-          "val": "+42 Covers for Seafood Evenings"
+          "label": "Editorial Impact",
+          "val": "High-Intent Bookmarks"
         }
       ],
       "deliverables": "Tableside Motion Reels · Mezze & Provenance Carousels · Long-Form Caption Strategy"
@@ -1015,16 +952,16 @@ var PORTFOLIO_DATA = {
       ],
       "results": [
         {
-          "label": "Organic Views",
-          "val": "210,000+"
+          "label": "Atmosphere",
+          "val": "Late-Night Noir"
         },
         {
-          "label": "Direct Saves",
-          "val": "4,600+"
+          "label": "Design Aesthetic",
+          "val": "Lacquer Crimson"
         },
         {
-          "label": "Supper Covers",
-          "val": "+65 Walk-ins & Tables"
+          "label": "Dining Crowd",
+          "val": "Post-9PM Supper"
         }
       ],
       "deliverables": "2 Reels · 10 Lifestyle Stills · Hook Testing for Paid Boosting"
@@ -1035,7 +972,7 @@ var PORTFOLIO_DATA = {
       "id": "essay-1",
       "title": "Seven Minutes in Heaven",
       "subtitle": "On infatuation, fresh bread, and the appetite that returns when love does.",
-      "url": "https://janinatran.substack.com/p/seven-minutes-in-heaven",
+      "url": "https://planetnina.substack.com/",
       "readTime": "4 min read",
       "excerpt": "The world looks a bit more vibrant, songs hold new meaning, and an absolute plus… everything tastes better. A bowl of cold noodles at two in the morning becomes an event. You find yourself ordering dessert you don't even like just to keep the table for another twenty minutes. Food is never just calories; it's the currency of time spent wanting someone across a candle.",
       "quote": "The world looks a bit more vibrant, songs hold new meaning, and an absolute plus… everything tastes better."
@@ -1044,7 +981,7 @@ var PORTFOLIO_DATA = {
       "id": "essay-2",
       "title": "The Gift of Forgetting",
       "subtitle": "Walking through foreign supermarkets and letting old grief stay in the past.",
-      "url": "https://janinatran.substack.com/p/the-gift-of-forgetting",
+      "url": "https://planetnina.substack.com/",
       "readTime": "5 min read",
       "excerpt": "No one can grieve forever and nobody can long forever. Eventually the palate resets. You find yourself in an unfamiliar alley in Hong Kong, smelling roast goose fat and white pepper broth, and you realize you haven't thought of their voice all afternoon. The senses are the first thing heartbreak takes, and the very first thing that heals you.",
       "quote": "No one can grieve forever and nobody can long forever."
@@ -1053,7 +990,7 @@ var PORTFOLIO_DATA = {
       "id": "essay-3",
       "title": "Late Suppers in Tanjong Pagar",
       "subtitle": "Why the best meals happen after the kitchen has started wiping down the stove.",
-      "url": "https://janinatran.substack.com/archive",
+      "url": "https://planetnina.substack.com/",
       "readTime": "3 min read",
       "excerpt": "At midnight in Singapore, the heat finally lets go of the pavement. The city exhales. You slip into a banquette with cold mineral wine and skewers that crackle under sea salt. The chefs are pouring themselves a beer at the corner of the bar. It is the only hour when dining feels entirely honest, stripped of performance and full of appetite.",
       "quote": "It is the only hour when dining feels entirely honest, stripped of performance and full of appetite."
