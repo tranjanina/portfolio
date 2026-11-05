@@ -118,52 +118,71 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initial filter setup
   filterGallery('all');
 
-  // 6. Render Case Studies
-  const caseStudiesGrid = document.getElementById('caseStudiesGrid');
-  if (caseStudiesGrid && data.caseStudies && data.caseStudies.length > 0) {
-    caseStudiesGrid.innerHTML = data.caseStudies.map(cs => `
-      <article class="case-study-card">
-        ${cs.video ? `
-          <div class="case-study-image-wrapper">
-            <video src="${cs.video}" autoplay loop muted playsinline poster="${cs.image || ''}"></video>
-            <span class="case-study-location-badge">✦ ${cs.location || 'Singapore'}</span>
-          </div>
-        ` : cs.image ? `
-          <div class="case-study-image-wrapper">
-            <img src="${cs.image}" alt="${cs.headline || cs.title}" loading="lazy">
-            <span class="case-study-location-badge">✦ ${cs.location || 'Singapore'}</span>
-          </div>
-        ` : ''}
-        <div class="case-study-body">
-          <div class="case-study-client">${cs.client}</div>
-          <div class="case-study-type">${cs.type}</div>
-          <h3 class="case-study-title">${cs.headline || cs.title}</h3>
-          ${cs.whatIDid ? `
-            <div class="case-study-strategy-title">What I Did</div>
-            <p class="case-study-challenge" style="border-bottom: none; margin-bottom: 20px; padding-bottom: 0;">${cs.whatIDid}</p>
-          ` : ''}
-          ${cs.challenge ? `<p class="case-study-challenge">${cs.challenge}</p>` : ''}
-          
-          ${cs.strategy && cs.strategy.length ? `
-            <div class="case-study-strategy-title">Strategic Execution</div>
-            <ul class="case-study-strategy-list">
-              ${cs.strategy.map(item => `<li>${item}</li>`).join('')}
-            </ul>
-          ` : ''}
+  // 6. Case Study Carousel Showcase
+  const showcase = document.getElementById('caseStudyShowcase');
+  if (showcase && data.caseStudies && data.caseStudies.length > 0) {
+    window.selectCaseStudyCarousel = function(index) {
+      const cs = data.caseStudies[index];
+      if (!cs) return;
 
-          <div class="case-study-results-grid">
-            ${cs.results.map(r => `
-              <div>
-                <div class="case-study-result-val">${r.val}</div>
-                <div class="case-study-result-label">${r.label}</div>
-              </div>
-            `).join('')}
-          </div>
+      // Update Tab Buttons
+      const tabBtns = showcase.querySelectorAll('.case-study-tab-btn');
+      tabBtns.forEach((btn, i) => {
+        if (i === index) {
+          btn.classList.add('active');
+          btn.setAttribute('aria-selected', 'true');
+        } else {
+          btn.classList.remove('active');
+          btn.setAttribute('aria-selected', 'false');
+        }
+      });
 
-          ${cs.deliverables ? `<div class="case-study-deliverables">${cs.deliverables}</div>` : ''}
-        </div>
-      </article>
-    `).join('') + `\n<!-- TODO: Add more case studies here later -->`;
+      // Update Video & Pill
+      const video = document.getElementById('csActiveVideo');
+      const pill = document.getElementById('csVideoPillText');
+      if (video && cs.video) {
+        video.src = cs.video;
+        if (cs.image) video.poster = cs.image;
+        video.load();
+        video.play().catch(() => {});
+      }
+      if (pill) {
+        pill.innerText = `${cs.views || cs.results?.[0]?.val || ''} Views`;
+      }
+
+      // Update Details
+      const client = document.getElementById('csClientText');
+      const type = document.getElementById('csTypeText');
+      const title = document.getElementById('csTitleText');
+      const whatIDid = document.getElementById('csWhatIDidText');
+      const viewsNum = document.getElementById('csViewsNum');
+      const deliverables = document.getElementById('csDeliverablesText');
+      const countLabel = document.getElementById('csSlideCountLabel');
+      const slidesScroll = document.getElementById('csSlidesScroll');
+
+      if (client) client.innerText = `✦ ${cs.location || ''} · ${cs.client || ''}`;
+      if (type) type.innerText = cs.type || 'Instagram Carousel';
+      if (title) title.innerText = cs.headline || cs.title || '';
+      if (whatIDid) whatIDid.innerText = cs.whatIDid || '';
+      if (viewsNum) viewsNum.innerText = cs.views || cs.results?.[0]?.val || '';
+      if (deliverables) deliverables.innerText = cs.deliverables || '';
+
+      // Update Slides Thumbnails
+      if (slidesScroll && cs.slidePrefix && cs.slideCount) {
+        if (countLabel) countLabel.innerText = `${cs.slideCount} slides`;
+        let html = '';
+        for (let s = 1; s <= cs.slideCount; s++) {
+          const numStr = String(s).padStart(2, '0');
+          html += `
+            <div class="case-study-slide-thumb">
+              <img src="${cs.slidePrefix}${numStr}.jpg" alt="Slide ${s}" loading="lazy">
+              <span class="slide-num">#${s}</span>
+            </div>
+          `;
+        }
+        slidesScroll.innerHTML = html;
+      }
+    };
   }
 
   // 6b. Render Testimonials (Hidden until client supplies real quotes)

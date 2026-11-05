@@ -862,7 +862,9 @@ var PORTFOLIO_DATA = {
           "val": "29.4K"
         }
       ],
-      "deliverables": "Editorial Carousel · Creative Direction · Captions"
+      "deliverables": "Editorial Carousel · Creative Direction · Captions",
+      "slidePrefix": "img/slides/c1_slide_",
+      "slideCount": 14
     },
     {
       "id": "cs-sushisamba",
@@ -879,7 +881,9 @@ var PORTFOLIO_DATA = {
           "val": "20.3K"
         }
       ],
-      "deliverables": "Collaborative Carousel · Visual Storytelling · Menu Highlights"
+      "deliverables": "Collaborative Carousel · Visual Storytelling · Menu Highlights",
+      "slidePrefix": "img/slides/c2_slide_",
+      "slideCount": 7
     },
     {
       "id": "cs-vietnam-story",
@@ -896,7 +900,9 @@ var PORTFOLIO_DATA = {
           "val": "62.5K"
         }
       ],
-      "deliverables": "Visual Essay · Atmospheric Tone · Captions"
+      "deliverables": "Visual Essay · Atmospheric Tone · Captions",
+      "slidePrefix": "img/slides/c3_slide_",
+      "slideCount": 12
     }
   ],
   "essays": [

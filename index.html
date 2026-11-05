@@ -106,82 +106,93 @@
           <p class="label">Strategic Case Studies</p>
           <h2>Emotional and editorial storytelling for restaurants and hotels</h2>
         </div>
-        <p class="head-desc">From luxury boutique resorts in Bali to dining destinations in Singapore, how creative direction, narrative PR, and tableside motion connect with real audiences — reflected in real engagement like 31.3K views and 141 shares on editorial guides.</p>
+        <p class="head-desc">From luxury boutique resorts in Bali to dining destinations in Singapore, how creative direction, narrative PR, and tableside motion connect with real audiences — reflected in real engagement across verified editorial carousels.</p>
       </div>
 
-      <div class="case-studies-grid" id="caseStudiesGrid">
-        <article class="case-study-card">
-          <div class="case-study-image-wrapper">
-            <video src="video/carousel_1_singapore_eats_views.mp4" autoplay loop muted playsinline poster="img/carousel_1_sg_eats_cover.jpg"></video>
-            <span class="case-study-location-badge">✦ Singapore</span>
+      <!-- Carousel Case Study Showcase -->
+      <div class="case-study-showcase" id="caseStudyShowcase">
+        <div class="case-study-tabs" role="tablist" aria-label="Featured Instagram Carousels">
+          <button class="case-study-tab-btn active" role="tab" aria-selected="true" data-index="0" onclick="window.selectCaseStudyCarousel(0)">
+            <span>Singapore City Eats Guide</span>
+            <span class="case-study-tab-badge">29.4K Views</span>
+          </button>
+          <button class="case-study-tab-btn" role="tab" aria-selected="false" data-index="1" onclick="window.selectCaseStudyCarousel(1)">
+            <span>Sushisamba Singapore</span>
+            <span class="case-study-tab-badge">20.3K Views</span>
+          </button>
+          <button class="case-study-tab-btn" role="tab" aria-selected="false" data-index="2" onclick="window.selectCaseStudyCarousel(2)">
+            <span>Ho Chi Minh City Story</span>
+            <span class="case-study-tab-badge">62.5K Views</span>
+          </button>
+        </div>
+
+        <div class="case-study-layout">
+          <!-- Video Column -->
+          <div class="case-study-video-col">
+            <div class="case-study-video-container">
+              <span class="case-study-video-pill">
+                <span class="pulse-dot"></span>
+                <span id="csVideoPillText">29.4K Views</span>
+              </span>
+              <video id="csActiveVideo" 
+                     src="video/carousel_1_singapore_eats_views.mp4" 
+                     poster="img/carousel_1_sg_eats_cover.jpg" 
+                     autoplay 
+                     loop 
+                     muted 
+                     playsinline>
+              </video>
+            </div>
           </div>
-          <div class="case-study-body">
-            <div class="case-study-client">Singapore City Eats Guide</div>
-            <div class="case-study-type">Instagram Carousel Editorial</div>
-            <h3 class="case-study-title">Singapore City Eats Guide — Instagram carousel</h3>
+
+          <!-- Detail Column -->
+          <div class="case-study-detail-col">
+            <div class="case-study-client" id="csClientText">✦ Singapore · Singapore City Eats Guide</div>
+            <div class="case-study-type" id="csTypeText">Instagram Carousel Editorial</div>
+            <h3 class="case-study-title" id="csTitleText">Singapore City Eats Guide — Instagram carousel</h3>
             
             <div class="case-study-strategy-title">What I Did</div>
-            <p class="case-study-challenge" style="border-bottom: none; margin-bottom: 20px; padding-bottom: 0;">Concept, photography, carousel design, captions</p>
+            <p class="case-study-challenge" id="csWhatIDidText" style="border-bottom: none; margin-bottom: 0; padding-bottom: 0;">
+              Concept, photography, carousel design, captions
+            </p>
 
-            <div class="case-study-results-grid">
-              <div>
-                <div class="case-study-result-val">29.4K</div>
-                <div class="case-study-result-label">Views</div>
+            <div class="case-study-metric-box">
+              <div class="metric-caption">Primary Verified Engagement</div>
+              <div class="metric-val-row">
+                <div class="metric-number" id="csViewsNum">29.4K</div>
+                <div class="metric-unit">Verified Views</div>
+              </div>
+              <div class="metric-subtext">
+                <span style="color: #10B981; font-weight: 500;">✓ Showing views only</span>
+                <span>Comments, shares &amp; reposts excluded</span>
               </div>
             </div>
 
-            <div class="case-study-deliverables">Editorial Carousel · Creative Direction · Captions</div>
-          </div>
-        </article>
-
-        <article class="case-study-card">
-          <div class="case-study-image-wrapper">
-            <video src="video/carousel_2_sushisamba_views.mp4" autoplay loop muted playsinline poster="img/carousel_2_sushisamba_cover.jpg"></video>
-            <span class="case-study-location-badge">✦ Singapore</span>
-          </div>
-          <div class="case-study-body">
-            <div class="case-study-client">Sushisamba Singapore</div>
-            <div class="case-study-type">Instagram Carousel Collaboration</div>
-            <h3 class="case-study-title">Sushisamba Singapore — Date Night Dining Guide</h3>
-            
-            <div class="case-study-strategy-title">What I Did</div>
-            <p class="case-study-challenge" style="border-bottom: none; margin-bottom: 20px; padding-bottom: 0;">Content strategy, photography, carousel design, collaborative co-post</p>
-
-            <div class="case-study-results-grid">
-              <div>
-                <div class="case-study-result-val">20.3K</div>
-                <div class="case-study-result-label">Views</div>
-              </div>
+            <div class="case-study-deliverables" id="csDeliverablesText">
+              Editorial Carousel · Creative Direction · Captions
             </div>
 
-            <div class="case-study-deliverables">Collaborative Carousel · Visual Storytelling · Menu Highlights</div>
-          </div>
-        </article>
-
-        <article class="case-study-card">
-          <div class="case-study-image-wrapper">
-            <video src="video/carousel_3_vietnam_love_views.mp4" autoplay loop muted playsinline poster="img/carousel_3_vietnam_cover.jpg"></video>
-            <span class="case-study-location-badge">✦ Ho Chi Minh City</span>
-          </div>
-          <div class="case-study-body">
-            <div class="case-study-client">Personal Editorial</div>
-            <div class="case-study-type">Instagram Carousel Photo Essay</div>
-            <h3 class="case-study-title">Ho Chi Minh City — Editorial Travel &amp; Dining Story</h3>
-            
-            <div class="case-study-strategy-title">What I Did</div>
-            <p class="case-study-challenge" style="border-bottom: none; margin-bottom: 20px; padding-bottom: 0;">Photography, creative direction, editorial sequencing, audio curation</p>
-
-            <div class="case-study-results-grid">
-              <div>
-                <div class="case-study-result-val">62.5K</div>
-                <div class="case-study-result-label">Views</div>
+            <!-- Slide Thumbnails Strip -->
+            <div class="case-study-slides-strip">
+              <div class="case-study-slides-strip-title">
+                <span>Key Carousel Slides</span>
+                <span id="csSlideCountLabel" style="color: var(--muted); font-weight: normal;">14 slides</span>
+              </div>
+              <div class="case-study-slides-scroll" id="csSlidesScroll">
+                <div class="case-study-slide-thumb"><img src="img/slides/c1_slide_01.jpg" alt="Slide 1" loading="lazy"><span class="slide-num">#1</span></div>
+                <div class="case-study-slide-thumb"><img src="img/slides/c1_slide_02.jpg" alt="Slide 2" loading="lazy"><span class="slide-num">#2</span></div>
+                <div class="case-study-slide-thumb"><img src="img/slides/c1_slide_03.jpg" alt="Slide 3" loading="lazy"><span class="slide-num">#3</span></div>
+                <div class="case-study-slide-thumb"><img src="img/slides/c1_slide_04.jpg" alt="Slide 4" loading="lazy"><span class="slide-num">#4</span></div>
+                <div class="case-study-slide-thumb"><img src="img/slides/c1_slide_05.jpg" alt="Slide 5" loading="lazy"><span class="slide-num">#5</span></div>
+                <div class="case-study-slide-thumb"><img src="img/slides/c1_slide_06.jpg" alt="Slide 6" loading="lazy"><span class="slide-num">#6</span></div>
+                <div class="case-study-slide-thumb"><img src="img/slides/c1_slide_07.jpg" alt="Slide 7" loading="lazy"><span class="slide-num">#7</span></div>
+                <div class="case-study-slide-thumb"><img src="img/slides/c1_slide_08.jpg" alt="Slide 8" loading="lazy"><span class="slide-num">#8</span></div>
               </div>
             </div>
-
-            <div class="case-study-deliverables">Visual Essay · Atmospheric Tone · Captions</div>
           </div>
-        </article>
-        <!-- TODO: Add more case studies here later -->
+        </div>
+      </div>
+      <!-- TODO: Add more case studies here later -->
       </div>
     </div>
   </div>
