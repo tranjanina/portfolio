@@ -120,25 +120,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 6. Render Case Studies
   const caseStudiesGrid = document.getElementById('caseStudiesGrid');
-  if (caseStudiesGrid && data.caseStudies) {
+  if (caseStudiesGrid && data.caseStudies && data.caseStudies.length > 0) {
     caseStudiesGrid.innerHTML = data.caseStudies.map(cs => `
       <article class="case-study-card">
         ${cs.image ? `
           <div class="case-study-image-wrapper">
-            <img src="${cs.image}" alt="${cs.client}" loading="lazy">
-            <span class="case-study-location-badge">✦ ${cs.location}</span>
+            <img src="${cs.image}" alt="${cs.headline || cs.title}" loading="lazy">
+            <span class="case-study-location-badge">✦ ${cs.location || 'Singapore'}</span>
           </div>
         ` : ''}
         <div class="case-study-body">
           <div class="case-study-client">${cs.client}</div>
           <div class="case-study-type">${cs.type}</div>
-          <h3 class="case-study-title">${cs.headline}</h3>
-          <p class="case-study-challenge">${cs.challenge}</p>
+          <h3 class="case-study-title">${cs.headline || cs.title}</h3>
+          ${cs.whatIDid ? `
+            <div class="case-study-strategy-title">What I Did</div>
+            <p class="case-study-challenge" style="border-bottom: none; margin-bottom: 20px; padding-bottom: 0;">${cs.whatIDid}</p>
+          ` : ''}
+          ${cs.challenge ? `<p class="case-study-challenge">${cs.challenge}</p>` : ''}
           
-          <div class="case-study-strategy-title">Strategic Execution</div>
-          <ul class="case-study-strategy-list">
-            ${cs.strategy.map(item => `<li>${item}</li>`).join('')}
-          </ul>
+          ${cs.strategy && cs.strategy.length ? `
+            <div class="case-study-strategy-title">Strategic Execution</div>
+            <ul class="case-study-strategy-list">
+              ${cs.strategy.map(item => `<li>${item}</li>`).join('')}
+            </ul>
+          ` : ''}
 
           <div class="case-study-results-grid">
             ${cs.results.map(r => `
@@ -149,15 +155,15 @@ document.addEventListener('DOMContentLoaded', () => {
             `).join('')}
           </div>
 
-          <div class="case-study-deliverables">${cs.deliverables}</div>
+          ${cs.deliverables ? `<div class="case-study-deliverables">${cs.deliverables}</div>` : ''}
         </div>
       </article>
-    `).join('');
+    `).join('') + `\n<!-- TODO: Add more case studies here later -->`;
   }
 
-  // 6b. Render Testimonials
+  // 6b. Render Testimonials (Hidden until client supplies real quotes)
   const testimonialsGrid = document.getElementById('testimonialsGrid');
-  if (testimonialsGrid && data.testimonials) {
+  if (testimonialsGrid && data.testimonials && data.testimonials.length > 0) {
     testimonialsGrid.innerHTML = data.testimonials.map(t => `
       <div class="testimonial-card">
         <div class="testimonial-mark">“</div>
@@ -178,7 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <blockquote>"${essay.quote}"</blockquote>
         <div class="quote-card-cta">
           <button type="button" class="quote-read-btn" data-essay="${essay.id}">Read essay excerpt ↗</button>
-          <a href="${essay.url}" target="_blank" rel="noopener" style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted);">Substack ↗</a>
+          <a href="${essay.url}" target="_blank" rel="noopener" style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted);">Personal essays ↗</a>
         </div>
       </figure>
     `).join('');
@@ -214,7 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileButtons = document.querySelectorAll('.mobile-action-btn');
   window.addEventListener('scroll', () => {
     const scrollPos = window.scrollY + 200;
-    const sections = ['work', 'reels', 'cases', 'rates', 'contact'];
+    const sections = ['cases', 'services', 'work', 'reels', 'contact'];
     
     for (let id of sections) {
       const el = document.getElementById(id);

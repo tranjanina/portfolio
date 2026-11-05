@@ -29,10 +29,6 @@ var PORTFOLIO_DATA = {
       "note": "Brand Development, Press Release & Media Strategy · Bali"
     },
     {
-      "name": "Telos Education Hong Kong",
-      "note": "Head of English & University Admissions Strategy · Hong Kong"
-    },
-    {
       "name": "Sassy Mama Hong Kong",
       "note": "Editorial Writing & Culinary/Lifestyle Photography · Hong Kong"
     }
@@ -708,13 +704,13 @@ var PORTFOLIO_DATA = {
       "title": "The Tomahawk Tableside Tasting",
       "establishment": "Bottega di Carne · Mondrian",
       "category": "Steakhouse & Grill",
-      "videoSrc": "video/IMG_5617.MOV",
-      "videoThumb": "video/thumbs/IMG_5617.MOV.png",
+      "videoSrc": "video/IMG_5617.mp4",
+      "videoThumb": "video/thumbs/IMG_5617_poster.jpg",
       "hookText": "If your steakhouse server doesn't feed you the bone like this, are you even dining?",
       "audioTrack": "Original Tableside Audio · Dining Room Energy",
       "duration": "0:10",
       "stats": {
-        "tag": "Tableside Motion",
+        "tag": "FOOD",
         "format": "4K Vertical · 0:10"
       },
       "scriptTimeline": [
@@ -849,122 +845,31 @@ var PORTFOLIO_DATA = {
       ]
     }
   ],
+  // TODO: Add more case studies when client supplies them
   "caseStudies": [
     {
-      "id": "cs-butchers",
-      "client": "Butcher's Block",
-      "location": "Raffles Hotel Arcade · Singapore",
-      "type": "Wood-Fire Gastronomy & 5-Star Hotel Dining",
-      "image": "img/j02.jpg",
-      "headline": "Where Heritage Luxury Meets Wood-Fire Craft: Translating Ember Gastronomy into Coveted Reservations",
-      "challenge": "Differentiating contemporary wood-fire steakhouse craft within Raffles Singapore's grand colonial heritage halls for international luxury travelers.",
-      "strategy": [
-        "Hook: Focused on the elemental drama of wood-fire smoke, ember basting, and glistening rendered wagyu fat.",
-        "Angle: Framed the dining room as warm, intimate, and sensual rather than stiffly formal.",
-        "Copywriting: Written with deep meat-craft terminology that serious food connoisseurs and travelers trust."
-      ],
+      "id": "cs-sg-city-eats",
+      "client": "Singapore City Eats Guide",
+      "location": "Singapore",
+      "type": "Instagram Carousel Editorial",
+      "image": "img/hero.jpg",
+      "headline": "Singapore City Eats Guide — Instagram carousel",
+      "whatIDid": "Concept, photography, carousel design, captions",
       "results": [
         {
-          "label": "Creative Angle",
-          "val": "Ember Gastronomy"
+          "label": "Views",
+          "val": "31.3K"
         },
         {
-          "label": "Brand Focus",
-          "val": "Heritage Luxury"
+          "label": "Shares",
+          "val": "141"
         },
         {
-          "label": "Editorial Impact",
-          "val": "High-Intent Saves"
+          "label": "Comments",
+          "val": "31"
         }
       ],
-      "deliverables": "Vertical Reels · 10 Editorial Table Stills · Ad Hook Architecture"
-    },
-    {
-      "id": "cs-mondrian",
-      "client": "Bottega di Carne",
-      "location": "Mondrian Duxton · Singapore",
-      "type": "Contemporary Lifestyle Hotel Dining & Italian Butchery",
-      "image": "img/j26.jpg",
-      "headline": "Lifestyle Hospitality & Dario Cecchini Butchery: Bringing Tuscan Energy to Duxton Hill",
-      "challenge": "Establishing a premier Italian grill concept as both a neighborhood dining staple and an anchor of Mondrian's high-design lifestyle experience.",
-      "strategy": [
-        "Hook: Showcased the sheer scale of dry-aged tomahawk carving against the backdrop of Duxton's architectural energy.",
-        "Angle: Merged butcher craft with Mondrian's signature design-led lifestyle hospitality, bridging dinner to late-night rooftop cocktails.",
-        "Copywriting: Bold, rhythmic storytelling highlighting Tuscan butchery traditions and vibrant communal dining."
-      ],
-      "results": [
-        {
-          "label": "Culinary Hook",
-          "val": "Tuscan Butchery"
-        },
-        {
-          "label": "Hospitality Angle",
-          "val": "Lifestyle Hotel"
-        },
-        {
-          "label": "Visual Impact",
-          "val": "Tableside Motion"
-        }
-      ],
-      "deliverables": "Tableside Motion Assets · Editorial Photography · Social Campaign Cut"
-    },
-    {
-      "id": "cs-bakalaki",
-      "client": "Bakalaki Greek Taverna",
-      "location": "Martin Road · Singapore",
-      "type": "Authentic Hellenic Hospitality & Mediterranean Seafood",
-      "image": "img/bakalaki_mezze.jpg",
-      "headline": "Aegean Provenance & Hellenic Warmth: Vibrant Mezze Colors, Salt-Crust Rituals & Mediterranean Cellar Storytelling",
-      "challenge": "Highlighting vibrant ingredient provenance, colorful mezze rituals, and authentic Mediterranean warmth in an upscale dining corridor saturated with generic European bistros.",
-      "strategy": [
-        "Hook: Captured the rich, saturated color palette of handcrafted Greek mezze dips—creamy pink taramasalata, beet red beetroot dip, golden olive oil wells, tzatziki, and warm grilled pita—paired with tableside sea bass carving.",
-        "Angle: Framed dining as a vibrant, generous Aegean ritual celebrating authentic imported Hellenic olive oil, regional wines, and market catch displays.",
-        "Copywriting: Evocative food writing celebrating olive oil provenance, sea salt crystals, and warm island generosity."
-      ],
-      "results": [
-        {
-          "label": "Visual Narrative",
-          "val": "Vibrant Aegean Mezze"
-        },
-        {
-          "label": "Dining Ritual",
-          "val": "Tableside Carving"
-        },
-        {
-          "label": "Editorial Impact",
-          "val": "High-Intent Bookmarks"
-        }
-      ],
-      "deliverables": "Tableside Motion Reels · Mezze & Provenance Carousels · Long-Form Caption Strategy"
-    },
-    {
-      "id": "cs-medusa",
-      "client": "Medusa",
-      "location": "Dining Room & Bar · Singapore",
-      "type": "Experiential Late-Night Hospitality & Supper Club",
-      "image": "img/m01.jpg",
-      "headline": "Cinematic Mood & Fashion Aesthetics: Driving The Post-9PM Supper Crowd",
-      "challenge": "Launching an intimate red-room concept in a saturated neighborhood where cocktail bars blend into one another.",
-      "strategy": [
-        "Hook: Leveraged high-contrast lacquer red lighting, black attire, and noir cinematography.",
-        "Angle: Positioned Medusa as the late-night haven for discerning creatives, hospitality insiders, and date nights.",
-        "Copywriting: Evocative storytelling linking mood, music, and Mediterranean small plates."
-      ],
-      "results": [
-        {
-          "label": "Atmosphere",
-          "val": "Late-Night Noir"
-        },
-        {
-          "label": "Design Aesthetic",
-          "val": "Lacquer Crimson"
-        },
-        {
-          "label": "Dining Crowd",
-          "val": "Post-9PM Supper"
-        }
-      ],
-      "deliverables": "2 Reels · 10 Lifestyle Stills · Hook Testing for Paid Boosting"
+      "deliverables": "Editorial Carousel · Creative Direction · Captions"
     }
   ],
   "essays": [
@@ -972,7 +877,7 @@ var PORTFOLIO_DATA = {
       "id": "essay-1",
       "title": "Seven Minutes in Heaven",
       "subtitle": "On infatuation, fresh bread, and the appetite that returns when love does.",
-      "url": "https://planetnina.substack.com/",
+      "url": "https://substack.com/@lovejanina",
       "readTime": "4 min read",
       "excerpt": "The world looks a bit more vibrant, songs hold new meaning, and an absolute plus… everything tastes better. A bowl of cold noodles at two in the morning becomes an event. You find yourself ordering dessert you don't even like just to keep the table for another twenty minutes. Food is never just calories; it's the currency of time spent wanting someone across a candle.",
       "quote": "The world looks a bit more vibrant, songs hold new meaning, and an absolute plus… everything tastes better."
@@ -981,7 +886,7 @@ var PORTFOLIO_DATA = {
       "id": "essay-2",
       "title": "The Gift of Forgetting",
       "subtitle": "Walking through foreign supermarkets and letting old grief stay in the past.",
-      "url": "https://planetnina.substack.com/",
+      "url": "https://substack.com/@lovejanina",
       "readTime": "5 min read",
       "excerpt": "No one can grieve forever and nobody can long forever. Eventually the palate resets. You find yourself in an unfamiliar alley in Hong Kong, smelling roast goose fat and white pepper broth, and you realize you haven't thought of their voice all afternoon. The senses are the first thing heartbreak takes, and the very first thing that heals you.",
       "quote": "No one can grieve forever and nobody can long forever."
@@ -990,7 +895,7 @@ var PORTFOLIO_DATA = {
       "id": "essay-3",
       "title": "Late Suppers in Tanjong Pagar",
       "subtitle": "Why the best meals happen after the kitchen has started wiping down the stove.",
-      "url": "https://planetnina.substack.com/",
+      "url": "https://substack.com/@lovejanina",
       "readTime": "3 min read",
       "excerpt": "At midnight in Singapore, the heat finally lets go of the pavement. The city exhales. You slip into a banquette with cold mineral wine and skewers that crackle under sea salt. The chefs are pouring themselves a beer at the corner of the bar. It is the only hour when dining feels entirely honest, stripped of performance and full of appetite.",
       "quote": "It is the only hour when dining feels entirely honest, stripped of performance and full of appetite."
@@ -999,46 +904,43 @@ var PORTFOLIO_DATA = {
   "packages": [
     {
       "id": "pkg-taste",
-      "name": "The Hero Launch",
-      "subtitle": "Menu or Suite Feature",
+      "name": "The Taste",
+      "subtitle": "An Introduction · Single Hero Feature",
       "summary": "Targeted editorial asset package designed to introduce a hero dish, private suite, or cocktail campaign with maximum social proof.",
       "deliverables": [
-        "1 Cinematic 4K Vertical Video (15–30s)",
-        "3 Tested Scroll-Stopping Hook Variations",
-        "Poetic, SEO-Optimized Caption & Hashtag Strategy",
-        "5 High-Resolution Editorial Stills (4:5)",
-        "Delivered within 7 business days"
+        "1 Vertical Video (15–30s)",
+        "3 Opening Hook Variations",
+        "Poetic, SEO-Optimized Caption",
+        "Delivered within 7 days"
       ],
-      "idealFor": "New seasonal menu item, cocktail feature, or single hero dish launch"
+      "idealFor": "Single hero dish or cocktail launch"
     },
     {
       "id": "pkg-story",
-      "name": "The Editorial Campaign",
+      "name": "The Story",
       "badge": "Most Requested",
-      "subtitle": "Complete Property & Dining Story",
+      "subtitle": "Complete Food & Room Storytelling",
       "summary": "Comprehensive multi-asset storytelling package covering the dining room, suites, culinary craft, and room ambiance from arrival to last sip.",
       "deliverables": [
-        "3 Vertical Cinematic Videos (15–60s) for Reels/TikTok",
-        "Custom Voiceover Narration & Authentic Room Audio",
-        "12 High-Resolution Editorial Stills (4:5 & 16:9)",
-        "Press Angle Factsheet & Ready-to-Pitch Media Narrative",
-        "Full Commercial Organic Usage Rights"
+        "3 Vertical Videos (15–60s)",
+        "Custom Voiceover Scripts & Audio",
+        "10 Editorial Table Stills (4:5)",
+        "Captions for Every Piece"
       ],
-      "idealFor": "Established restaurants and boutique hotels seeking high-converting organic content and fresh photo assets"
+      "idealFor": "Complete food & room storytelling"
     },
     {
       "id": "pkg-season",
-      "name": "The Residency & PR Retainer",
-      "subtitle": "Grand Openings & Ongoing Partnership",
+      "name": "The Season",
+      "subtitle": "For Openings & Retainers",
       "summary": "Full-scale hospitality PR and creative direction partnership for property launches, seasonal revamps, or monthly dining room dominance.",
       "deliverables": [
-        "6+ Vertical Videos spaced across launch schedule",
-        "Bespoke PR Strategy, Press Release & Media Liaison",
-        "25+ Editorial Photography Stills (Suites, Dining, Portraits)",
-        "Paid Ad Cuts & Whitelisting Consultation",
-        "VIP & Influencer Hosting Curation Guidance"
+        "6+ Videos over a Month",
+        "Content Plan Built from Your Brief",
+        "Carousels, Stills, and Paid Ad Cuts",
+        "Whitelisting Consultation Included"
       ],
-      "idealFor": "Grand openings, seasonal brand revamps, or luxury hotel hospitality partnerships"
+      "idealFor": "By proposal / Monthly partnership"
     }
   ],
   "addOns": [
@@ -1068,23 +970,8 @@ var PORTFOLIO_DATA = {
       "desc": "On-site production in Bali, Hong Kong, or Southeast Asia"
     }
   ],
-  "testimonials": [
-    {
-      "quote": "Janina brings an extraordinary eye and a writer's sensibility to the table. She understands culinary craft, fire, and provenance in a way few creators do.",
-      "author": "Executive Culinary Team",
-      "property": "Fine Dining & Wood-Fire Grill, Singapore"
-    },
-    {
-      "quote": "Her storytelling captured the electric ambiance of our dining room and translated directly into reservations. The aesthetic was immaculate.",
-      "author": "Hospitality & Operations Director",
-      "property": "Dining Room & Bar, Singapore"
-    },
-    {
-      "quote": "The depth of her writing and the precision of her visual hooks gave our property international reach and prestige. True editorial excellence.",
-      "author": "General Manager",
-      "property": "Boutique Resort & Villas, Bali"
-    }
-  ]
+  // TODO: Add real testimonials/endorsements when supplied
+  "testimonials": []
 };
 
 if (typeof module !== 'undefined' && module.exports) {

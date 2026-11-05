@@ -140,13 +140,10 @@ class ReelPlayer {
       this.phoneAudioTrack.textContent = reel.audioTrack;
     }
 
-    // Toggle Beauty Filter & Badge
-    if (reel.beautyFilter) {
-      if (this.phoneVideo) this.phoneVideo.classList.add('beauty-filter-active');
-      if (this.phoneBeautyBadge) this.phoneBeautyBadge.style.display = 'inline-flex';
-    } else {
-      if (this.phoneVideo) this.phoneVideo.classList.remove('beauty-filter-active');
-      if (this.phoneBeautyBadge) this.phoneBeautyBadge.style.display = 'none';
+    // Update Tag Badge (FOOD / Category)
+    if (this.phoneBeautyBadge) {
+      this.phoneBeautyBadge.textContent = (reel.stats && reel.stats.tag) ? reel.stats.tag : 'FOOD';
+      this.phoneBeautyBadge.style.display = 'inline-flex';
     }
 
     // Render script timeline

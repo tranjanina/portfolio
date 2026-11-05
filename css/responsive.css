@@ -216,4 +216,17 @@
     color: var(--white);
     font-weight: 500;
   }
+
+  @media (max-width: 420px) {
+    .mobile-action-bar {
+      padding: 5px 6px;
+      gap: 3px;
+      max-width: calc(100vw - 20px);
+    }
+    .mobile-action-btn {
+      padding: 7px 10px;
+      font-size: 10px;
+      letter-spacing: 0.08em;
+    }
+  }
 }
