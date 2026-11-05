@@ -845,31 +845,58 @@ var PORTFOLIO_DATA = {
       ]
     }
   ],
-  // TODO: Add more case studies when client supplies them
+  // Three real Instagram carousels extracted from recent screen recordings (showing views only)
   "caseStudies": [
     {
       "id": "cs-sg-city-eats",
       "client": "Singapore City Eats Guide",
       "location": "Singapore",
       "type": "Instagram Carousel Editorial",
-      "image": "img/hero.jpg",
+      "image": "img/carousel_1_sg_eats_cover.jpg",
+      "video": "video/carousel_1_singapore_eats_views.mp4",
       "headline": "Singapore City Eats Guide — Instagram carousel",
       "whatIDid": "Concept, photography, carousel design, captions",
       "results": [
         {
           "label": "Views",
-          "val": "31.3K"
-        },
-        {
-          "label": "Shares",
-          "val": "141"
-        },
-        {
-          "label": "Comments",
-          "val": "31"
+          "val": "29.4K"
         }
       ],
       "deliverables": "Editorial Carousel · Creative Direction · Captions"
+    },
+    {
+      "id": "cs-sushisamba",
+      "client": "Sushisamba Singapore",
+      "location": "Singapore",
+      "type": "Instagram Carousel Collaboration",
+      "image": "img/carousel_2_sushisamba_cover.jpg",
+      "video": "video/carousel_2_sushisamba_views.mp4",
+      "headline": "Sushisamba Singapore — Date Night Dining Guide",
+      "whatIDid": "Content strategy, photography, carousel design, collaborative co-post",
+      "results": [
+        {
+          "label": "Views",
+          "val": "20.3K"
+        }
+      ],
+      "deliverables": "Collaborative Carousel · Visual Storytelling · Menu Highlights"
+    },
+    {
+      "id": "cs-vietnam-story",
+      "client": "Personal Editorial",
+      "location": "Ho Chi Minh City",
+      "type": "Instagram Carousel Photo Essay",
+      "image": "img/carousel_3_vietnam_cover.jpg",
+      "video": "video/carousel_3_vietnam_love_views.mp4",
+      "headline": "Ho Chi Minh City — Editorial Travel & Dining Story",
+      "whatIDid": "Photography, creative direction, editorial sequencing, audio curation",
+      "results": [
+        {
+          "label": "Views",
+          "val": "62.5K"
+        }
+      ],
+      "deliverables": "Visual Essay · Atmospheric Tone · Captions"
     }
   ],
   "essays": [

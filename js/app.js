@@ -123,7 +123,12 @@ document.addEventListener('DOMContentLoaded', () => {
   if (caseStudiesGrid && data.caseStudies && data.caseStudies.length > 0) {
     caseStudiesGrid.innerHTML = data.caseStudies.map(cs => `
       <article class="case-study-card">
-        ${cs.image ? `
+        ${cs.video ? `
+          <div class="case-study-image-wrapper">
+            <video src="${cs.video}" autoplay loop muted playsinline poster="${cs.image || ''}"></video>
+            <span class="case-study-location-badge">✦ ${cs.location || 'Singapore'}</span>
+          </div>
+        ` : cs.image ? `
           <div class="case-study-image-wrapper">
             <img src="${cs.image}" alt="${cs.headline || cs.title}" loading="lazy">
             <span class="case-study-location-badge">✦ ${cs.location || 'Singapore'}</span>
