@@ -176,6 +176,16 @@ section.block{padding-block:92px}
 .wcard .go{display:inline-block;margin-top:0;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
 @media (max-width:640px){.writing{grid-template-columns:1fr}}
 
+.built{margin-top:22px;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:36px;align-items:center;border:1px solid var(--line);border-radius:22px;padding:28px 40px 0;overflow:hidden}
+.built-shot{align-self:end;width:100%;max-width:340px;justify-self:center}
+.built-shot img{width:100%;height:auto;display:block}
+.built-copy{display:flex;flex-direction:column;gap:14px;padding-bottom:28px;min-width:0}
+.built-title{display:flex;align-items:center;gap:14px}
+.built-title img{width:52px;height:52px;border-radius:14px}
+.built-copy h3{font-family:var(--f-display);font-size:2rem}
+.built-copy p{margin:0;max-width:54ch;color:var(--cocoa)}
+.built-copy .pill{align-self:flex-start}
+@media (max-width:760px){.built{grid-template-columns:1fr;gap:24px;padding:28px 22px 0}.built-copy{order:-1;padding-bottom:0}.built-shot{max-width:280px}}
 /* contact */
 .contact{text-align:center;display:grid;gap:18px;justify-items:center}
 .contact h2 .script{font-size:1.6em;letter-spacing:0;display:block;text-transform:none;color:var(--butter)}
@@ -416,6 +426,16 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
           <div class="latest"><img src="img/lovejanina_post.jpg" alt="" loading="lazy"><div><span>Latest</span><strong>Ok, Let’s Get Real: On Love &amp; Freedom.</strong></div></div>
           <span class="go">Read Love, Janina ↗</span>
         </a>
+      </div>
+      <div class="built">
+        <div class="built-shot"><img src="img/deerdayly_screen.jpg" alt="DeerDayly app screen showing today's journal entry with a photo and a short reflection" loading="lazy"></div>
+        <div class="built-copy">
+          <p class="eyebrow">Also built · On the App Store</p>
+          <div class="built-title"><img src="img/deerdayly_icon.png" alt="" width="52" height="52"><h3>DeerDayly</h3></div>
+          <p>A daily journal for one honest moment a day. A photo and a few words, private by default, shared only if you choose. No streaks, no filters, no audience unless you want one.</p>
+          <p>I designed and built it myself, from the first sketch to the App Store, using AI coding tools. It's the same instinct behind my client work: find the feeling, then build the thing that holds it.</p>
+          <a class="pill" href="https://deerdayly.com/download" target="_blank" rel="noopener">Download on the App Store ↗</a>
+        </div>
       </div>
     </div>
   </section>
