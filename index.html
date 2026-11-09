@@ -137,16 +137,18 @@ section.block{padding-block:92px}
 .results-note{margin:22px 0 0;color:rgba(251,248,241,.6);font-size:.82rem}
 @media (max-width:760px){.stats{grid-template-columns:1fr}}
 
-/* offer */
-.offer{display:grid;grid-template-columns:1.1fr .9fr;gap:22px}
-.offer-list{background:var(--butter);border-radius:22px;padding:40px 42px;display:grid;gap:18px}
-.offer-list dl{margin:0;display:grid;gap:16px}
-.offer-list dt{font-family:var(--f-display);font-size:1.2rem;letter-spacing:.03em}
-.offer-list dd{margin:2px 0 0;color:var(--cocoa);max-width:56ch}
-.offer-side{border:1px solid var(--line);border-radius:22px;padding:40px 38px;display:flex;flex-direction:column;gap:16px;justify-content:space-between}
-.offer-side p{margin:0}
-.offer-side .big{font-family:var(--f-display);font-size:1.6rem;line-height:1.25}
-@media (max-width:860px){.offer{grid-template-columns:1fr}.offer-list,.offer-side{padding:30px 24px}}
+/* services */
+.svc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.svc-card{background:var(--butter);border-radius:22px;padding:32px 30px;display:flex;flex-direction:column;gap:12px}
+.svc-card .eyebrow{color:var(--gold)}
+.svc-card h3{font-family:var(--f-display);font-size:1.55rem;letter-spacing:.02em}
+.svc-card ul{margin:4px 0 0;padding:0;list-style:none;display:grid;gap:9px}
+.svc-card li{display:grid;grid-template-columns:16px 1fr;gap:6px;color:var(--espresso);font-size:.95rem}
+.svc-card li::before{content:"✦";color:var(--gold);font-size:.7rem;padding-top:5px}
+.rates{margin-top:18px;border:1px solid var(--line);border-radius:22px;padding:22px 28px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px}
+.rates p{margin:0;max-width:62ch;color:var(--cocoa)}
+.rates strong{color:var(--espresso);font-weight:500}
+@media (max-width:900px){.svc{grid-template-columns:1fr}}
 
 /* writing */
 .writing{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
@@ -197,10 +199,11 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
     <div class="bar">
       <a class="logo" href="#top" aria-label="Janina, back to top">Janina</a>
       <ul>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#formats">Content</a></li>
+        <li><a href="#writing">Writing</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#formats">Formats</a></li>
-        <li><a href="#work">Portfolio</a></li>
-        <li><a href="#results">Results</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <a class="pill" href="#contact">Work with me</a>
@@ -220,7 +223,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
           <h1><span class="script">Janina</span><span class="role">Brand Storyteller</span></h1>
           <p class="disc"><span>Content &amp; PR Strategist</span><span>Creative &amp; Communications</span><span>Content Creator</span></p>
           <p class="sub">Singapore · Bali · Hong Kong</p>
-          <p class="lede">Content and PR for wellness, fitness, food and travel brands. I find the story, write it, shoot it, and get it in front of the people you want to reach.</p>
+          <p class="lede">Stories that fill tables and book rooms. Content and PR for hotels, restaurants and wellness brands across Singapore, Bali and Hong Kong.</p>
           <div class="hero-actions">
             <button class="pill" type="button" data-copy="tranjanina@gmail.com"><span class="dot">@</span>tranjanina@gmail.com</button>
             <a class="pill ghost" href="https://instagram.com/janina.ig" target="_blank" rel="noopener">@janina.ig</a>
@@ -264,9 +267,9 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
     <div class="wrap">
       <div class="head">
         <div>
-          <p class="eyebrow">Sample videos</p>
-          <h2>Formats I shoot</h2>
-          <p class="intro">The four formats brands ask for most. Each one follows the same arc: hook, problem, demo, call to action.</p>
+          <p class="eyebrow">Content samples</p>
+          <h2>Made to be watched</h2>
+          <p class="intro">Short-form video for venues and brands. Each piece follows the same arc: hook, story, payoff, call to action.</p>
         </div>
       </div>
       <div class="formats">
@@ -356,34 +359,40 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
     </div>
   </section>
 
-  <section class="block" id="work-with-me">
+  <section class="block" id="services">
     <div class="wrap">
       <div class="head">
         <div>
-          <p class="eyebrow">Working together</p>
-          <h2>What you get</h2>
+          <p class="eyebrow">Services</p>
+          <h2>Ways to work together</h2>
+          <p class="intro">Hire me for one piece or the whole story. Most clients mix all three.</p>
         </div>
       </div>
-      <div class="offer">
-        <div class="offer-list">
-          <dl>
-            <div><dt>Ad-ready videos</dt><dd>Vertical 9:16 edits plus 4:5 cuts, captioned, with raw footage on request.</dd></div>
-            <div><dt>Three hooks per video</dt><dd>Scripted by me, so your team can A/B test openings without a reshoot.</dd></div>
-            <div><dt>Usage rights and whitelisting</dt><dd>Paid-ad usage for 30, 60 or 90 days, whitelisting from my account, and exclusivity when you need it.</dd></div>
-            <div><dt>Monthly retainers</dt><dd>A steady supply of fresh creatives each month for brands running ads all year.</dd></div>
-          </dl>
-        </div>
-        <div class="offer-side">
-          <p class="eyebrow">Rates</p>
-          <p class="big">Every brief is different. Rates depend on the number of videos, usage and timing.</p>
-          <p>Send me your product, your goal and your timeline, and I'll come back with a tailored quote.</p>
-          <a class="pill" href="#contact" style="align-self:flex-start">Send a brief</a>
-        </div>
+      <div class="svc">
+        <article class="svc-card">
+          <p class="eyebrow">01</p>
+          <h3>PR &amp; Strategy</h3>
+          <ul><li>Press strategy and story angles</li><li>Launch and seasonal campaigns</li><li>Press releases and press kits</li><li>Media and VIP tastings</li><li>Brand voice and messaging</li></ul>
+        </article>
+        <article class="svc-card">
+          <p class="eyebrow">02</p>
+          <h3>Content Creation</h3>
+          <ul><li>UGC and ad-ready video, 9:16 and 4:5</li><li>Three scripted hooks per video</li><li>Photography and styling</li><li>Copywriting and captions</li><li>Usage rights and whitelisting</li></ul>
+        </article>
+        <article class="svc-card">
+          <p class="eyebrow">03</p>
+          <h3>Partnerships</h3>
+          <ul><li>Hosted stays and dining experiences</li><li>Ambassador and long-term roles</li><li>Monthly content retainers</li><li>Events and openings</li><li>Substack features</li></ul>
+        </article>
+      </div>
+      <div class="rates">
+        <p><strong>Rates on request.</strong> Every brief is different. Send me your goal and timeline and I'll come back with a tailored proposal.</p>
+        <a class="pill" href="#contact">Send a brief</a>
       </div>
     </div>
   </section>
 
-  <section class="block" style="padding-top:0">
+  <section class="block" id="writing" style="padding-top:0">
     <div class="wrap">
       <div class="head"><div><p class="eyebrow">I also write</p><h2>Words behind the work</h2></div></div>
       <a class="feature" href="https://planetnina.substack.com/p/la-reserve-1785-bali-canggu" target="_blank" rel="noopener">
@@ -414,7 +423,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
   <section class="band" id="contact">
     <div class="wrap contact">
       <p class="eyebrow">Contact</p>
-      <h2>Let's make <span class="script">something</span> people stop for</h2>
+      <h2>Tell me about your <span class="script">table,</span> your stay or your launch</h2>
       <p class="mail">tranjanina@gmail.com</p>
       <div class="row">
         <button class="pill" type="button" data-copy="tranjanina@gmail.com">Copy email</button>
