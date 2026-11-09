@@ -1,1144 +1,413 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Janina Tran · Hospitality PR, Creative Direction & Editorial Storytelling</title>
-  <meta name="description" content="Hospitality PR, creative direction and editorial storytelling for restaurants and hotels across Singapore, Bali, and Hong Kong.">
-  <link rel="canonical" href="https://janinatran.com/">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Janina UGC Portfolio</title>
+<meta name="description" content="Janina, Singapore-based UGC creator for wellness, fitness, food and travel brands. Ad-ready video with hooks I write myself.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap">
+<style>
+/* Layout: split hero card (photo | buttermilk dot-grid), espresso striped bands between cream sections, filterable 4:5 grid */
+:root{
+  --cream:#FFFBF1;        /* page ground */
+  --butter:#FBEFC6;       /* hero + card fill */
+  --butter-deep:#F4E2A6;
+  --espresso:#3D2A20;     /* text + bands */
+  --espresso-2:#4A3428;
+  --cocoa:#7A5E4F;        /* secondary text */
+  --gold:#B4892F;         /* accent */
+  --line:rgba(61,42,32,.16);
+  --f-script:"Pinyon Script","Snell Roundhand",cursive;
+  --f-display:"Bodoni Moda","Didot",Georgia,serif;
+  --f-body:"Jost","Futura","Helvetica Neue",Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{margin:0;background:var(--cream);color:var(--espresso);font-family:var(--f-body);font-weight:400;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.eyebrow{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--cocoa);font-weight:500;margin:0}
+h1,h2,h3{text-wrap:balance;margin:0;font-weight:400}
+h2{font-family:var(--f-display);font-size:clamp(1.9rem,3.6vw,2.8rem);letter-spacing:.06em;text-transform:uppercase;line-height:1.1}
+.script{font-family:var(--f-script);font-weight:400;letter-spacing:0;text-transform:none}
 
-  <!-- Standard Open Graph Meta Tags -->
-  <meta property="og:site_name" content="Janina Tran">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://janinatran.com/">
-  <meta property="og:title" content="Janina Tran · Hospitality PR, Creative Direction & Editorial Storytelling">
-  <meta property="og:description" content="Hospitality PR, creative direction and editorial storytelling for restaurants and hotels across Singapore, Bali, and Hong Kong.">
-  <meta property="og:image" content="https://janinatran.com/img/hero.jpg">
+/* nav */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--cream)}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;padding-block:14px}
+.nav .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;background:rgba(255,251,241,.92);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:18px;padding:10px 12px 10px 22px;box-shadow:0 6px 24px rgba(61,42,32,.06)}
+.logo{font-family:var(--f-script);font-size:1.9rem;line-height:1;text-decoration:none}
+.nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
+.nav ul a{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;color:var(--espresso)}
+.nav ul a:hover{color:var(--gold)}
+.pill{display:inline-flex;align-items:center;gap:10px;background:var(--espresso);color:var(--cream);border:0;border-radius:999px;padding:11px 20px;font:500 .72rem/1 var(--f-body);letter-spacing:.18em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background .2s}
+.pill:hover{background:var(--gold)}
+.pill.ghost{background:transparent;color:var(--espresso);box-shadow:inset 0 0 0 1px var(--espresso)}
+.pill.ghost:hover{background:var(--espresso);color:var(--cream)}
+.pill .dot{width:22px;height:22px;border-radius:50%;background:var(--cream);color:var(--espresso);display:grid;place-items:center;font-size:.7rem;letter-spacing:0}
+@media (max-width:820px){.nav ul{display:none}}
 
-  <!-- Twitter Card Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Janina Tran · Hospitality PR, Creative Direction & Editorial Storytelling">
-  <meta name="twitter:description" content="Hospitality PR, creative direction and editorial storytelling for restaurants and hotels across Singapore, Bali, and Hong Kong.">
-  <meta name="twitter:image" content="https://janinatran.com/img/hero.jpg">
+/* hero */
+.hero{padding-block:8px 64px}
+.hero-card{display:grid;grid-template-columns:1fr 1.15fr;border-radius:26px;overflow:hidden;border:1px solid var(--line);min-height:560px}
+.hero-photo{position:relative;background:var(--espresso)}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 35%}
+.hero-photo .tag{position:absolute;left:16px;bottom:16px;background:rgba(255,251,241,.92);border-radius:999px;padding:7px 14px;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase}
+.hero-copy{position:relative;background-color:var(--butter);background-image:radial-gradient(rgba(180,137,47,.32) 1.1px,transparent 1.2px);background-size:14px 14px;padding:56px 72px 48px 56px;display:flex;flex-direction:column;justify-content:center;gap:18px}
+.hero-copy h1{display:flex;flex-direction:column;gap:6px}
+.hero-copy h1 .script{font-size:clamp(4.2rem,9vw,7.4rem);line-height:.9;margin-left:-6px}
+.hero-copy h1 .role{font-family:var(--f-display);font-size:clamp(1.3rem,2.4vw,1.9rem);letter-spacing:.2em;text-transform:uppercase}
+.hero-copy .sub{font-size:.8rem;letter-spacing:.26em;text-transform:uppercase;color:var(--cocoa);margin:0}
+.hero-copy .lede{max-width:44ch;margin:6px 0 4px;font-size:1.02rem}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+.vertical{position:absolute;right:22px;top:50%;transform:translateY(-50%) rotate(180deg);writing-mode:vertical-rl;font-size:.66rem;letter-spacing:.32em;text-transform:uppercase;color:var(--cocoa)}
+@media (max-width:860px){.hero-card{grid-template-columns:1fr;min-height:0}.hero-photo{aspect-ratio:4/4.4}.hero-copy{padding:36px 28px 32px}.vertical{display:none}}
 
-  <!-- Google Fonts: Bodoni Moda & Hanken Grotesk -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400;1,6..96,500&family=Hanken+Grotesk:wght@300;400;500;600&display=swap">
+/* clients strip */
+.clients{border-block:1px solid var(--line);padding-block:22px}
+.clients .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:14px 36px;justify-content:center}
+.clients span{font-family:var(--f-display);font-size:1.05rem;letter-spacing:.08em}
+.clients .eyebrow{flex-basis:100%;text-align:center}
 
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/design-tokens.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/responsive.css">
+/* espresso band */
+.band{background-color:var(--espresso);background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.035) 0 28px,transparent 28px 56px);color:var(--cream);padding-block:88px}
+.band .eyebrow{color:var(--butter-deep)}
+
+/* about */
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.about-photo{border-radius:22px;overflow:hidden;aspect-ratio:4/5}
+.about-photo img{width:100%;height:100%;object-fit:cover}
+.about-card{background:var(--cream);color:var(--espresso);border-radius:22px;padding:44px 46px;display:grid;gap:18px}
+.about-card h2 .script{font-size:1.3em;letter-spacing:0}
+.about-card .eyebrow{color:var(--cocoa)}
+.about-card ul{margin:0;padding:0;list-style:none;display:grid;gap:12px}
+.about-card li{display:grid;grid-template-columns:18px 1fr;gap:8px;max-width:58ch}
+.about-card li::before{content:"✦";color:var(--gold);font-size:.8rem;padding-top:4px}
+.about-card .sig{font-family:var(--f-script);font-size:2.6rem;line-height:1;margin-top:6px}
+@media (max-width:860px){.about{grid-template-columns:1fr;gap:28px}.about-card{padding:30px 24px}.about-photo{aspect-ratio:4/4.2}}
+
+/* sections */
+section.block{padding-block:92px}
+.head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:20px;margin-bottom:34px}
+.head .intro{max-width:52ch;color:var(--cocoa);margin:10px 0 0}
+
+/* formats */
+.formats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.fmt{display:flex;flex-direction:column;gap:14px}
+.phone{position:relative;aspect-ratio:9/16;border-radius:26px;overflow:hidden;border:6px solid var(--espresso);background:var(--espresso);max-width:100%}
+.phone img,.phone video{width:100%;height:100%;object-fit:cover}
+.phone .hook{position:absolute;left:10px;right:10px;top:14%;text-align:center;color:#fff;font-weight:500;font-size:.95rem;line-height:1.3;text-shadow:0 1px 8px rgba(0,0,0,.55)}
+.phone .badge{position:absolute;left:10px;bottom:10px;background:var(--butter);color:var(--espresso);border-radius:999px;padding:5px 11px;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+.fmt h3{font-family:var(--f-display);font-size:1.25rem;letter-spacing:.04em}
+.fmt .niche{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:500;margin:0}
+.fmt p{margin:0;font-size:.92rem;color:var(--cocoa)}
+.arc{display:flex;gap:6px;flex-wrap:wrap;margin:0;padding:0;list-style:none}
+.arc li{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:3px 9px}
+@media (max-width:980px){.formats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:480px){.formats{gap:12px}.fmt p{font-size:.85rem}}
+
+/* portfolio */
+.tabs{display:flex;flex-wrap:wrap;gap:8px}
+.tabs button{font:500 .7rem/1 var(--f-body);letter-spacing:.18em;text-transform:uppercase;border-radius:999px;border:1px solid var(--espresso);background:transparent;color:var(--espresso);padding:11px 18px;cursor:pointer}
+.tabs button[aria-pressed="true"]{background:var(--espresso);color:var(--cream)}
+.tabs button .n{opacity:.6;margin-left:6px}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.tile{margin:0;display:flex;flex-direction:column;gap:10px}
+.tile .ph{aspect-ratio:4/5;border-radius:16px;overflow:hidden;background:var(--butter)}
+.tile img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.tile:hover img{transform:scale(1.03)}
+.tile figcaption{display:grid;gap:2px}
+.tile strong{font-weight:500;font-size:.95rem;line-height:1.35}
+.tile span{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--cocoa)}
+@media (max-width:980px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:640px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}}
+
+/* results */
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.stat{border:1px solid rgba(251,239,198,.25);border-radius:20px;padding:28px 26px;display:grid;gap:6px}
+.stat b{font-family:var(--f-display);font-weight:400;font-size:clamp(2.4rem,5vw,3.4rem);line-height:1;color:var(--butter);font-variant-numeric:tabular-nums}
+.stat span{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--butter-deep)}
+.stat p{margin:6px 0 0;color:rgba(255,251,241,.78);font-size:.92rem}
+.results-note{margin:22px 0 0;color:rgba(255,251,241,.6);font-size:.82rem}
+@media (max-width:760px){.stats{grid-template-columns:1fr}}
+
+/* offer */
+.offer{display:grid;grid-template-columns:1.1fr .9fr;gap:22px}
+.offer-list{background:var(--butter);border-radius:22px;padding:40px 42px;display:grid;gap:18px}
+.offer-list dl{margin:0;display:grid;gap:16px}
+.offer-list dt{font-family:var(--f-display);font-size:1.2rem;letter-spacing:.03em}
+.offer-list dd{margin:2px 0 0;color:var(--cocoa);max-width:56ch}
+.offer-side{border:1px solid var(--line);border-radius:22px;padding:40px 38px;display:flex;flex-direction:column;gap:16px;justify-content:space-between}
+.offer-side p{margin:0}
+.offer-side .big{font-family:var(--f-display);font-size:1.6rem;line-height:1.25}
+@media (max-width:860px){.offer{grid-template-columns:1fr}.offer-list,.offer-side{padding:30px 24px}}
+
+/* writing */
+.writing{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.wcard{display:block;text-decoration:none;border-top:1px solid var(--espresso);padding-top:18px}
+.wcard h3{font-family:var(--f-display);font-size:1.4rem;margin-bottom:6px}
+.wcard p{margin:0;color:var(--cocoa);max-width:48ch}
+.wcard .go{display:inline-block;margin-top:12px;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+@media (max-width:640px){.writing{grid-template-columns:1fr}}
+
+/* contact */
+.contact{text-align:center;display:grid;gap:18px;justify-items:center}
+.contact h2 .script{font-size:1.6em;letter-spacing:0;display:block;text-transform:none;color:var(--butter)}
+.contact .mail{font-family:var(--f-display);font-size:clamp(1.3rem,3.4vw,2.1rem);letter-spacing:.04em;user-select:all;word-break:break-all}
+.contact .row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.contact .pill{background:var(--cream);color:var(--espresso)}
+.contact .pill:hover{background:var(--butter-deep)}
+.contact .pill.ghost{background:transparent;color:var(--cream);box-shadow:inset 0 0 0 1px var(--cream)}
+.contact small{color:rgba(255,251,241,.6);font-size:.8rem}
+footer{padding-block:26px;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--cocoa)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--espresso);color:var(--cream);padding:10px 18px;border-radius:999px;font-size:.8rem;letter-spacing:.06em;z-index:20}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
 </head>
 <body>
 
-  <!-- Top Navigation -->
+
+<header class="nav">
   <div class="wrap">
-    <nav class="site-nav" aria-label="Main Navigation">
-      <div class="nav-brand">
-        <a class="nav-word" href="#top">Janina Tran</a>
-        <span class="nav-tag">Hospitality PR &amp; Storytelling</span>
-      </div>
-      <div class="nav-links">
-        <a href="#cases">Case Studies</a>
-        <a href="#services">Services</a>
-        <a href="#work">Portfolio</a>
-        <a href="#reels">Motion</a>
-        <a href="#about">About</a>
-        <a href="#writing">Writing</a>
-        <a class="nav-cta" href="#contact">Enquire</a>
-      </div>
-    </nav>
-  </div>
-
-  <!-- Hero Header -->
-  <div class="wrap">
-    <header class="hero" id="top">
-      <div class="hero-content">
-        <p class="label">Hospitality PR · Culinary Creative Direction · Luxury Dining &amp; Stays</p>
-        <h1>Janina Tran</h1>
-        <p class="lede">Where an analyst's critical eye meets a poet's sensory ear. Bespoke PR, creative direction, and editorial storytelling for premier dining rooms and luxury hotels across Singapore, Bali, and Hong Kong.</p>
-        
-        <div class="meta-badges">
-          <span><strong>Locations:</strong> Singapore · Bali · Hong Kong</span>
-          <span><strong>Degree:</strong> BA in Academic &amp; Creative Writing (with Concentration in Poetry &amp; Analysis)</span>
-          <span><strong>Background:</strong> 6 Years Head of English &amp; Admissions Coach (HK) · Copywriting &amp; Hospitality Direction</span>
-          <span><strong>Clients &amp; Collaborators:</strong> La Réserve 1785 Bali · Sassy Mama Hong Kong · Wrong Gym Bali</span>
-        </div>
-
-        <div class="cta-group">
-          <a class="btn-primary" href="#cases">Explore Case Studies <span>→</span></a>
-          <a class="tlink soft" href="#services">View Services</a>
-          <a class="tlink soft" href="#work">At the Table &amp; Stays</a>
-        </div>
-      </div>
-
-      <figure class="hero-figure">
-        <div class="hero-figure-frame">
-          <img src="img/hero.jpg" alt="Janina in a black halter dress on a red leather banquette">
-          <div class="hero-badge-float">Singapore · Late Supper</div>
-        </div>
-        <figcaption>
-          <span>The red room, late supper</span>
-          <span>Photographed tableside</span>
-        </figcaption>
-      </figure>
-    </header>
-
-    <!-- Selected Properties, Tables & Editorial Features Ticker -->
-    <div class="clients-section">
-      <p class="label">Clients &amp; Collaborators</p>
-      <ul class="clients-list">
-        <li>La Réserve 1785 Bali</li>
-        <li>Sassy Mama Hong Kong</li>
-        <li>Wrong Gym Bali</li>
+    <div class="bar">
+      <a class="logo" href="#top" aria-label="Janina, back to top">Janina</a>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#formats">Formats</a></li>
+        <li><a href="#work">Portfolio</a></li>
+        <li><a href="#results">Results</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
+      <a class="pill" href="#contact">Work with me</a>
     </div>
   </div>
+</header>
 
-  <!-- Strategic Case Studies -->
-  <div class="band-soft" id="cases">
+<main id="top">
+  <section class="hero">
     <div class="wrap">
-      <div class="section-head">
-        <div>
-          <p class="label">Strategic Case Studies</p>
-          <h2>Emotional and editorial storytelling for restaurants and hotels</h2>
+      <div class="hero-card">
+        <div class="hero-photo">
+          <img src="img/well_02.jpg" alt="Janina mid-lunge with a dumbbell at Wrong Gym Bali" fetchpriority="high">
+          <span class="tag">Wrong Gym · Bali</span>
         </div>
-        <p class="head-desc">From luxury boutique resorts in Bali to dining destinations in Singapore, how creative direction, narrative PR, and tableside motion connect with real audiences — reflected in real engagement across verified editorial carousels.</p>
-      </div>
-
-      <!-- Carousel Case Study Showcase -->
-      <div class="case-study-showcase" id="caseStudyShowcase">
-        <div class="case-study-tabs" role="tablist" aria-label="Featured Instagram Carousels">
-          <button class="case-study-tab-btn active" role="tab" aria-selected="true" data-index="0" onclick="window.selectCaseStudyCarousel(0)">
-            <span>Singapore City Eats Guide</span>
-            <span class="case-study-tab-badge">29.4K Views</span>
-          </button>
-          <button class="case-study-tab-btn" role="tab" aria-selected="false" data-index="1" onclick="window.selectCaseStudyCarousel(1)">
-            <span>Sushisamba Singapore</span>
-            <span class="case-study-tab-badge">20.3K Views</span>
-          </button>
-          <button class="case-study-tab-btn" role="tab" aria-selected="false" data-index="2" onclick="window.selectCaseStudyCarousel(2)">
-            <span>Ho Chi Minh City Story</span>
-            <span class="case-study-tab-badge">62.5K Views</span>
-          </button>
-        </div>
-
-        <div class="case-study-layout">
-          <!-- Video Column -->
-          <div class="case-study-video-col">
-            <div class="case-study-video-container">
-              <span class="case-study-video-pill">
-                <span class="pulse-dot"></span>
-                <span id="csVideoPillText">29.4K Views</span>
-              </span>
-              <video id="csActiveVideo" 
-                     src="video/carousel_1_singapore_eats_views.mp4" 
-                     poster="img/carousel_1_sg_eats_cover.jpg" 
-                     autoplay 
-                     loop 
-                     muted 
-                     playsinline>
-              </video>
-            </div>
+        <div class="hero-copy">
+          <h1><span class="script">Janina</span><span class="role">UGC Creator</span></h1>
+          <p class="sub">Singapore · Bali · Hong Kong</p>
+          <p class="lede">Ad-ready video for wellness, fitness, food and travel brands. I write the hooks, shoot the content, and hand over files your team can run tomorrow.</p>
+          <div class="hero-actions">
+            <button class="pill" type="button" data-copy="tranjanina@gmail.com"><span class="dot">@</span>tranjanina@gmail.com</button>
+            <a class="pill ghost" href="https://instagram.com/janina.ig" target="_blank" rel="noopener">@janina.ig</a>
           </div>
-
-          <!-- Detail Column -->
-          <div class="case-study-detail-col">
-            <div class="case-study-client" id="csClientText">✦ Singapore · Singapore City Eats Guide</div>
-            <div class="case-study-type" id="csTypeText">Instagram Carousel Editorial</div>
-            <h3 class="case-study-title" id="csTitleText">Singapore City Eats Guide — Instagram carousel</h3>
-            
-            <div class="case-study-strategy-title">What I Did</div>
-            <p class="case-study-challenge" id="csWhatIDidText" style="border-bottom: none; margin-bottom: 0; padding-bottom: 0;">
-              Concept, photography, carousel design, captions
-            </p>
-
-            <div class="case-study-metric-box">
-              <div class="metric-caption">Primary Verified Engagement</div>
-              <div class="metric-val-row">
-                <div class="metric-number" id="csViewsNum">29.4K</div>
-                <div class="metric-unit">Verified Views</div>
-              </div>
-              <div class="metric-subtext">
-                <span style="color: #10B981; font-weight: 500;">✓ Showing views only</span>
-                <span>Comments, shares &amp; reposts excluded</span>
-              </div>
-            </div>
-
-            <div class="case-study-deliverables" id="csDeliverablesText">
-              Editorial Carousel · Creative Direction · Captions
-            </div>
-
-            <!-- Slide Thumbnails Strip -->
-            <div class="case-study-slides-strip">
-              <div class="case-study-slides-strip-title">
-                <span>Key Carousel Slides</span>
-                <span id="csSlideCountLabel" style="color: var(--muted); font-weight: normal;">14 slides</span>
-              </div>
-              <div class="case-study-slides-scroll" id="csSlidesScroll">
-                <div class="case-study-slide-thumb"><img src="img/slides/c1_slide_01.jpg" alt="Slide 1" loading="lazy"><span class="slide-num">#1</span></div>
-                <div class="case-study-slide-thumb"><img src="img/slides/c1_slide_02.jpg" alt="Slide 2" loading="lazy"><span class="slide-num">#2</span></div>
-                <div class="case-study-slide-thumb"><img src="img/slides/c1_slide_03.jpg" alt="Slide 3" loading="lazy"><span class="slide-num">#3</span></div>
-                <div class="case-study-slide-thumb"><img src="img/slides/c1_slide_04.jpg" alt="Slide 4" loading="lazy"><span class="slide-num">#4</span></div>
-                <div class="case-study-slide-thumb"><img src="img/slides/c1_slide_05.jpg" alt="Slide 5" loading="lazy"><span class="slide-num">#5</span></div>
-                <div class="case-study-slide-thumb"><img src="img/slides/c1_slide_06.jpg" alt="Slide 6" loading="lazy"><span class="slide-num">#6</span></div>
-                <div class="case-study-slide-thumb"><img src="img/slides/c1_slide_07.jpg" alt="Slide 7" loading="lazy"><span class="slide-num">#7</span></div>
-                <div class="case-study-slide-thumb"><img src="img/slides/c1_slide_08.jpg" alt="Slide 8" loading="lazy"><span class="slide-num">#8</span></div>
-              </div>
-            </div>
-          </div>
+          <span class="vertical" aria-hidden="true">Wellness / Fitness / Food / Travel</span>
         </div>
-      </div>
-      <!-- TODO: Add more case studies here later -->
-      </div>
-    </div>
-  </div>
-
-  <!-- Client & Collaborator Testimonials -->
-  <!-- TODO: Add real testimonials/endorsements when supplied -->
-  <!--
-  <section class="testimonials-section" id="testimonials" style="display: none;">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <p class="label">Endorsements</p>
-          <h2>What chefs &amp; hospitality directors say</h2>
-        </div>
-        <p class="head-desc">Collaborating with celebrated culinary teams and hospitality leaders across Asia.</p>
-      </div>
-
-      <div class="testimonials-grid" id="testimonialsGrid">
       </div>
     </div>
   </section>
-  -->
 
-  <!-- Services & Packages Section -->
-  <div class="band" id="services">
+  <div class="clients">
     <div class="wrap">
-      <div class="section-head">
+      <p class="eyebrow">Created for</p>
+      <span>Wrong Gym Bali</span>
+      <span>La Réserve 1785</span>
+      <span>Sassy Mama HK</span>
+      <span>Umalas Creek</span>
+    </div>
+  </div>
+
+  <section class="band" id="about">
+    <div class="wrap about">
+      <div class="about-photo"><img src="img/hero.jpg" alt="Janina in a black halter dress on a red leather banquette" loading="lazy"></div>
+      <div class="about-card">
+        <p class="eyebrow">About me</p>
+        <h2>Hi <span class="script">brands</span></h2>
+        <ul>
+          <li>Singapore-based UGC creator for wellness, fitness, food and travel.</li>
+          <li>Former copywriter and brand strategist. I write my own hooks and scripts.</li>
+          <li>Every video ships with three hook variations, so you can test what stops the scroll.</li>
+          <li>Natural light, clean audio, real reactions. Delivered 9:16 and 4:5 for Meta and TikTok ads.</li>
+          <li>Training at Wrong Gym Bali, eating my way across Singapore, Bali and Hong Kong.</li>
+        </ul>
+        <span class="sig" aria-hidden="true">Janina</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="formats">
+    <div class="wrap">
+      <div class="head">
         <div>
-          <p class="label">Services &amp; Packages</p>
-          <h2>Strategies to achieve your reservation and brand goals</h2>
-        </div>
-        <p class="head-desc">Full-scope hospitality PR, launch campaigns, creative direction, and visual storytelling tailored to luxury hotels, boutique stays, and premier dining destinations.</p>
-      </div>
-
-      <!-- 1. Three Service Areas -->
-      <div class="services-pillars-grid">
-        <div class="service-pillar-card">
-          <span class="pillar-num">01</span>
-          <h3>PR &amp; Launch Campaigns</h3>
-          <p class="pillar-tagline">Tell your story to the international audiences that book flights and tables.</p>
-          <ul class="pillar-list">
-            <li>Narrative angles, brand development &amp; press releases tailored for food, luxury travel, and lifestyle editors</li>
-            <li>Bespoke press kit building (EPKs), launch asset libraries, and factsheet kits</li>
-            <li>Targeted media distribution across Singapore, Bali, and regional Southeast Asia</li>
-            <li>VIP &amp; food journalist tasting curation with custom media kits and opening hype</li>
-          </ul>
-        </div>
-
-        <div class="service-pillar-card featured">
-          <span class="pillar-num">02</span>
-          <h3>Short-Form Motion &amp; Creative Direction</h3>
-          <p class="pillar-tagline">Stop the scroll with tableside authenticity and sensory pacing.</p>
-          <ul class="pillar-list">
-            <li>The 20-second hook architecture: crisp crackles, broth pours, late-night room murmur</li>
-            <li>Natural light cinematography edited for viral vertical conversion (Reels &amp; TikTok)</li>
-            <li>High-resolution 4:5 editorial photography for digital menus, social feeds, and press</li>
-            <li>Custom voiceover scripts and tested caption copy that resonates with diners</li>
-          </ul>
-        </div>
-
-        <div class="service-pillar-card">
-          <span class="pillar-num">03</span>
-          <h3>Brand Voice &amp; Storytelling Retainers</h3>
-          <p class="pillar-tagline">Consistent cultural depth that builds loyal audiences and memorable brand affinity.</p>
-          <ul class="pillar-list">
-            <li>Chef, sommelier &amp; founder profile storytelling written with a literary ear</li>
-            <li>Monthly content partnerships providing steady organic momentum and seasonal rollouts</li>
-            <li>Substack essays &amp; newsletter features exploring the culinary philosophy of the table</li>
-            <li>Whitelisting and paid social asset optimization consultation</li>
-          </ul>
+          <p class="eyebrow">Sample videos</p>
+          <h2>Formats I shoot</h2>
+          <p class="intro">The four formats brands ask for most. Each one follows the same arc: hook, problem, demo, call to action.</p>
         </div>
       </div>
-
-      <!-- 2. Three Packages -->
-      <div style="margin-top: 72px;">
-        <div class="section-head" style="margin-bottom: 28px;">
-          <div>
-            <p class="label">Deliverable Packages</p>
-            <h3 style="font-family: var(--serif); font-size: clamp(26px, 3.2vw, 36px); font-weight: 400; color: var(--ink);">Commissioning a story</h3>
-          </div>
-          <p class="head-desc">Every commission includes scripting, one round of revisions and raw files on request. Usage rights and whitelist ad rights are customized to your launch schedule.</p>
-        </div>
-
-        <div class="svc-grid">
-          <div class="svc-col">
-            <p class="label">An introduction</p>
-            <h3>The Taste</h3>
-            <ul>
-              <li>One vertical video (15–30s)</li>
-              <li>Three opening hook variations</li>
-              <li>Poetic, SEO-optimized caption</li>
-              <li>Delivered within 7 days</li>
-            </ul>
-            <p class="price-tag">Ideal for single hero dish or cocktail launch</p>
-          </div>
-
-          <div class="svc-col">
-            <p class="label" style="color: var(--accent);">Most requested</p>
-            <h3>The Story</h3>
-            <ul>
-              <li>Three vertical videos (15–60s)</li>
-              <li>Custom voiceover scripts &amp; audio</li>
-              <li>Ten editorial table stills (4:5)</li>
-              <li>Captions for every piece</li>
-            </ul>
-            <p class="price-tag">Complete food &amp; room storytelling</p>
-          </div>
-
-          <div class="svc-col">
-            <p class="label">For openings &amp; retainers</p>
-            <h3>The Season</h3>
-            <ul>
-              <li>Six or more videos over a month</li>
-              <li>Content plan built from your brief</li>
-              <li>Carousels, stills, and paid ad cuts</li>
-              <li>Whitelisting consultation included</li>
-            </ul>
-            <p class="price-tag">By proposal / Monthly partnership</p>
-          </div>
-        </div>
-
-        <div class="formats-bar">
-          <p class="label">Deliverable Formats</p>
-          <p>Instagram Reels &amp; carousels · TikTok · Photography in 4:5 and 1:1 · Paid Meta ad cuts · Long-form newsletter copy</p>
-        </div>
-
-        <!-- The Process -->
-        <div style="margin-top: 64px;">
-          <div class="section-head" style="margin-bottom: 28px;">
-            <div>
-              <p class="label">The Process</p>
-              <h3 style="font-family: var(--serif); font-size: clamp(24px, 3vw, 34px); font-weight: 400; color: var(--ink);">From brief to posted</h3>
-            </div>
-          </div>
-          <div class="process-grid">
-            <div class="process-step">
-              <span class="step-num">I.</span>
-              <h3>Brief</h3>
-              <p>You share the menu, the audience, and what success looks like for the season.</p>
-            </div>
-            <div class="process-step">
-              <span class="step-num">II.</span>
-              <h3>Script</h3>
-              <p>Tested hooks, a concise script and a shot list return to you for sign-off.</p>
-            </div>
-            <div class="process-step">
-              <span class="step-num">III.</span>
-              <h3>Shoot</h3>
-              <p>Natural light, real service, real appetite. Edited for vertical conversion.</p>
-            </div>
-            <div class="process-step">
-              <span class="step-num">IV.</span>
-              <h3>Deliver</h3>
-              <p>Final files, captions and raw clips, ready for organic or paid promotion.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Interactive Inquiry & Brief Builder -->
-        <div class="brief-builder-container" id="briefBuilder" style="margin-top: 56px;">
-          <div class="builder-controls">
-            <div>
-              <div class="builder-step-label"><span>1.</span> Select Deliverable Package</div>
-              <div class="package-cards-grid" id="builderPackages">
-                <!-- Rendered via brief-builder.js -->
-              </div>
-            </div>
-
-            <div>
-              <div class="builder-step-label"><span>2.</span> Add-On Options &amp; Ad Rights</div>
-              <div class="addons-checkbox-group" id="builderAddOns">
-                <!-- Rendered via brief-builder.js -->
-              </div>
-            </div>
-
-            <div>
-              <div class="builder-step-label"><span>3.</span> Property &amp; Dining Location</div>
-              <div class="location-pills" id="builderLocations">
-                <!-- Rendered via brief-builder.js -->
-              </div>
-            </div>
-          </div>
-
-          <!-- Generated Brief Summary Box -->
-          <div class="brief-summary-panel">
-            <div>
-              <div class="brief-summary-header">
-                <span class="label">Your Tailored Brief</span>
-                <div class="brief-summary-title">Collaboration Overview</div>
-              </div>
-              <div class="brief-output-box" id="briefSummaryOutput">
-                <!-- Live output generated by brief-builder.js -->
-              </div>
-            </div>
-
-            <div class="brief-actions">
-              <button type="button" class="btn-brief-copy" id="copyBriefBtn">
-                <span>📋</span> Copy Brief to Clipboard
-              </button>
-              <button type="button" class="btn-brief-email" id="emailBriefBtn">
-                Email Janina Directly ↗
-              </button>
-              <div class="brief-feedback-msg" id="briefFeedback" aria-live="polite"></div>
-            </div>
-          </div>
-        </div>
+      <div class="formats">
+        <article class="fmt">
+          <div class="phone"><img src="img/well_05.jpg" alt="Janina doing dumbbell deadlifts in flared leggings" loading="lazy"><span class="hook">“I stopped skipping leg day because of these.”</span><span class="badge">Testimonial</span></div>
+          <p class="niche">Wellness · Activewear</p>
+          <h3>Testimonial</h3>
+          <p>A real routine, a real opinion. Built to run as a paid ad.</p>
+          <ul class="arc"><li>Hook</li><li>Problem</li><li>Demo</li><li>CTA</li></ul>
+        </article>
+        <article class="fmt">
+          <div class="phone"><img src="img/well_07.jpg" alt="Janina doing a step-up lunge with a dumbbell" loading="lazy"><span class="hook">“Three moves, twenty minutes, done.”</span><span class="badge">Product demo</span></div>
+          <p class="niche">Fitness · Equipment</p>
+          <h3>Product demo</h3>
+          <p>Fast, clear, in use. Shows what the product does inside the first five seconds.</p>
+          <ul class="arc"><li>Hook</li><li>Problem</li><li>Demo</li><li>CTA</li></ul>
+        </article>
+        <article class="fmt">
+          <div class="phone"><img src="img/j26.jpg" alt="Dry-aged tomahawk at Bottega di Carne" loading="lazy"><span class="hook">“Is this the best tomahawk in Singapore?”</span><span class="badge">Taste test</span></div>
+          <p class="niche">Food &amp; Drink</p>
+          <h3>Taste test</h3>
+          <p>First bite on camera with an honest reaction. Works for restaurants and packaged food.</p>
+          <ul class="arc"><li>Hook</li><li>Taste</li><li>Reaction</li><li>CTA</li></ul>
+        </article>
+        <article class="fmt">
+          <div class="phone"><img src="img/travel_pool_breakfast.jpg" alt="Poolside villa breakfast at La Réserve 1785, Bali" loading="lazy"><span class="hook">“24 hours at a villa in Bali.”</span><span class="badge">Vlog</span></div>
+          <p class="niche">Travel &amp; Stays</p>
+          <h3>Day-in-the-life vlog</h3>
+          <p>Your product or property woven into a day people want to live.</p>
+          <ul class="arc"><li>Hook</li><li>Story</li><li>Moments</li><li>CTA</li></ul>
+        </article>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- About Section -->
-  <div class="wrap">
-    <section class="about" id="about">
-      <div>
-        <p class="label">About Janina</p>
-        <h2>A poet's ear. An analyst's eye. <em>Always hungry.</em></h2>
-      </div>
-      <div class="copy">
-        <p>I've lived in Hong Kong, Bali, and Singapore, immersed in the food, hotels, and cultural textures of all three. My literary foundation is a degree in Academic and Creative Writing with a concentration in Poetry and Analysis—giving me both a lyricist's ear for emotional cadence and an analyst's eye for rigorous narrative structure.</p>
-        <p>Before stepping into copywriting and hospitality creative direction two years ago, I spent six years in Hong Kong as <strong>Head of English</strong> and an <strong>admissions coach</strong> for overseas college and university applications, including at <strong>Telos Education Hong Kong</strong>. That career demanded crafting authentic, high-stakes personal narratives that stood out to the world's most selective institutions—a storytelling rigor that now directly powers how I position luxury dining rooms and boutique properties.</p>
-        <p>Today, my practice bridges culinary photography, brand development, and editorial press releases: creating lifestyle features for <strong>Sassy Mama Hong Kong</strong>, architecting launch releases for <strong>Wrong Gym Bali</strong> (featured in <em>Tatler Singapore</em>), and directing visual stories for luxury stays like <strong>La Réserve 1785 Bali</strong>. I don't treat hospitality as generic promotional content; I treat it as cultural, sensory, and emotional storytelling that captures what makes a table or property truly distinct.</p>
-        
-        <div class="facts">
-          <div>
-            <b>BA Writing</b>
-            <span>Concentration in Poetry &amp; Analysis</span>
-          </div>
-          <div>
-            <b>6 Years in HK</b>
-            <span>Head of English &amp; Admissions Coach</span>
-          </div>
-          <div>
-            <b>Copywriting &amp; PR</b>
-            <span>2 Years Hospitality Direction</span>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <!-- Gallery Section -->
-  <div class="band">
+  <section class="block" id="work" style="padding-top:0">
     <div class="wrap">
-      <section id="work">
-        <div class="section-head">
-          <div>
-            <p class="label">Curated Visual Portfolio</p>
-            <h2>At the table &amp; luxury stays</h2>
-          </div>
-          <p class="head-desc">Every photograph is captured on-location in real dining rooms, suites, and beach clubs across Singapore, Bali, and Hong Kong. Click any plate or room to explore sensory notes, creative hooks, and editorial captions.</p>
+      <div class="head">
+        <div>
+          <p class="eyebrow">Portfolio</p>
+          <h2>Recent work</h2>
         </div>
-
-        <div class="gallery-controls">
-          <div class="gallery-tabs" role="tablist" aria-label="Filter hospitality portfolio">
-            <button type="button" class="active" data-filter="all" aria-pressed="true" role="tab">All <span class="tab-count">32</span></button>
-            <button type="button" data-filter="fine" aria-pressed="false" role="tab">Restaurants &amp; Tables <span class="tab-count">22</span></button>
-            <button type="button" data-filter="travel" aria-pressed="false" role="tab">Luxury Stays &amp; Travel <span class="tab-count">5</span></button>
-            <button type="button" data-filter="bar" aria-pressed="false" role="tab">Bars &amp; Rooms <span class="tab-count">8</span></button>
-            <button type="button" data-filter="me" aria-pressed="false" role="tab">With Janina <span class="tab-count">5</span></button>
-          </div>
-          <span class="gallery-view-hint">Click any photo for tasting notes &amp; caption</span>
+        <div class="tabs" role="group" aria-label="Filter portfolio">
+          <button type="button" id="tab-all" data-f="all" aria-pressed="false">All</button>
+          <button type="button" id="tab-wellness" data-f="wellness" aria-pressed="true">Wellness &amp; Fitness</button>
+          <button type="button" id="tab-food" data-f="food" aria-pressed="false">Food &amp; Drink</button>
+          <button type="button" id="tab-travel" data-f="travel" aria-pressed="false">Travel &amp; Stays</button>
         </div>
-
-        <!-- Dynamic Gallery Grid Container -->
-        <div class="gallery-grid" id="galleryGrid">
-        <figure class="gallery-item" data-category="fine" data-id="j22" tabindex="0" role="button" aria-label="View Fried Montanara with San Daniele at Fortuna">
-          <div class="gallery-mat">
-            <img src="img/j22.jpg" alt="Fried Montanara with San Daniele at Fortuna" loading="lazy">
-            <span class="gallery-stamp">Fortuna</span>
-            <span class="gallery-expand-hint" aria-hidden="true">↗</span>
-          </div>
-          <figcaption class="gallery-caption">
-            <span class="gallery-caption-title">Fried Montanara with San Daniele</span>
-            <span class="gallery-caption-sub">Fortuna · Craig Road</span>
-          </figcaption>
-        </figure>
-        <figure class="gallery-item gallery-collage" data-category="travel" data-id="t01" data-venue-ids="t01,t02" tabindex="0" role="button" aria-label="View La Réserve 1785 Canggu (2 Captures)">
-          <div class="gallery-mat collage-diptych">
-            <span class="collage-count-badge">✦ 2 Captures</span>
-            <img src="img/travel_pool_breakfast.jpg" data-venue-id="t01" alt="Poolside Villa Breakfast at La Réserve 1785" loading="lazy">
-            <img src="img/travel_suite_stone.jpg" data-venue-id="t02" alt="The Stone Sanctuary Suite at La Réserve 1785" loading="lazy">
-            <span class="gallery-stamp">La Réserve 1785</span>
-            <span class="gallery-expand-hint" aria-hidden="true">↗</span>
-          </div>
-          <figcaption class="gallery-caption">
-            <span class="gallery-caption-title">La Réserve 1785 · Canggu</span>
-            <span class="gallery-caption-sub">Boutique Stay &amp; Poolside Villa · 2 Captures</span>
-          </figcaption>
-        </figure>
-        <figure class="gallery-item" data-category="travel bar" data-id="t03" tabindex="0" role="button" aria-label="View The Frozen Spritz Flight at Tanjong Beach Club">
-          <div class="gallery-mat">
-            <img src="img/travel_beachclub_spritz.jpg" alt="The Frozen Spritz Flight at Tanjong Beach Club" loading="lazy">
-            <span class="gallery-stamp">Tanjong Beach Club</span>
-            <span class="gallery-expand-hint" aria-hidden="true">↗</span>
-          </div>
-          <figcaption class="gallery-caption">
-            <span class="gallery-caption-title">The Frozen Spritz Flight</span>
-            <span class="gallery-caption-sub">Tanjong Beach Club · Sentosa</span>
-          </figcaption>
-        </figure>
-        <figure class="gallery-item" data-category="travel" data-id="t04" tabindex="0" role="button" aria-label="View Victoria Harbour Midnight">
-          <div class="gallery-mat">
-            <img src="img/travel_hk_skyline.jpg" alt="Victoria Harbour Midnight" loading="lazy">
-            <span class="gallery-stamp">Hong Kong</span>
-            <span class="gallery-expand-hint" aria-hidden="true">↗</span>
-          </div>
-          <figcaption class="gallery-caption">
-            <span class="gallery-caption-title">Victoria Harbour Midnight</span>
-            <span class="gallery-caption-sub">Metropolitan Travel · Hong Kong</span>
-          </figcaption>
-        </figure>
-        <figure class="gallery-item" data-category="travel me" data-id="t05" tabindex="0" role="button" aria-label="View Tropical Resort Nights at Desa Kitsuné Bali">
-          <div class="gallery-mat">
-            <img src="img/travel_resort_lounge.jpg" alt="Tropical Resort Nights at Desa Kitsuné Bali" loading="lazy">
-            <span class="gallery-stamp">Desa Kitsuné</span>
-            <span class="gallery-expand-hint" aria-hidden="true">↗</span>
-          </div>
-          <figcaption class="gallery-caption">
-            <span class="gallery-caption-title">Tropical Resort Nights</span>
-            <span class="gallery-caption-sub">Desa Kitsuné · Bali</span>
-          </figcaption>
-        </figure>
-        <figure class="gallery-item" data-category="fine bar" data-id="t06" tabindex="0" role="button" aria-label="View The Macallan Vintage Archive in Singapore">
-          <div class="gallery-mat">
-            <img src="img/travel_macallan_archive.jpg" alt="The Macallan Vintage Archive in Singapore" loading="lazy">
-            <span class="gallery-stamp">The Macallan</span>
-            <span class="gallery-expand-hint" aria-hidden="true">↗</span>
-          </div>
-          <figcaption class="gallery-caption">
-            <span class="gallery-caption-title">The Macallan Vintage Archive</span>
-            <span class="gallery-caption-sub">The Macallan · Singapore</span>
-          </figcaption>
-        </figure>
-        <figure class="gallery-item" data-category="travel" data-id="t08" tabindex="0" role="button" aria-label="View Coastal Tostadas & Swim Club">
-          <div class="gallery-mat">
-            <img src="img/swimclub_tostadas.jpg" alt="Coastal Tostadas & Swim Club" loading="lazy">
-            <span class="gallery-stamp">Swim Club</span>
-            <span class="gallery-expand-hint" aria-hidden="true">↗</span>
-          </div>
-          <figcaption class="gallery-caption">
-            <span class="gallery-caption-title">Coastal Tostadas &amp; Swim Club</span>
-            <span class="gallery-caption-sub">Seaside Raw Bar &amp; Grill</span>
-          </figcaption>
-        </figure>
-        <figure class="gallery-item gallery-collage" data-category="fine" data-id="k16" data-venue-ids="k16,j02,j23" tabindex="0" role="button" aria-label="View Butcher's Block · Raffles Hotel (3 Captures)">
-          <div class="gallery-mat collage-grid-3">
-            <span class="collage-count-badge">✦ 3 Captures</span>
-            <img src="img/k16.jpg" data-venue-id="k16" alt="Steak on Bone Marrow Mash at Butcher's Block" class="collage-hero" loading="lazy">
-            <img src="img/j02.jpg" data-venue-id="j02" alt="Wagyu Sliders at Butcher's Block" loading="lazy">
-            <img src="img/j23.jpg" data-venue-id="j23" alt="Wild Herb Lettuce Cup at Butcher's Block" loading="lazy">
-            <span class="gallery-stamp">Butcher's Block</span>
-            <span class="gallery-expand-hint" aria-hidden="true">↗</span>
-          </div>
-          <figcaption class="gallery-caption">
-            <span class="gallery-caption-title">Butcher's Block · Raffles Hotel</span>
-            <span class="gallery-caption-sub">Wood-Fire Culinary Experience · 3 Captures</span>
-          </figcaption>
-        </figure>
-        <figure class="gallery-item" data-category="fine me" data-id="j18" tabindex="0" role="button" aria-label="View Caviar at Brunch at FiCO Singapore">
-          <div class="gallery-mat">
-            <img src="img/j18.jpg" alt="Caviar at Brunch at FiCO Singapore" loading="lazy" style="object-position: 50% 30%">
-            <span class="gallery-stamp">FiCO</span>
-            <span class="gallery-expand-hint" aria-hidden="true">↗</span>
-          </div>
-          <figcaption class="gallery-caption">
-            <span class="gallery-caption-title">Caviar at Brunch</span>
-            <span class="gallery-caption-sub">FiCO Masseria · East Coast</span>
-          </figcaption>
-        </figure>
-        <figure class="gallery-item gallery-collage" data-category="bar fine me" data-id="m01" data-venue-ids="m01,j14,medusa-welcome,medusa-chili-crunch,medusa-telefono" tabindex="0" role="button" aria-label="View Medusa Dining Room & Bar (5 Captures)">
-          <div class="gallery-mat collage-grid-4">
-            <span class="collage-count-badge">✦ 5 Captures</span>
-            <img src="img/m01.jpg" data-venue-id="m01" alt="The Red Room at Medusa" class="collage-hero" loading="lazy">
-            <img src="img/j14.jpg" data-venue-id="j14" alt="Wild Sea Bream in Saffron Broth at Medusa" loading="lazy">
-            <img src="img/medusa_welcome.jpg" data-venue-id="medusa-welcome" alt="Dinner & Drinks at Medusa" loading="lazy">
-            <img src="img/medusa_telefono.jpg" data-venue-id="medusa-telefono" alt="The Telefono Booth at Medusa" loading="lazy">
-            <span class="gallery-stamp">Medusa</span>
-            <span class="gallery-expand-hint" aria-hidden="true">↗</span>
-          </div>
-          <figcaption class="gallery-caption">
-            <span class="gallery-caption-title">Medusa Dining Room &amp; Bar</span>
-            <span class="gallery-caption-sub">Supper Club &amp; Cocktails · 5 Captures</span>
-          </figcaption>
-        </figure>
-        <figure class="gallery-item gallery-collage" data-category="fine" data-id="j06" data-venue-ids="j06,j12" tabindex="0" role="button" aria-label="View Contemporary French-Japanese (2 Captures)">
-          <div class="gallery-mat collage-diptych">
-            <span class="collage-count-badge">✦ 2 Captures</span>
-            <img src="img/j06.jpg" data-venue-id="j06" alt="Angel Hair & Caviar at Fine Dining" loading="lazy">
-            <img src="img/j12.jpg" data-venue-id="j12" alt="Hand-Cut Steak Tartare at Fine Dining" loading="lazy">
-            <span class="gallery-stamp">Fine Dining</span>
-            <span class="gallery-expand-hint" aria-hidden="true">↗</span>
-          </div>
-          <figcaption class="gallery-caption">
-            <span class="gallery-caption-title">Contemporary French-Japanese</span>
-            <span class="gallery-caption-sub">Caviar &amp; Wagyu Tartare · 2 Captures</span>
-          </figcaption>
-        </figure>
-        <figure class="gallery-item" data-category="bar" data-id="j07" tabindex="0" role="button" aria-label="View Bresaola & 24-Month Parmesan at Casa Vostra">
-          <div class="gallery-mat">
-            <img src="img/j07.jpg" alt="Bresaola & 24-Month Parmesan at Casa Vostra" loading="lazy">
-            <span class="gallery-stamp">Casa Vostra</span>
-            <span class="gallery-expand-hint" aria-hidden="true">↗</span>
-          </div>
-          <figcaption class="gallery-caption">
-            <span class="gallery-caption-title">Bresaola & 24-Month Parmesan</span>
-            <span class="gallery-caption-sub">Aperitivo & Salumeria</span>
-          </figcaption>
-        </figure>
-        <figure class="gallery-item gallery-collage" data-category="fine" data-id="k07" data-venue-ids="k07,j17" tabindex="0" role="button" aria-label="View Solo Ristorante · Amoy Street (2 Captures)">
-          <div class="gallery-mat collage-diptych">
-            <span class="collage-count-badge">✦ 2 Captures</span>
-            <img src="img/k07.jpg" data-venue-id="k07" alt="Signature Uni Tagliolini at Solo Ristorante" loading="lazy">
-            <img src="img/j17.jpg" data-venue-id="j17" alt="Cantabrian Anchovy & Piquillo at Solo Ristorante" loading="lazy">
-            <span class="gallery-stamp">Solo Ristorante</span>
-            <span class="gallery-expand-hint" aria-hidden="true">↗</span>
-          </div>
-          <figcaption class="gallery-caption">
-            <span class="gallery-caption-title">Solo Ristorante</span>
-            <span class="gallery-caption-sub">Northern Italian Dining · 2 Captures</span>
-          </figcaption>
-        </figure>
-        <figure class="gallery-item gallery-collage" data-category="fine" data-id="j20" data-venue-ids="j20,j28" tabindex="0" role="button" aria-label="View Alati Divine Greek (2 Captures)">
-          <div class="gallery-mat collage-diptych">
-            <span class="collage-count-badge">✦ 2 Captures</span>
-            <img src="img/j20.jpg" data-venue-id="j20" alt="Charred Mediterranean Octopus at Alati" loading="lazy">
-            <img src="img/j28.jpg" data-venue-id="j28" alt="Mezze for the Whole Table at Alati" loading="lazy">
-            <span class="gallery-stamp">Alati</span>
-            <span class="gallery-expand-hint" aria-hidden="true">↗</span>
-          </div>
-          <figcaption class="gallery-caption">
-            <span class="gallery-caption-title">Alati Divine Greek</span>
-            <span class="gallery-caption-sub">Cycladic Seafood &amp; Salt-Crust · 2 Captures</span>
-          </figcaption>
-        </figure>
-        <figure class="gallery-item" data-category="me" data-id="k06" tabindex="0" role="button" aria-label="View Hotpot for One at Haidilao">
-          <div class="gallery-mat">
-            <img src="img/k06.jpg" alt="Hotpot for One at Haidilao" loading="lazy">
-            <span class="gallery-stamp">Haidilao</span>
-            <span class="gallery-expand-hint" aria-hidden="true">↗</span>
-          </div>
-          <figcaption class="gallery-caption">
-            <span class="gallery-caption-title">Hotpot for One</span>
-            <span class="gallery-caption-sub">Sichuan Hotpot & Comfort</span>
-          </figcaption>
-        </figure>
-        <figure class="gallery-item" data-category="fine" data-id="k11" tabindex="0" role="button" aria-label="View T-Bone with Charred Rosemary at Nomada">
-          <div class="gallery-mat">
-            <img src="img/k11.jpg" alt="T-Bone with Charred Rosemary at Nomada" loading="lazy">
-            <span class="gallery-stamp">Nomada</span>
-            <span class="gallery-expand-hint" aria-hidden="true">↗</span>
-          </div>
-          <figcaption class="gallery-caption">
-            <span class="gallery-caption-title">T-Bone with Charred Rosemary</span>
-            <span class="gallery-caption-sub">Open-Fire Grill</span>
-          </figcaption>
-        </figure>
-        <figure class="gallery-item gallery-collage" data-category="bar fine" data-id="m02" data-venue-ids="m02,j13" tabindex="0" role="button" aria-label="View People People (2 Captures)">
-          <div class="gallery-mat collage-diptych">
-            <span class="collage-count-badge">✦ 2 Captures</span>
-            <img src="img/m02.jpg" data-venue-id="m02" alt="The Front Bar at People People" loading="lazy">
-            <img src="img/j13.jpg" data-venue-id="j13" alt="Smash Burger & Rosemary Fries at People People" loading="lazy">
-            <span class="gallery-stamp">People People</span>
-            <span class="gallery-expand-hint" aria-hidden="true">↗</span>
-          </div>
-          <figcaption class="gallery-caption">
-            <span class="gallery-caption-title">People People</span>
-            <span class="gallery-caption-sub">Dining Room &amp; Wagyu Burger · 2 Captures</span>
-          </figcaption>
-        </figure>
-        <figure class="gallery-item" data-category="bar" data-id="j10" tabindex="0" role="button" aria-label="View Tiger Prawns on Ice at Lavo">
-          <div class="gallery-mat">
-            <img src="img/j10.jpg" alt="Tiger Prawns on Ice at Lavo" loading="lazy" style="object-position: 50% 80%">
-            <span class="gallery-stamp">Lavo</span>
-            <span class="gallery-expand-hint" aria-hidden="true">↗</span>
-          </div>
-          <figcaption class="gallery-caption">
-            <span class="gallery-caption-title">Tiger Prawns on Ice</span>
-            <span class="gallery-caption-sub">Rooftop Italian Seafood</span>
-          </figcaption>
-        </figure>
-        <figure class="gallery-item" data-category="fine" data-id="j25" tabindex="0" role="button" aria-label="View Smokehouse Platter at Meatsmith">
-          <div class="gallery-mat">
-            <img src="img/j25.jpg" alt="Smokehouse Platter at Meatsmith" loading="lazy">
-            <span class="gallery-stamp">Meatsmith</span>
-            <span class="gallery-expand-hint" aria-hidden="true">↗</span>
-          </div>
-          <figcaption class="gallery-caption">
-            <span class="gallery-caption-title">Smokehouse Platter</span>
-            <span class="gallery-caption-sub">Texas Barbecue Craft</span>
-          </figcaption>
-        </figure>
-        <figure class="gallery-item" data-category="fine" data-id="k09" tabindex="0" role="button" aria-label="View Golden Broth Poured Tableside at Birds of a Feather">
-          <div class="gallery-mat">
-            <img src="img/k09.jpg" alt="Golden Broth Poured Tableside at Birds of a Feather" loading="lazy" style="object-position: 50% 80%">
-            <span class="gallery-stamp">Birds of a Feather</span>
-            <span class="gallery-expand-hint" aria-hidden="true">↗</span>
-          </div>
-          <figcaption class="gallery-caption">
-            <span class="gallery-caption-title">Golden Broth Poured Tableside</span>
-            <span class="gallery-caption-sub">Modern Sichuan-French</span>
-          </figcaption>
-        </figure>
-        <figure class="gallery-item" data-category="fine" data-id="k08" tabindex="0" role="button" aria-label="View Two Pies, One Table at Da Michele">
-          <div class="gallery-mat">
-            <img src="img/k08.jpg" alt="Two Pies, One Table at Da Michele" loading="lazy">
-            <span class="gallery-stamp">Da Michele</span>
-            <span class="gallery-expand-hint" aria-hidden="true">↗</span>
-          </div>
-          <figcaption class="gallery-caption">
-            <span class="gallery-caption-title">Two Pies, One Table</span>
-            <span class="gallery-caption-sub">Neapolitan Pizzeria</span>
-          </figcaption>
-        </figure>
-        <figure class="gallery-item" data-category="fine" data-id="k03" tabindex="0" role="button" aria-label="View Steak, Foie Gras & Tacos at El Kabron">
-          <div class="gallery-mat">
-            <img src="img/k03.jpg" alt="Steak, Foie Gras & Tacos at El Kabron" loading="lazy" style="object-position: 50% 70%">
-            <span class="gallery-stamp">El Kabron</span>
-            <span class="gallery-expand-hint" aria-hidden="true">↗</span>
-          </div>
-          <figcaption class="gallery-caption">
-            <span class="gallery-caption-title">Steak, Foie Gras & Tacos</span>
-            <span class="gallery-caption-sub">Cliffside Spanish & Sunset</span>
-          </figcaption>
-        </figure>
-        <figure class="gallery-item" data-category="fine" data-id="j26" tabindex="0" role="button" aria-label="View Dry-Aged Tomahawk at Bottega di Carne">
-          <div class="gallery-mat">
-            <img src="img/j26.jpg" alt="Dry-Aged Tomahawk at Bottega di Carne" loading="lazy" style="object-position: 50% 50%">
-            <span class="gallery-stamp">Bottega di Carne</span>
-            <span class="gallery-expand-hint" aria-hidden="true">↗</span>
-          </div>
-          <figcaption class="gallery-caption">
-            <span class="gallery-caption-title">Dry-Aged Tomahawk</span>
-            <span class="gallery-caption-sub">Italian Butchery & Grill</span>
-          </figcaption>
-        </figure>
-        <figure class="gallery-item" data-category="fine" data-id="j16" tabindex="0" role="button" aria-label="View The French Dip at Temper">
-          <div class="gallery-mat">
-            <img src="img/j16.jpg" alt="The French Dip at Temper" loading="lazy" style="object-position: 50% 75%">
-            <span class="gallery-stamp">Temper</span>
-            <span class="gallery-expand-hint" aria-hidden="true">↗</span>
-          </div>
-          <figcaption class="gallery-caption">
-            <span class="gallery-caption-title">The French Dip</span>
-            <span class="gallery-caption-sub">Craft Sandwich Counter</span>
-          </figcaption>
-        </figure>
-        <figure class="gallery-item" data-category="fine" data-id="k10" tabindex="0" role="button" aria-label="View Botanical Petits Fours at Cloudstreet">
-          <div class="gallery-mat">
-            <img src="img/k10.jpg" alt="Botanical Petits Fours at Cloudstreet" loading="lazy">
-            <span class="gallery-stamp">Cloudstreet</span>
-            <span class="gallery-expand-hint" aria-hidden="true">↗</span>
-          </div>
-          <figcaption class="gallery-caption">
-            <span class="gallery-caption-title">Botanical Petits Fours</span>
-            <span class="gallery-caption-sub">2-Star Michelin Experiential</span>
-          </figcaption>
-        </figure>
-        <figure class="gallery-item" data-category="fine" data-id="k14" tabindex="0" role="button" aria-label="View Sashimi Above the Clouds at SUSHISAMBA">
-          <div class="gallery-mat">
-            <img src="img/k14.jpg" alt="Sashimi Above the Clouds at SUSHISAMBA" loading="lazy" style="object-position: 50% 85%">
-            <span class="gallery-stamp">SUSHISAMBA</span>
-            <span class="gallery-expand-hint" aria-hidden="true">↗</span>
-          </div>
-          <figcaption class="gallery-caption">
-            <span class="gallery-caption-title">Sashimi Above the Clouds</span>
-            <span class="gallery-caption-sub">Japanese-Brazilian-Peruvian</span>
-          </figcaption>
-        </figure>
-        <figure class="gallery-item" data-category="bar" data-id="m05" tabindex="0" role="button" aria-label="View Neon Sashimi & Late Beats at Kinki">
-          <div class="gallery-mat">
-            <img src="img/m05.jpg" alt="Neon Sashimi & Late Beats at Kinki" loading="lazy" style="object-position: 50% 70%">
-            <span class="gallery-stamp">Kinki</span>
-            <span class="gallery-expand-hint" aria-hidden="true">↗</span>
-          </div>
-          <figcaption class="gallery-caption">
-            <span class="gallery-caption-title">Neon Sashimi & Late Beats</span>
-            <span class="gallery-caption-sub">Urban Japanese & Rooftop</span>
-          </figcaption>
-        </figure>
-        <figure class="gallery-item" data-category="bar" data-id="j27" tabindex="0" role="button" aria-label="View The Marchand Artisan Cheese Table at 10 Scotts">
-          <div class="gallery-mat">
-            <img src="img/j27.jpg" alt="The Marchand Artisan Cheese Table at 10 Scotts" loading="lazy">
-            <span class="gallery-stamp">10 Scotts</span>
-            <span class="gallery-expand-hint" aria-hidden="true">↗</span>
-          </div>
-          <figcaption class="gallery-caption">
-            <span class="gallery-caption-title">The Marchand Artisan Cheese Table</span>
-            <span class="gallery-caption-sub">French Fromagerie & Wine Bar</span>
-          </figcaption>
-        </figure>
-        <figure class="gallery-item" data-category="fine" data-id="j05" tabindex="0" role="button" aria-label="View Warm Rice Tuna Hand Roll at Rappu">
-          <div class="gallery-mat">
-            <img src="img/j05.jpg" alt="Warm Rice Tuna Hand Roll at Rappu" loading="lazy" style="object-position: 50% 70%">
-            <span class="gallery-stamp">Rappu</span>
-            <span class="gallery-expand-hint" aria-hidden="true">↗</span>
-          </div>
-          <figcaption class="gallery-caption">
-            <span class="gallery-caption-title">Warm Rice Tuna Hand Roll</span>
-            <span class="gallery-caption-sub">Modern Hand Roll Bar</span>
-          </figcaption>
-        </figure>
-        <figure class="gallery-item" data-category="fine" data-id="k02" tabindex="0" role="button" aria-label="View Bolognese Tagliatelle al Ragù at Caffe Italia">
-          <div class="gallery-mat">
-            <img src="img/k02.jpg" alt="Bolognese Tagliatelle al Ragù at Caffe Italia" loading="lazy" style="object-position: 50% 70%">
-            <span class="gallery-stamp">Caffe Italia</span>
-            <span class="gallery-expand-hint" aria-hidden="true">↗</span>
-          </div>
-          <figcaption class="gallery-caption">
-            <span class="gallery-caption-title">Bolognese Tagliatelle al Ragù</span>
-            <span class="gallery-caption-sub">Traditional Emilia-Romagna</span>
-          </figcaption>
-        </figure>
-        <figure class="gallery-item" data-category="fine" data-id="k12" tabindex="0" role="button" aria-label="View Charred Skewers & Chilled Wine at Capasso">
-          <div class="gallery-mat">
-            <img src="img/k12.jpg" alt="Charred Skewers & Chilled Wine at Capasso" loading="lazy" style="object-position: 50% 75%">
-            <span class="gallery-stamp">Capasso</span>
-            <span class="gallery-expand-hint" aria-hidden="true">↗</span>
-          </div>
-          <figcaption class="gallery-caption">
-            <span class="gallery-caption-title">Charred Skewers & Chilled Wine</span>
-            <span class="gallery-caption-sub">Contemporary Oenoteca & Grill</span>
-          </figcaption>
-        </figure>
-        <figure class="gallery-item gallery-collage" data-category="fine me" data-id="bakalaki-mezze" data-venue-ids="bakalaki-mezze,bakalaki-seabass,bakalaki-market,bakalaki-portrait" tabindex="0" role="button" aria-label="View Bakalaki Greek Taverna (4 Captures)">
-          <div class="gallery-mat collage-grid-4">
-            <span class="collage-count-badge">✦ 4 Captures</span>
-            <img src="img/bakalaki_mezze.jpg" data-venue-id="bakalaki-mezze" alt="Greek Mezze Dips Platter at Bakalaki" class="collage-hero" loading="lazy">
-            <img src="img/bakalaki_seabass.jpg" data-venue-id="bakalaki-seabass" alt="Whole Greek Sea Bass at Bakalaki" loading="lazy">
-            <img src="img/bakalaki_market.jpg" data-venue-id="bakalaki-market" alt="Aegean Fresh Catch Display at Bakalaki" loading="lazy">
-            <img src="img/bakalaki_portrait.jpg" data-venue-id="bakalaki-portrait" alt="Taverna Living at Bakalaki" loading="lazy">
-            <span class="gallery-stamp">Bakalaki</span>
-            <span class="gallery-expand-hint" aria-hidden="true">↗</span>
-          </div>
-          <figcaption class="gallery-caption">
-            <span class="gallery-caption-title">Bakalaki Greek Taverna</span>
-            <span class="gallery-caption-sub">Hellenic Mezze &amp; Aegean Catch · 4 Captures</span>
-          </figcaption>
-        </figure>
-        </div>
-      </section>
+      </div>
+      <div class="grid" id="grid">
+        <figure class="tile" data-c="wellness"><div class="ph"><img src="img/well_01.jpg" alt="Janina at the entrance of Wrong Gym Bali" loading="lazy"></div><figcaption><strong>Gym arrival, Wrong Gym Bali</strong><span>Vlog · Lifestyle</span></figcaption></figure>
+        <figure class="tile" data-c="wellness"><div class="ph"><img src="img/well_04.jpg" alt="Janina in a blue set doing a split squat" loading="lazy"></div><figcaption><strong>Split squat in a two-piece set</strong><span>Activewear · Fit check</span></figcaption></figure>
+        <figure class="tile" data-c="wellness"><div class="ph"><img src="img/well_06.jpg" alt="Janina doing a cable kickback in flared leggings" loading="lazy"></div><figcaption><strong>Cable kickbacks, glute day</strong><span>Tutorial · Fitness</span></figcaption></figure>
+        <figure class="tile" data-c="wellness"><div class="ph"><img src="img/well_08.jpg" alt="Janina doing a step-up in black shorts" loading="lazy"></div><figcaption><strong>Step-ups in black shorts</strong><span>Product demo · Activewear</span></figcaption></figure>
+        <figure class="tile" data-c="food"><div class="ph"><img src="img/k16.jpg" alt="Steak on bone marrow mash at Butcher's Block" loading="lazy"></div><figcaption><strong>Steak on bone marrow mash</strong><span>Butcher's Block, Raffles</span></figcaption></figure>
+        <figure class="tile" data-c="food"><div class="ph"><img src="img/j22.jpg" alt="Fried montanara with San Daniele at Fortuna" loading="lazy"></div><figcaption><strong>Fried montanara, San Daniele</strong><span>Fortuna, Singapore</span></figcaption></figure>
+        <figure class="tile" data-c="food"><div class="ph"><img src="img/j02.jpg" alt="Wagyu sliders at Butcher's Block" loading="lazy"></div><figcaption><strong>Wagyu sliders</strong><span>Butcher's Block, Raffles</span></figcaption></figure>
+        <figure class="tile" data-c="food"><div class="ph"><img src="img/k14.jpg" alt="Sashimi above the Singapore skyline at SUSHISAMBA" loading="lazy"></div><figcaption><strong>Sashimi above the clouds</strong><span>SUSHISAMBA, Singapore</span></figcaption></figure>
+        <figure class="tile" data-c="food"><div class="ph"><img src="img/bakalaki_mezze.jpg" alt="Greek mezze dips at Bakalaki" loading="lazy"></div><figcaption><strong>Greek mezze for the table</strong><span>Bakalaki, Singapore</span></figcaption></figure>
+        <figure class="tile" data-c="food"><div class="ph"><img src="img/m01.jpg" alt="The red room at Medusa" loading="lazy"></div><figcaption><strong>The red room</strong><span>Medusa, Singapore</span></figcaption></figure>
+        <figure class="tile" data-c="travel"><div class="ph"><img src="img/travel_suite_stone.jpg" alt="Stone Sanctuary Suite at La Réserve 1785" loading="lazy"></div><figcaption><strong>The Stone Sanctuary Suite</strong><span>La Réserve 1785, Bali</span></figcaption></figure>
+        <figure class="tile" data-c="travel"><div class="ph"><img src="img/travel_resort_lounge.jpg" alt="Janina at night at Desa Kitsuné, Bali" loading="lazy"></div><figcaption><strong>Tropical resort nights</strong><span>Desa Kitsuné, Bali</span></figcaption></figure>
+        <figure class="tile" data-c="travel"><div class="ph"><img src="img/travel_beachclub_spritz.jpg" alt="Frozen spritz flight at Tanjong Beach Club" loading="lazy"></div><figcaption><strong>Frozen spritz flight</strong><span>Tanjong Beach Club, Sentosa</span></figcaption></figure>
+        <figure class="tile" data-c="travel"><div class="ph"><img src="img/carousel_1_sg_eats_cover.jpg" alt="Cover of Janina's Singapore city eats guide carousel" loading="lazy"></div><figcaption><strong>Singapore city eats guide</strong><span>Carousel · 29.4K views</span></figcaption></figure>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <!-- Interactive Vertical Reel Simulator -->
-  <div class="reels-section">
+  <section class="band" id="results">
     <div class="wrap">
-      <section id="reels">
-        <div class="section-head">
-          <div>
-            <p class="label">Short-Form Motion</p>
-            <h2>The 20-second hook architecture</h2>
-          </div>
-          <p class="head-desc">UGC reels shouldn't feel like generic ads. We capture authentic tableside pacing: the sizzling crust, the slow broth pour, the room humming at midnight.</p>
+      <div class="head">
+        <div>
+          <p class="eyebrow">Results</p>
+          <h2>Content people watch</h2>
         </div>
-
-        <div class="reels-layout">
-          <!-- Phone Frame Mockup -->
-          <div class="phone-mockup-wrapper">
-            <div class="phone-device">
-              <div class="phone-speaker-notch"></div>
-              
-              <div class="phone-screen" id="phoneScreen">
-                <div class="phone-video-media playing" id="phoneMedia">
-                  <video id="phoneVideo" src="video/IMG_5617.mp4" poster="video/thumbs/IMG_5617_poster.jpg" playsinline loop muted autoplay style="width: 100%; height: 100%; object-fit: cover; display: block;"></video>
-                  <img id="phoneImg" src="video/thumbs/IMG_5617_poster.jpg" alt="Reel video preview" style="display: none;">
-                  <div class="phone-video-overlay-gradient"></div>
-                </div>
-
-                <div class="phone-playback-btn" id="phonePlaybackBtn" aria-label="Pause Reel">❚❚</div>
-
-                <div class="phone-top-bar">
-                  <span class="phone-live-indicator"><span class="phone-pulse-dot"></span> UGC REEL</span>
-                  <span id="phoneBeautyBadge" class="phone-beauty-badge">FOOD</span>
-                  <span id="phoneEstablishment" style="color: rgba(255,255,255,0.85); font-size: 10px;">Bottega di Carne · Mondrian</span>
-                </div>
-
-                <div class="phone-bottom-info">
-                  <div class="phone-creator-tag">
-                    <img class="phone-creator-avatar" src="img/hero.jpg" alt="Janina avatar">
-                    <div>
-                      <div class="phone-creator-name">Janina</div>
-                      <div class="phone-creator-handle"><a href="https://www.instagram.com/janina.ig" target="_blank" rel="noopener" style="color: inherit; text-decoration: none;">@janina.ig</a></div>
-                    </div>
-                  </div>
-
-                  <p class="phone-hook-caption" id="phoneHookCaption">The 3-second crust rule: If your steak doesn't make this sound, send it back.</p>
-
-                  <div class="phone-audio-pill">
-                    <span>♫</span>
-                    <span id="phoneAudioTrack">Original Tableside Audio · Sizzle &amp; Jazz</span>
-                  </div>
-
-                  <div class="phone-progress-bar-container">
-                    <div class="phone-progress-bar" id="phoneProgressBar"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Reel Selector Tabs & Script Breakdown -->
-          <div class="reels-controls-column">
-            <div>
-              <p class="label" style="margin-bottom: 12px;">Select A Reel Concept</p>
-              <div class="reel-selector-tabs" id="reelSelectorTabs">
-                <div class="reel-tab-card active" role="button" tabindex="0">
-                  <div class="reel-tab-left">
-                    <span class="reel-tab-meta">Steakhouse &amp; Grill · Bottega di Carne · Mondrian</span>
-                    <span class="reel-tab-title">The Tomahawk Tableside Tasting</span>
-                  </div>
-                  <div class="reel-tab-metrics">
-                    <span class="reel-tab-views">FOOD</span>
-                    <span class="reel-tab-saves">4K Vertical · 0:10</span>
-                  </div>
-                </div>
-                <div class="reel-tab-card" role="button" tabindex="0">
-                  <div class="reel-tab-left">
-                    <span class="reel-tab-meta">Authentic Italian Trattoria &amp; Dessert · Pete's Place · Grand Hyatt Singapore</span>
-                    <span class="reel-tab-title">The Tableside Affogato Tasting</span>
-                  </div>
-                  <div class="reel-tab-metrics">
-                    <span class="reel-tab-views">Macro Dessert</span>
-                    <span class="reel-tab-saves">Tableside Ritual · 0:08</span>
-                  </div>
-                </div>
-                <div class="reel-tab-card" role="button" tabindex="0">
-                  <div class="reel-tab-left">
-                    <span class="reel-tab-meta">Evening Dining &amp; Hospitality Presence · Medusa · Dining Room &amp; Bar</span>
-                    <span class="reel-tab-title">Cocktail Hour &amp; Dining Glamour</span>
-                  </div>
-                  <div class="reel-tab-metrics">
-                    <span class="reel-tab-views">Evening Glamour</span>
-                    <span class="reel-tab-saves">Supper Club · 0:09</span>
-                  </div>
-                </div>
-                <div class="reel-tab-card" role="button" tabindex="0">
-                  <div class="reel-tab-left">
-                    <span class="reel-tab-meta">Brunch &amp; Tropical Hospitality · El Kabron · Bali Lifestyle Dining</span>
-                    <span class="reel-tab-title">Tropical Villa Sunday Brunch</span>
-                  </div>
-                  <div class="reel-tab-metrics">
-                    <span class="reel-tab-views">Lifestyle Dining</span>
-                    <span class="reel-tab-saves">Slow Morning · 0:10</span>
-                  </div>
-                </div>
-                <div class="reel-tab-card" role="button" tabindex="0">
-                  <div class="reel-tab-left">
-                    <span class="reel-tab-meta">Hellenic Dessert &amp; Tableside Theater · Bakalaki Greek Taverna · Singapore</span>
-                    <span class="reel-tab-title">Tableside Bougatsa Tower</span>
-                  </div>
-                  <div class="reel-tab-metrics">
-                    <span class="reel-tab-views">Culinary Reveal</span>
-                    <span class="reel-tab-saves">Dessert Crack · 0:09</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="reel-script-panel" id="reelScriptPanel">
-              <h4>The 20-Second Narrative Architecture</h4>
-              <div class="reel-script-steps">
-                <div class="reel-script-step">
-                  <span class="reel-step-time">00:00 - 00:03</span>
-                  <span class="reel-step-desc">Visual Hook: Server presenting the sizzling tomahawk bone tableside.</span>
-                </div>
-                <div class="reel-script-step">
-                  <span class="reel-step-time">00:04 - 00:07</span>
-                  <span class="reel-step-desc">The Taste: Biting into the juicy, perfectly pink charred tomahawk crust.</span>
-                </div>
-                <div class="reel-script-step">
-                  <span class="reel-step-time">00:08 - 00:10</span>
-                  <span class="reel-step-desc">Authentic Reaction: Pure unscripted dining joy and tableside banter.</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>62.5K</b><span>Views</span><p>Ho Chi Minh City food story. Concept, photography, carousel design and captions.</p></div>
+        <div class="stat"><b>29.4K</b><span>Views</span><p>Singapore city eats guide. 14 slides, shot and written by me.</p></div>
+        <div class="stat"><b>20.3K</b><span>Views</span><p>SUSHISAMBA Singapore. Editorial carousel for a rooftop dining room.</p></div>
+      </div>
+      <p class="results-note">Verified Instagram views. Comments, shares and reposts not included.</p>
     </div>
-  </div>
+  </section>
 
-
-
-  <!-- Voice & Captions Quote -->
-  <div class="wrap">
-    <section class="voice-layout">
-      <div>
-        <p class="label">Captions &amp; Voice</p>
-        <h2>The words are part of the work.</h2>
-        <p class="voice-side-desc">I write the hook, the script and the caption myself, in a voice that sounds like a person and makes people hungry.</p>
-      </div>
-      <div class="voice-quote-box">
-        <blockquote>"I live for a steak with a real crust. This one came off the wood fire charred on the outside and perfectly blushing pink inside, on a bone marrow potato purée that was lick-the-plate worthy."</blockquote>
-        <cite>Butcher's Block, Raffles Arcade</cite>
-      </div>
-    </section>
-  </div>
-
-  <!-- Essays & Newsletters Substack Reading Room -->
-  <div class="band">
+  <section class="block" id="work-with-me">
     <div class="wrap">
-      <section id="writing">
-        <div class="section-head">
-          <div>
-            <p class="label">Essays &amp; Newsletters</p>
-            <h2>From the newsletters</h2>
-          </div>
-          <p class="head-desc">Personal essays on love, memory and starting over, alongside food and travel field notes. The same attention and sensory depth I bring to every table.</p>
+      <div class="head">
+        <div>
+          <p class="eyebrow">Working together</p>
+          <h2>What you get</h2>
         </div>
-
-        <div class="newsletter-links-row" style="margin-bottom: 28px; display: flex; gap: 24px; flex-wrap: wrap;">
-          <a class="tlink" href="https://planetnina.substack.com/" target="_blank" rel="noopener">Food and travel newsletter ↗</a>
-          <a class="tlink" href="https://substack.com/@lovejanina" target="_blank" rel="noopener">Personal essays ↗</a>
+      </div>
+      <div class="offer">
+        <div class="offer-list">
+          <dl>
+            <div><dt>Ad-ready videos</dt><dd>Vertical 9:16 edits plus 4:5 cuts, captioned, with raw footage on request.</dd></div>
+            <div><dt>Three hooks per video</dt><dd>Scripted by me, so your team can A/B test openings without a reshoot.</dd></div>
+            <div><dt>Usage rights and whitelisting</dt><dd>Paid-ad usage for 30, 60 or 90 days, whitelisting from my account, and exclusivity when you need it.</dd></div>
+            <div><dt>Monthly retainers</dt><dd>A steady supply of fresh creatives each month for brands running ads all year.</dd></div>
+          </dl>
         </div>
-
-        <div class="quotes-grid" id="quotesGrid">
-          <!-- Rendered via js/app.js -->
+        <div class="offer-side">
+          <p class="eyebrow">Rates</p>
+          <p class="big">Every brief is different. Rates depend on the number of videos, usage and timing.</p>
+          <p>Send me your product, your goal and your timeline, and I'll come back with a tailored quote.</p>
+          <a class="pill" href="#contact" style="align-self:flex-start">Send a brief</a>
         </div>
-
-        <div style="margin-top: 40px; display: flex; gap: 24px; flex-wrap: wrap;">
-          <a class="tlink" href="https://planetnina.substack.com/" target="_blank" rel="noopener">Food and travel newsletter: https://planetnina.substack.com/ ↗</a>
-          <a class="tlink" href="https://substack.com/@lovejanina" target="_blank" rel="noopener">Personal essays: https://substack.com/@lovejanina ↗</a>
-        </div>
-      </section>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <!-- Contact & Lacquer Red Footer Band -->
-  <div class="band-red">
+  <section class="block" style="padding-top:0">
     <div class="wrap">
-      <section class="contact-box" id="contact">
-        <p class="label">Enquiries &amp; Partnerships</p>
-        <h2>Tell me about your table or <em>property.</em></h2>
-        
-        <div class="mail-action-row">
-          <span class="mail-display" id="emailDisplay">tranjanina@gmail.com</span>
-          <button class="btn-copy-email" id="copyEmailBtn" type="button">Copy email</button>
-        </div>
-        <p class="copied-status" id="copyEmailStatus" aria-live="polite"></p>
-
-        <div class="social-links">
-          <a class="tlink soft" href="https://planetnina.substack.com/" target="_blank" rel="noopener">Food and travel newsletter</a>
-          <a class="tlink soft" href="https://substack.com/@lovejanina" target="_blank" rel="noopener">Personal essays</a>
-          <a class="tlink soft" href="https://www.instagram.com/janina.ig" target="_blank" rel="noopener">Instagram (@janina.ig)</a>
-        </div>
-
-        <p class="sign-off">Love, Janina.</p>
-      </section>
-  </div>
-
-  <!-- Colophon Footer -->
-  <div class="wrap">
-    <footer class="site-footer">
-      <span>Janina Tran · Hospitality PR, Creative Direction &amp; Editorial Storytelling</span>
-      <span>Singapore · Available for Bali &amp; Hong Kong</span>
-    </footer>
-  </div>
-
-  <!-- Mobile Quick Action Floating Bar -->
-  <div class="mobile-action-bar" role="navigation" aria-label="Mobile Quick Nav">
-    <a class="mobile-action-btn" href="#cases">Cases</a>
-    <a class="mobile-action-btn" href="#services">Services</a>
-    <a class="mobile-action-btn" href="#work">Portfolio</a>
-    <a class="mobile-action-btn" href="#reels">Motion</a>
-    <a class="mobile-action-btn btn-enquire" href="#contact">Enquire</a>
-  </div>
-
-  <!-- Editorial Lightbox Modal -->
-  <div class="lightbox-backdrop" id="lightboxBackdrop" role="dialog" aria-modal="true" aria-label="Dish Details">
-    <div class="lightbox-container" id="lightboxContainer">
-      <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Close Lightbox">✕</button>
-
-      <div class="lightbox-media">
-        <img id="lightboxImg" src="img/j02.jpg" alt="Dish detail">
-        <span class="lightbox-media-badge" id="lightboxBadge">Steakhouse</span>
-      </div>
-
-      <div class="lightbox-details">
-        <div class="lightbox-header">
-          <div class="lightbox-section-label">Selected Table</div>
-          <h3 class="lightbox-restaurant" id="lightboxRestaurant">Butcher's Block</h3>
-          <p class="lightbox-dish" id="lightboxDish">Wagyu Sliders · Raffles Arcade, Singapore</p>
-        </div>
-
-        <div class="lightbox-section-label">The Strategic Hook (Why it stops the scroll)</div>
-        <div class="lightbox-hook-box" id="lightboxHook">
-          The glossy brioche sheen against charcoal-charred Australian wagyu and melted gruyère.
-        </div>
-
-        <div class="lightbox-section-label">The Caption (Written with a poet's ear)</div>
-        <div class="lightbox-caption-box">
-          <p class="lightbox-caption-text" id="lightboxCaption">
-            A bite of pure excess. Rich, wood-smoked wagyu ground coarse enough to hold its fat.
-          </p>
-        </div>
-
-        <div class="lightbox-meta-grid">
-          <div class="lightbox-meta-item">
-            <dt>Sensory Notes</dt>
-            <dd id="lightboxSensory">Smoked marrow butter · Brioche</dd>
-          </div>
-          <div class="lightbox-meta-item">
-            <dt>Technical Format</dt>
-            <dd id="lightboxFormat">4:5 High-Res Portrait</dd>
-          </div>
-        </div>
-
-        <div class="lightbox-nav-bar">
-          <button type="button" class="lightbox-nav-btn" id="lightboxPrev">← Previous</button>
-          <span class="lightbox-nav-counter" id="lightboxCounter">1 / 32</span>
-          <button type="button" class="lightbox-nav-btn" id="lightboxNext">Next →</button>
-        </div>
+      <div class="head"><div><p class="eyebrow">I also write</p><h2>Words behind the work</h2></div></div>
+      <div class="writing">
+        <a class="wcard" href="https://planetnina.substack.com" target="_blank" rel="noopener"><h3>Planet Nina</h3><p>My food and travel newsletter. The stories behind the dishes I eat around the world.</p><span class="go">Read on Substack ↗</span></a>
+        <a class="wcard" href="https://substack.com/@lovejanina" target="_blank" rel="noopener"><h3>Love, Janina</h3><p>Personal essays on love, starting over and building a life I chose.</p><span class="go">Read on Substack ↗</span></a>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- "Love, Janina" Substack Essay Drawer -->
-  <div class="drawer-backdrop" id="essayDrawerBackdrop" role="dialog" aria-modal="true" aria-label="Essay Reader">
-    <div class="reading-drawer" id="essayDrawer">
-      <div class="drawer-top-bar">
-        <span class="label">Love, Janina · Essay Reader</span>
-        <button type="button" class="drawer-close-btn" id="drawerCloseBtn">Close ✕</button>
+  <section class="band" id="contact">
+    <div class="wrap contact">
+      <p class="eyebrow">Contact</p>
+      <h2>Let's make <span class="script">something</span> people stop for</h2>
+      <p class="mail">tranjanina@gmail.com</p>
+      <div class="row">
+        <button class="pill" type="button" data-copy="tranjanina@gmail.com">Copy email</button>
+        <a class="pill ghost" href="https://instagram.com/janina.ig" target="_blank" rel="noopener">Instagram ↗</a>
       </div>
-
-      <h2 class="drawer-essay-title" id="drawerTitle">Seven Minutes in Heaven</h2>
-      <p class="drawer-essay-subtitle" id="drawerSubtitle">On infatuation, fresh bread, and the appetite that returns when love does.</p>
-
-      <div class="drawer-essay-body" id="drawerBody">
-        <!-- Rendered dynamically -->
-      </div>
-
-      <div class="drawer-essay-footer">
-        <span class="label">Read more from Janina</span>
-        <a class="btn-primary" id="drawerSubstackLink" href="https://substack.com/@lovejanina" target="_blank" rel="noopener">
-          Personal essays ↗
-        </a>
-      </div>
+      <small>Full-resolution files and raw footage available on request.</small>
     </div>
-  </div>
+  </section>
+</main>
 
-  <!-- JavaScript Modules -->
-  <script src="js/data.js"></script>
-  <script src="js/lightbox.js"></script>
-  <script src="js/reel-player.js"></script>
-  <script src="js/brief-builder.js"></script>
-  <script src="js/essay-drawer.js"></script>
-  <script src="js/app.js"></script>
+<footer><div class="wrap"><span>Janina · UGC Creator</span><span>Singapore · Bali · Hong Kong</span></div></footer>
+<div class="toast" id="toast" role="status" hidden>Email copied</div>
+
+<script>
+(function(){
+  var tabs=document.querySelectorAll('.tabs button'),tiles=document.querySelectorAll('#grid .tile');
+  function show(f){
+    tabs.forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.f===f))});
+    tiles.forEach(function(t){t.hidden=!(f==='all'||t.dataset.c===f)});
+  }
+  tabs.forEach(function(b){
+    var n=b.dataset.f==='all'?tiles.length:document.querySelectorAll('#grid .tile[data-c="'+b.dataset.f+'"]').length;
+    var s=document.createElement('span');s.className='n';s.textContent=n;b.appendChild(s);
+    b.addEventListener('click',function(){show(b.dataset.f)});
+  });
+  show('wellness');
+  var toast=document.getElementById('toast'),tm;
+  function flash(msg){toast.textContent=msg;toast.hidden=false;clearTimeout(tm);tm=setTimeout(function(){toast.hidden=true},1800)}
+  document.querySelectorAll('[data-copy]').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var v=btn.dataset.copy;
+      try{navigator.clipboard.writeText(v).then(function(){flash('Email copied')},function(){flash(v)})}catch(e){flash(v)}
+    });
+  });
+})();
+</script>
+
 </body>
 </html>
