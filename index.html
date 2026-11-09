@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Janina · Brand Storyteller</title>
-<meta name="description" content="Janina, Singapore-based brand storyteller. UGC, content and PR for wellness, fitness, food and travel brands.">
+<meta name="description" content="Janina, Singapore-based brand storyteller, content and PR strategist, and content creator for wellness, fitness, food and travel brands.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap">
@@ -62,7 +62,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .hero-copy h1{display:flex;flex-direction:column;gap:6px}
 .hero-copy h1 .script{font-size:clamp(4.2rem,9vw,7.4rem);line-height:.9;margin-left:-6px}
 .hero-copy h1 .role{font-family:var(--f-display);font-size:clamp(1.3rem,2.4vw,1.9rem);letter-spacing:.2em;text-transform:uppercase}
-.hero-copy .disc{margin:-4px 0 0;font-size:.82rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);font-weight:500}
+.hero-copy .disc{margin:0;display:grid;gap:4px;font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:500;line-height:1.5;border-left:1px solid var(--gold);padding-left:14px}
 .hero-copy .sub{font-size:.8rem;letter-spacing:.26em;text-transform:uppercase;color:var(--cocoa);margin:0}
 .hero-copy .lede{max-width:44ch;margin:6px 0 4px;font-size:1.02rem}
 .hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
@@ -200,7 +200,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
         </div>
         <div class="hero-copy">
           <h1><span class="script">Janina</span><span class="role">Brand Storyteller</span></h1>
-          <p class="disc">UGC · Content · PR</p>
+          <p class="disc"><span>Content &amp; PR Strategist</span><span>Creative &amp; Communications</span><span>Content Creator</span></p>
           <p class="sub">Singapore · Bali · Hong Kong</p>
           <p class="lede">Content and PR for wellness, fitness, food and travel brands. I find the story, write it, shoot it, and get it in front of the people you want to reach.</p>
           <div class="hero-actions">
@@ -292,10 +292,10 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
           <h2>Recent work</h2>
         </div>
         <div class="tabs" role="group" aria-label="Filter portfolio">
-          <button type="button" id="tab-all" data-f="all" aria-pressed="false">All</button>
-          <button type="button" id="tab-wellness" data-f="wellness" aria-pressed="true">Wellness &amp; Fitness</button>
+          <button type="button" id="tab-travel" data-f="travel" aria-pressed="true">Travel &amp; Stays</button>
+          <button type="button" id="tab-wellness" data-f="wellness" aria-pressed="false">Wellness &amp; Fitness</button>
           <button type="button" id="tab-food" data-f="food" aria-pressed="false">Food &amp; Drink</button>
-          <button type="button" id="tab-travel" data-f="travel" aria-pressed="false">Travel &amp; Stays</button>
+          <button type="button" id="tab-all" data-f="all" aria-pressed="false">All</button>
         </div>
       </div>
       <div class="grid" id="grid">
@@ -310,6 +310,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
         <figure class="tile" data-c="food"><div class="ph"><img src="img/k14.jpg" alt="Sashimi above the Singapore skyline at SUSHISAMBA" loading="lazy"></div><figcaption><strong>Sashimi above the clouds</strong><span>SUSHISAMBA, Singapore</span></figcaption></figure>
         <figure class="tile" data-c="food"><div class="ph"><img src="img/bakalaki_mezze.jpg" alt="Greek mezze dips at Bakalaki" loading="lazy"></div><figcaption><strong>Greek mezze for the table</strong><span>Bakalaki, Singapore</span></figcaption></figure>
         <figure class="tile" data-c="food"><div class="ph"><img src="img/m01.jpg" alt="The red room at Medusa" loading="lazy"></div><figcaption><strong>The red room</strong><span>Medusa, Singapore</span></figcaption></figure>
+        <figure class="tile" data-c="travel"><div class="ph"><img src="img/travel_pool_breakfast.jpg" alt="Poolside villa breakfast at La Réserve 1785, Bali" loading="lazy"></div><figcaption><strong>Poolside villa breakfast</strong><span>La Réserve 1785, Bali</span></figcaption></figure>
         <figure class="tile" data-c="travel"><div class="ph"><img src="img/travel_suite_stone.jpg" alt="Stone Sanctuary Suite at La Réserve 1785" loading="lazy"></div><figcaption><strong>The Stone Sanctuary Suite</strong><span>La Réserve 1785, Bali</span></figcaption></figure>
         <figure class="tile" data-c="travel"><div class="ph"><img src="img/travel_resort_lounge.jpg" alt="Janina at night at Desa Kitsuné, Bali" loading="lazy"></div><figcaption><strong>Tropical resort nights</strong><span>Desa Kitsuné, Bali</span></figcaption></figure>
         <figure class="tile" data-c="travel"><div class="ph"><img src="img/travel_beachclub_spritz.jpg" alt="Frozen spritz flight at Tanjong Beach Club" loading="lazy"></div><figcaption><strong>Frozen spritz flight</strong><span>Tanjong Beach Club, Sentosa</span></figcaption></figure>
@@ -401,7 +402,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
     var s=document.createElement('span');s.className='n';s.textContent=n;b.appendChild(s);
     b.addEventListener('click',function(){show(b.dataset.f)});
   });
-  show('wellness');
+  show('travel');
   var toast=document.getElementById('toast'),tm;
   function flash(msg){toast.textContent=msg;toast.hidden=false;clearTimeout(tm);tm=setTimeout(function(){toast.hidden=true},1800)}
   document.querySelectorAll('[data-copy]').forEach(function(btn){
