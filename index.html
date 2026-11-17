@@ -177,8 +177,9 @@ section.block{padding-block:92px}
 @media (max-width:640px){.writing{grid-template-columns:1fr}}
 
 .built{margin-top:22px;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:36px;align-items:center;border:1px solid var(--line);border-radius:22px;padding:28px 40px 0;overflow:hidden}
-.built-shot{align-self:end;width:100%;max-width:340px;justify-self:center}
-.built-shot img{width:100%;height:auto;display:block}
+.built-shot{align-self:end;width:100%;max-width:300px;justify-self:center}
+.built-shot img,.built-shot video{width:100%;height:auto;display:block}
+.built-shot video{border-radius:20px 20px 0 0;aspect-ratio:9/16;object-fit:cover;background:var(--butter)}
 .built-copy{display:flex;flex-direction:column;gap:14px;padding-bottom:28px;min-width:0}
 .built-title{display:flex;align-items:center;gap:14px}
 .built-title img{width:52px;height:52px;border-radius:14px}
@@ -461,13 +462,13 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
         </a>
       </div>
       <div class="built">
-        <div class="built-shot"><img src="img/deerdayly_screen.jpg" alt="DeerDayly app screen showing today's journal entry with a photo and a short reflection" loading="lazy"></div>
+        <div class="built-shot"><video src="video/deerdayly_walkthrough.mp4" poster="img/deerdayly_poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="DeerDayly app walkthrough reel: private journal, no-contact tracker, urge delay and Sunday Dispatches"></video></div>
         <div class="built-copy">
-          <p class="eyebrow">Also built · On the App Store</p>
+          <p class="eyebrow">Also built</p>
           <div class="built-title"><img src="img/deerdayly_icon.png" alt="" width="52" height="52"><h3>DeerDayly</h3></div>
-          <p>A daily journal for one honest moment a day. A photo and a few words, private by default, shared only if you choose. No streaks, no filters, no audience unless you want one.</p>
-          <p>I designed and built it myself, from the first sketch to the App Store, using AI coding tools. It's the same instinct behind my client work: find the feeling, then build the thing that holds it.</p>
-          <a class="pill" href="https://deerdayly.com/download" target="_blank" rel="noopener">Download on the App Store ↗</a>
+          <p>A private daily journal for heartbreak recovery and emotional regulation. One day, one entry, strictly private: no public feeds and no followers. Track your days returned, and tap a 3-minute urge delay when emotions spike.</p>
+          <p>It also holds Sunday Dispatches, longform essays on heartbreak and healing. I designed and built it myself using AI coding tools, and made the launch reel you see here. It's the same instinct behind my client work: find the feeling, then build the thing that holds it.</p>
+          <a class="pill" href="https://deerdayly.com" target="_blank" rel="noopener">Visit deerdayly.com ↗</a>
         </div>
       </div>
     </div>
